@@ -1,0 +1,29 @@
+Notes for API Testing
+
+
+METHODS-
+1-> GET - Fetch data from server/application
+2 -> POST - to add new data/resource to the application
+3 -> PUT - to modify/update the data in application. here we have to send all the data to the server during request
+4 -> DELETE - Delete the content from server/application
+5 -> PATCH - similar to PUT but we have to send only updated data
+Other methods
+6 -> HEAD - fetch only header data from the application
+7 -> OPTIONS - to find out which request methods a server supports (allow: OPTIONS, GET, HEAD, POST)
+8 -> TRACE - This method performs a message loop-back means it will return message content as Response, providing a useful debugging mechanism.
+
+
+
+JSON-
+1 -> javascript object notion is a light weight data interchange format
+2 -> data is stored in key value pair
+3 -> value can be array
+4 -> Value can be further key-value pair
+5 -> find json path (jsonpath.com)
+
+1. json.dump()
+Purpose: Serializes a Python object into a JSON formatted string and writes it directly to a file-like object (e.g., a file or StringIO).
+Usage: When you want to write the JSON data to a file or a file-like object.
+2. json.dumps()
+Purpose: Serializes a Python object into a JSON formatted string in memory, returning the result as a string. It does not write to a file.
+Usage: When you want to get the JSON as a string, either for printing, logging, or sending it over a network.
