@@ -73,3 +73,15 @@ def find_second_largest(arr1=None):
         elif largest > ele > second_largest:
             second_largest = ele
     return second_largest
+
+def find_nextGreaterElement(arr1, arr2):
+    ans = []
+    for ele in arr1:
+        index_in_arr1 = arr2.index(ele)
+        maxi , next_highest = ele, -1
+        for j in range(index_in_arr1, len(arr2)):
+            if maxi < arr2[j]:
+                next_highest = arr2[j]
+                break
+        ans.append(next_highest)
+    return ans

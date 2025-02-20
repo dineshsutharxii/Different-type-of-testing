@@ -1,4 +1,6 @@
-from find_solution import twoSum, minSubArrayLen, longest_substring_without_repeating_characters, find_second_largest
+from find_solution import (twoSum, minSubArrayLen,
+                           longest_substring_without_repeating_characters,
+                           find_second_largest, find_nextGreaterElement)
 import pytest
 
 def test_twosum():
@@ -22,4 +24,9 @@ def test_longest_substring_without_repeating_characters():
 def test_find_second_largest():
     print(" --- Inside test_find_second_largest ---")
     assert find_second_largest([2, 3, 1, 2, 4, 3]) == 3
+
+def test_nextGreaterElement():
+    print(" --- Inside test_nextGreaterElement ---")
+    assert find_nextGreaterElement([4,1,2], [1,3,4,2]) == [-1,3,-1]
+
 
