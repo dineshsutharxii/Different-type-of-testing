@@ -28,5 +28,6 @@ def test_find_second_largest():
 def test_nextGreaterElement():
     print(" --- Inside test_nextGreaterElement ---")
     assert find_nextGreaterElement([4,1,2], [1,3,4,2]) == [-1,3,-1]
+    assert find_nextGreaterElement([2,4], [1,2,3,4]) == [3,-1]
 
 
