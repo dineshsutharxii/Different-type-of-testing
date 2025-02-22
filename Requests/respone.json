@@ -1,6 +1,72 @@
-{
-    "name": "Dipak77.71076222553071",
-    "job": "Test62.3968689850233",
-    "id": "738",
-    "createdAt": "2024-11-29T03:38:35.805Z"
-}
+[
+    {
+        "id": 7712788,
+        "name": "Poornima Tagore",
+        "email": "tagore_poornima@walsh.test",
+        "gender": "female",
+        "status": "active"
+    },
+    {
+        "id": 7712786,
+        "name": "Bhamini Kakkar",
+        "email": "bhamini_kakkar@wiza-reichert.test",
+        "gender": "female",
+        "status": "active"
+    },
+    {
+        "id": 7712785,
+        "name": "Anaadi Sinha",
+        "email": "sinha_anaadi@gleichner-braun.test",
+        "gender": "female",
+        "status": "active"
+    },
+    {
+        "id": 7712782,
+        "name": "Rukmin Ahluwalia",
+        "email": "ahluwalia_rukmin@fahey.test",
+        "gender": "male",
+        "status": "active"
+    },
+    {
+        "id": 7712781,
+        "name": "Somu Chattopadhyay",
+        "email": "somu_chattopadhyay@hand-baumbach.test",
+        "gender": "female",
+        "status": "active"
+    },
+    {
+        "id": 7712779,
+        "name": "Rohit Adiga",
+        "email": "rohit_adiga@robel.test",
+        "gender": "female",
+        "status": "active"
+    },
+    {
+        "id": 7712776,
+        "name": "Divaakar Bandopadhyay",
+        "email": "divaakar_bandopadhyay@okeefe-pouros.example",
+        "gender": "female",
+        "status": "active"
+    },
+    {
+        "id": 7712775,
+        "name": "Ekaling Talwar",
+        "email": "talwar_ekaling@mosciski.test",
+        "gender": "female",
+        "status": "active"
+    },
+    {
+        "id": 7712774,
+        "name": "Jagdish Guha",
+        "email": "jagdish_guha@king.test",
+        "gender": "female",
+        "status": "inactive"
+    },
+    {
+        "id": 7712773,
+        "name": "Devajyoti Shah",
+        "email": "devajyoti_shah@morar.test",
+        "gender": "female",
+        "status": "inactive"
+    }
+]
