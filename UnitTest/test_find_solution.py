@@ -24,6 +24,7 @@ def test_longest_substring_without_repeating_characters():
 def test_find_second_largest():
     print(" --- Inside test_find_second_largest ---")
     assert find_second_largest([2, 3, 1, 2, 4, 3]) == 3
+    assert find_second_largest([2, 3, 1, 2, 4, 5]) == 4
 
 def test_nextGreaterElement():
     print(" --- Inside test_nextGreaterElement ---")
