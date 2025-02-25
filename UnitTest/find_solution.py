@@ -85,3 +85,20 @@ def find_nextGreaterElement(arr1, arr2):
                 break
         ans.append(next_highest)
     return ans
+
+def longest_repeating_character_replacement(s: str, k: int):
+    sub_arr = []
+    maxlen = 0
+    for i in range(len(s)):
+        hash = [0]*26
+        maxfre = 0
+        for j in range(i,len(s)):
+            sub_arr.append(s[i:j])
+            hash[ord(s[j])-ord('A')] += 1
+            maxfre = max(maxfre, hash[ord(s[j])-ord('A')])
+            changes = j-i+1 - maxfre
+            if changes <= k:
+                maxlen = max(maxlen, j-i+1)
+            else:
+                break
+    return maxlen
