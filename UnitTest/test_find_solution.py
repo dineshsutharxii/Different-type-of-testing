@@ -1,6 +1,7 @@
 from find_solution import (twoSum, minSubArrayLen,
                            longest_substring_without_repeating_characters,
-                           find_second_largest, find_nextGreaterElement)
+                           find_second_largest, find_nextGreaterElement,
+                           longest_repeating_character_replacement)
 import pytest
 
 def test_twosum():
@@ -33,3 +34,6 @@ def test_nextGreaterElement():
     assert find_nextGreaterElement([2,4], [1,2,3,4]) == [3,-1]
 
 
+def test_longest_repeating_character_replacement():
+    print(" --- Inside test_longest_repeating_character_replacement ---")
+    assert longest_repeating_character_replacement("ABAB", 2) == 4
