@@ -1,7 +1,7 @@
 from find_solution import (twoSum, minSubArrayLen,
                            longest_substring_without_repeating_characters,
                            find_second_largest, find_nextGreaterElement,
-                           longest_repeating_character_replacement)
+                           longest_repeating_character_replacement, pow_x_n)
 import pytest
 
 def test_twosum():
@@ -37,3 +37,9 @@ def test_nextGreaterElement():
 def test_longest_repeating_character_replacement():
     print(" --- Inside test_longest_repeating_character_replacement ---")
     assert longest_repeating_character_replacement("ABAB", 2) == 4
+
+def test_pow_x_n():
+    print(" --- Inside test_pow_x_n ---")
+    assert pow_x_n(2.00, 10) == 1024.0000
+    assert pow_x_n(2.10000, 3) == 9.26100
+    assert pow_x_n(2.00000, -2) == 0.25000

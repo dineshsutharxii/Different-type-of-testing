@@ -102,3 +102,13 @@ def longest_repeating_character_replacement(s: str, k: int):
             else:
                 break
     return maxlen
+
+def pow_x_n(x: float, n: int):
+    #Brute force
+    ans = 1.0
+    if x == 0: return 0
+    if n == 0: return 1
+    for i in range(1, abs(n)+1):
+        ans *= x
+    if n < 0: ans = 1/ans
+    return round(ans, 4)
