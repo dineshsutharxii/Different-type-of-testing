@@ -1,7 +1,7 @@
 from find_solution import (twoSum, minSubArrayLen,
                            longest_substring_without_repeating_characters,
                            find_second_largest, find_nextGreaterElement,
-                           longest_repeating_character_replacement, pow_x_n)
+                           longest_repeating_character_replacement, pow_x_n, find_all_subsequences)
 import pytest
 
 def test_twosum():
@@ -43,3 +43,8 @@ def test_pow_x_n():
     assert pow_x_n(2.00, 10) == 1024.0000
     assert pow_x_n(2.10000, 3) == 9.26100
     assert pow_x_n(2.00000, -2) == 0.25000
+
+def test_find_all_subsequences():
+    print(" --- Inside test_find_all_subsequences ---")
+    assert find_all_subsequences([1,2,3]) == [[],[1],[2],[1,2],[3],[1,3],[2,3],[1,2,3]]
+    assert find_all_subsequences([0]) == [[],[0]]

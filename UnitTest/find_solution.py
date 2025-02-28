@@ -74,11 +74,12 @@ def find_second_largest(arr1=None):
             second_largest = ele
     return second_largest
 
+
 def find_nextGreaterElement(arr1, arr2):
     ans = []
     for ele in arr1:
         index_in_arr1 = arr2.index(ele)
-        maxi , next_highest = ele, -1
+        maxi, next_highest = ele, -1
         for j in range(index_in_arr1, len(arr2)):
             if maxi < arr2[j]:
                 next_highest = arr2[j]
@@ -86,29 +87,43 @@ def find_nextGreaterElement(arr1, arr2):
         ans.append(next_highest)
     return ans
 
+
 def longest_repeating_character_replacement(s: str, k: int):
     sub_arr = []
     maxlen = 0
     for i in range(len(s)):
-        hash = [0]*26
+        hash = [0] * 26
         maxfre = 0
-        for j in range(i,len(s)):
+        for j in range(i, len(s)):
             sub_arr.append(s[i:j])
-            hash[ord(s[j])-ord('A')] += 1
-            maxfre = max(maxfre, hash[ord(s[j])-ord('A')])
-            changes = j-i+1 - maxfre
+            hash[ord(s[j]) - ord('A')] += 1
+            maxfre = max(maxfre, hash[ord(s[j]) - ord('A')])
+            changes = j - i + 1 - maxfre
             if changes <= k:
-                maxlen = max(maxlen, j-i+1)
+                maxlen = max(maxlen, j - i + 1)
             else:
                 break
     return maxlen
+
 
 def pow_x_n(x: float, n: int):
     #Brute force
     ans = 1.0
     if x == 0: return 0
     if n == 0: return 1
-    for i in range(1, abs(n)+1):
+    for i in range(1, abs(n) + 1):
         ans *= x
-    if n < 0: ans = 1/ans
+    if n < 0: ans = 1 / ans
     return round(ans, 4)
+
+
+def find_all_subsequences(nums):
+    n = len(nums)
+    ans = []
+    for i in range(1 << n):
+        sublist = []
+        for j in range(n):
+            if i & 1 << j:
+                sublist.append(nums[j])
+        ans.append(sublist)
+    return ans
