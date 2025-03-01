@@ -1,7 +1,8 @@
 from find_solution import (twoSum, minSubArrayLen,
                            longest_substring_without_repeating_characters,
                            find_second_largest, find_nextGreaterElement,
-                           longest_repeating_character_replacement, pow_x_n, find_all_subsequences)
+                           longest_repeating_character_replacement, pow_x_n, find_all_subsequences,
+                           check_if_power_of_two)
 import pytest
 
 def test_twosum():
@@ -48,3 +49,9 @@ def test_find_all_subsequences():
     print(" --- Inside test_find_all_subsequences ---")
     assert find_all_subsequences([1,2,3]) == [[],[1],[2],[1,2],[3],[1,3],[2,3],[1,2,3]]
     assert find_all_subsequences([0]) == [[],[0]]
+
+def test_check_if_power_of_two():
+    print(" --- Inside test_check_if_power_of_two ---")
+    assert check_if_power_of_two(16) == True
+    assert check_if_power_of_two(1) == True
+    assert check_if_power_of_two(6) == False

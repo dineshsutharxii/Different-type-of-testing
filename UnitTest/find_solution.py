@@ -127,3 +127,11 @@ def find_all_subsequences(nums):
                 sublist.append(nums[j])
         ans.append(sublist)
     return ans
+
+
+def check_if_power_of_two(n):
+    if n == 1: return True
+    if n % 2 == 1: return False
+    while n%2 == 0:
+        n //= 2
+    return n == 1
