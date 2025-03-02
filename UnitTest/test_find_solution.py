@@ -2,7 +2,7 @@ from find_solution import (twoSum, minSubArrayLen,
                            longest_substring_without_repeating_characters,
                            find_second_largest, find_nextGreaterElement,
                            longest_repeating_character_replacement, pow_x_n, find_all_subsequences,
-                           check_if_power_of_two)
+                           check_if_power_of_two, divide_two_integers)
 import pytest
 
 def test_twosum():
@@ -55,3 +55,8 @@ def test_check_if_power_of_two():
     assert check_if_power_of_two(16) == True
     assert check_if_power_of_two(1) == True
     assert check_if_power_of_two(6) == False
+
+def test_divide_two_integers():
+    print(" --- Inside test_divide_two_integers ---")
+    assert divide_two_integers(10,3) == 3
+    assert divide_two_integers(7, -3) == -2
