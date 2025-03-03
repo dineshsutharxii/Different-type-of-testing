@@ -153,3 +153,22 @@ def divide_two_integers(dividend: int, divisor: int):
         quotient += multiple
 
     return -quotient if negative else quotient
+
+def find_single_num(nums):
+    #using dict
+    # freq = {}
+    # for ele in nums:
+    #     if ele not in freq:
+    #         freq[ele] = 1
+    #     else:
+    #         freq[ele] += 1
+    # for key in freq.keys():
+    #     if freq[key] == 1:
+    #         return key
+    # return 0
+
+    #Using XOR
+    one_ele = 0
+    for ele in nums:
+        one_ele = one_ele^ele
+    return one_ele
