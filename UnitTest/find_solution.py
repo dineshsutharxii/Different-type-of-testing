@@ -132,15 +132,16 @@ def find_all_subsequences(nums):
 def check_if_power_of_two(n):
     if n == 1: return True
     if n % 2 == 1: return False
-    while n%2 == 0:
+    while n % 2 == 0:
         n //= 2
     return n == 1
 
+
 def divide_two_integers(dividend: int, divisor: int):
-    if dividend == -2**31 and divisor == -1:
-        return 2**31 - 1
-    if dividend == -2**31 and divisor == 1:
-        return -2**31
+    if dividend == -2 ** 31 and divisor == -1:
+        return 2 ** 31 - 1
+    if dividend == -2 ** 31 and divisor == 1:
+        return -2 ** 31
     negative = (dividend < 0) ^ (divisor < 0)
     absDividend, absDivisor = abs(dividend), abs(divisor)
     quotient = 0
@@ -153,6 +154,7 @@ def divide_two_integers(dividend: int, divisor: int):
         quotient += multiple
 
     return -quotient if negative else quotient
+
 
 def find_single_num(nums):
     #using dict
@@ -170,5 +172,22 @@ def find_single_num(nums):
     #Using XOR
     one_ele = 0
     for ele in nums:
-        one_ele = one_ele^ele
+        one_ele = one_ele ^ ele
     return one_ele
+
+
+def count_primes(n):
+    prime = []
+    for i in range(n + 1):
+        prime.append(1)
+    p = 2
+    while (p * p <= n):
+        if prime[p] == 1:
+            for i in range(p * p, n + 1, p):
+                prime[i] = 0
+        p += 1
+    primecount = 0
+    for i in range(2, n):
+        if prime[i]:
+            primecount += 1
+    return primecount
