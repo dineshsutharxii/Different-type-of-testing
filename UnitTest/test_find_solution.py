@@ -2,7 +2,7 @@ from find_solution import (twoSum, minSubArrayLen,
                            longest_substring_without_repeating_characters,
                            find_second_largest, find_nextGreaterElement,
                            longest_repeating_character_replacement, pow_x_n, find_all_subsequences,
-                           check_if_power_of_two, divide_two_integers, find_single_num, count_primes)
+                           check_if_power_of_two, divide_two_integers, find_single_num, count_primes, reverse_integer)
 import pytest
 
 def test_twosum():
@@ -73,3 +73,6 @@ def test_count_primes():
     assert count_primes(30) == 10
     assert count_primes(0) == 0
 
+def test_reverse_integer():
+    print(" --- Inside test_count_primes ---")
+    assert reverse_integer(123) == 321

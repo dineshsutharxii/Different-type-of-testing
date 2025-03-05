@@ -191,3 +191,11 @@ def count_primes(n):
         if prime[i]:
             primecount += 1
     return primecount
+
+
+def reverse_integer(x):
+    res = 0
+    res = int(str(x[1:0][::-1]))*-1 if x<0 else int(str(x)[::-1])
+    if res > 2**31-1 or res < -2**31: return 0
+    return res
+
