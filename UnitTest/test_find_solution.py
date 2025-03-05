@@ -76,3 +76,6 @@ def test_count_primes():
 def test_reverse_integer():
     print(" --- Inside test_count_primes ---")
     assert reverse_integer(123) == 321
+    assert reverse_integer(-123) == -321
+    assert reverse_integer(1534236469) == 0
+    assert reverse_integer(-1534236469) == 0
