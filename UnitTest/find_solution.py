@@ -199,3 +199,17 @@ def reverse_integer(x):
     if res > 2**31-1 or res < -2**31: return 0
     return res
 
+def find_missing_and_repeated_number(grid):
+    l = len(grid)
+    missing = (l*l)*(l*l+1)//2
+    seen_set, duplicate = set(), -1
+    for row in grid:
+        for num in row:
+            if num not in seen_set:
+                seen_set.add(num)
+                missing -= num
+            else:
+                duplicate = num
+    return [duplicate, missing]
+
+

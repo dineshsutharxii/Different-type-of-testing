@@ -2,7 +2,8 @@ from find_solution import (twoSum, minSubArrayLen,
                            longest_substring_without_repeating_characters,
                            find_second_largest, find_nextGreaterElement,
                            longest_repeating_character_replacement, pow_x_n, find_all_subsequences,
-                           check_if_power_of_two, divide_two_integers, find_single_num, count_primes, reverse_integer)
+                           check_if_power_of_two, divide_two_integers, find_single_num, count_primes, reverse_integer,
+                           find_missing_and_repeated_number)
 import pytest
 
 def test_twosum():
@@ -79,3 +80,8 @@ def test_reverse_integer():
     assert reverse_integer(-123) == -321
     assert reverse_integer(1534236469) == 0
     assert reverse_integer(-1534236469) == 0
+
+def test_find_missing_and_repeated_number():
+    print(" --- Inside test_find_missing_and_repeated_number ---")
+    assert find_missing_and_repeated_number([[1,3],[2,2]]) == [2,4]
+    assert find_missing_and_repeated_number([[9,1,7],[8,9,2],[3,4,6]]) == [9,5]
