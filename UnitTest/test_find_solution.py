@@ -3,7 +3,7 @@ from find_solution import (twoSum, minSubArrayLen,
                            find_second_largest, find_nextGreaterElement,
                            longest_repeating_character_replacement, pow_x_n, find_all_subsequences,
                            check_if_power_of_two, divide_two_integers, find_single_num, count_primes, reverse_integer,
-                           find_missing_and_repeated_number)
+                           find_missing_and_repeated_number, assign_cookies)
 import pytest
 
 def test_twosum():
@@ -85,3 +85,8 @@ def test_find_missing_and_repeated_number():
     print(" --- Inside test_find_missing_and_repeated_number ---")
     assert find_missing_and_repeated_number([[1,3],[2,2]]) == [2,4]
     assert find_missing_and_repeated_number([[9,1,7],[8,9,2],[3,4,6]]) == [9,5]
+
+def test_assign_cookies():
+    print(" --- Inside test_assign_cookies ---")
+    assert assign_cookies([1,2,3], [1,1]) == 1
+    assert assign_cookies([1,2], [1,2,3]) == 2

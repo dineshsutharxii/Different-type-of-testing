@@ -212,4 +212,13 @@ def find_missing_and_repeated_number(grid):
                 duplicate = num
     return [duplicate, missing]
 
-
+def assign_cookies(g, s):
+    g.sort()
+    s.sort()
+    left, right, count = 0, 0, 0
+    while left < len(g) and right < len(s):
+        if g[left] <= s[right]:
+            count += 1
+            left += 1
+        right += 1
+    return count
