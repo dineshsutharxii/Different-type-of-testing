@@ -3,7 +3,7 @@ from find_solution import (twoSum, minSubArrayLen,
                            find_second_largest, find_nextGreaterElement,
                            longest_repeating_character_replacement, pow_x_n, find_all_subsequences,
                            check_if_power_of_two, divide_two_integers, find_single_num, count_primes, reverse_integer,
-                           find_missing_and_repeated_number, assign_cookies)
+                           find_missing_and_repeated_number, assign_cookies, lemonado_change)
 import pytest
 
 def test_twosum():
@@ -90,3 +90,8 @@ def test_assign_cookies():
     print(" --- Inside test_assign_cookies ---")
     assert assign_cookies([1,2,3], [1,1]) == 1
     assert assign_cookies([1,2], [1,2,3]) == 2
+
+def test_lemonado_change():
+    print(" --- Inside test_lemonado_change ---")
+    assert lemonado_change([5,5,5,10,20]) == True
+    assert lemonado_change([5,5,10,10,20]) == False
