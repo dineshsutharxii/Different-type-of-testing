@@ -242,3 +242,18 @@ def lemonado_change(bills):
             else:
                 return False
     return True
+
+def valid_parenthesis_string(s):
+    count_str = 0
+    stk = []
+    for ele in s:
+        if ele == "(":
+            stk.append(ele)
+        elif len(stk) > 0 and ele == ")" and stk[-1] == "(":
+            stk.pop()
+        else:
+            count_str += 1
+    if len(stk) == 0: return True
+    if count_str == len(stk):
+        return True
+    return False
