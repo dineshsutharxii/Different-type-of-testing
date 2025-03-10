@@ -258,3 +258,11 @@ def valid_parenthesis_string(s):
         return True
     return False
 
+
+def jump_game(nums):
+    max_length = 0
+    for i in range(len(nums)):
+        if i > max_length: return False
+        if max_length < i + nums[i]:
+            max_length = i + nums[i]
+    return True
