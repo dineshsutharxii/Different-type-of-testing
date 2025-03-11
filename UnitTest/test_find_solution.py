@@ -4,7 +4,7 @@ from find_solution import (twoSum, minSubArrayLen,
                            longest_repeating_character_replacement, pow_x_n, find_all_subsequences,
                            check_if_power_of_two, divide_two_integers, find_single_num, count_primes, reverse_integer,
                            find_missing_and_repeated_number, assign_cookies, lemonado_change, valid_parenthesis_string,
-                           jump_game)
+                           jump_game, jump_game_2)
 import pytest
 
 
@@ -120,7 +120,14 @@ def test_valid_parenthesis_string():
     assert valid_parenthesis_string("(*)")
     assert valid_parenthesis_string("(*))")
 
+
 def test_jump_game():
     print(' --- Inside test_jump_game ---')
-    assert jump_game([2,3,1,1,4]) == True
-    assert jump_game([3,2,1,0,4]) == False
+    assert jump_game([2, 3, 1, 1, 4]) == True
+    assert jump_game([3, 2, 1, 0, 4]) == False
+
+
+def test_jump_game_2():
+    print(' --- Inside test_jump_game_2 ---')
+    assert jump_game_2([2, 3, 1, 1, 4]) == 2
+    assert jump_game_2([2,3,0,1,4]) == 2

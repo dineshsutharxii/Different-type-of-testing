@@ -195,13 +195,14 @@ def count_primes(n):
 
 def reverse_integer(x):
     res = 0
-    res = (int(str(x)[1:][::-1]))*-1 if x<0 else int(str(x)[::-1])
-    if res > 2**31-1 or res < -2**31: return 0
+    res = (int(str(x)[1:][::-1])) * -1 if x < 0 else int(str(x)[::-1])
+    if res > 2 ** 31 - 1 or res < -2 ** 31: return 0
     return res
+
 
 def find_missing_and_repeated_number(grid):
     l = len(grid)
-    missing = (l*l)*(l*l+1)//2
+    missing = (l * l) * (l * l + 1) // 2
     seen_set, duplicate = set(), -1
     for row in grid:
         for num in row:
@@ -211,6 +212,7 @@ def find_missing_and_repeated_number(grid):
             else:
                 duplicate = num
     return [duplicate, missing]
+
 
 def assign_cookies(g, s):
     g.sort()
@@ -223,10 +225,12 @@ def assign_cookies(g, s):
         right += 1
     return count
 
+
 def lemonado_change(bills):
     five, ten = 0, 0
     for ele in bills:
-        if ele == 5: five += 1
+        if ele == 5:
+            five += 1
         elif ele == 10:
             if five:
                 ten += 1
@@ -242,6 +246,7 @@ def lemonado_change(bills):
             else:
                 return False
     return True
+
 
 def valid_parenthesis_string(s):
     count_str = 0
@@ -266,3 +271,15 @@ def jump_game(nums):
         if max_length < i + nums[i]:
             max_length = i + nums[i]
     return True
+
+
+def jump_game_2(nums):
+    jumps, l, r, n = 0, 0, 0, len(nums)
+    while r < n - 1:
+        farthest = 0
+        for i in range(l, r + 1):
+            farthest = max(farthest, i + nums[i])
+        l = r + 1
+        r = farthest
+        jumps += 1
+    return jumps
