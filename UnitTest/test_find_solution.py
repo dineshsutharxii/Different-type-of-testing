@@ -131,3 +131,4 @@ def test_jump_game_2():
     print(' --- Inside test_jump_game_2 ---')
     assert jump_game_2([2, 3, 1, 1, 4]) == 2
     assert jump_game_2([2,3,0,1,4]) == 2
+    assert jump_game_2([2,2,0,1,4]) == 3
