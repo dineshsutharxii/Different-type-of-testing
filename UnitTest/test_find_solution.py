@@ -4,7 +4,7 @@ from find_solution import (twoSum, minSubArrayLen,
                            longest_repeating_character_replacement, pow_x_n, find_all_subsequences,
                            check_if_power_of_two, divide_two_integers, find_single_num, count_primes, reverse_integer,
                            find_missing_and_repeated_number, assign_cookies, lemonado_change, valid_parenthesis_string,
-                           jump_game, jump_game_2, insert_interval)
+                           jump_game, jump_game_2, insert_interval, merge_intervals)
 import pytest
 
 
@@ -137,3 +137,9 @@ def test_insert_interval():
     print(' --- Inside test_insert_interval ---')
     assert insert_interval([[1,3],[6,9]], [2,5]) == [[1,5],[6,9]]
     assert insert_interval([[1,2],[3,5],[6,7],[8,10],[12,16]], [4,8]) == [[1,2],[3,10],[12,16]]
+
+
+def test_merge_intervals():
+    print(' --- Inside test_merge_intervals ---')
+    assert merge_intervals([[1,3],[2,6],[8,10],[15,18]]) == [[1,6],[8,10],[15,18]]
+    assert merge_intervals([[1,4],[4,5]]) == [[1,5]]
