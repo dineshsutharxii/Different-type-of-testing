@@ -311,3 +311,12 @@ def merge_intervals(intervals):
             prev = interval
     merged.append(prev)
     return merged
+
+def non_overlapping_intervals(intervals):
+    intervals.sort(key= lambda x:x[1])
+    count, prev, l = 1, 0, len(intervals)
+    for i in range(1, l):
+        if intervals[i][0] >= intervals[prev][1]:
+            count += 1
+            prev = i
+    return l - count

@@ -4,7 +4,7 @@ from find_solution import (twoSum, minSubArrayLen,
                            longest_repeating_character_replacement, pow_x_n, find_all_subsequences,
                            check_if_power_of_two, divide_two_integers, find_single_num, count_primes, reverse_integer,
                            find_missing_and_repeated_number, assign_cookies, lemonado_change, valid_parenthesis_string,
-                           jump_game, jump_game_2, insert_interval, merge_intervals)
+                           jump_game, jump_game_2, insert_interval, merge_intervals, non_overlapping_intervals)
 import pytest
 
 
@@ -143,3 +143,8 @@ def test_merge_intervals():
     print(' --- Inside test_merge_intervals ---')
     assert merge_intervals([[1,3],[2,6],[8,10],[15,18]]) == [[1,6],[8,10],[15,18]]
     assert merge_intervals([[1,4],[4,5]]) == [[1,5]]
+
+def test_non_overlapping_intervals():
+    assert non_overlapping_intervals([[1,2],[2,3],[3,4],[1,3]]) == 1
+    assert non_overlapping_intervals([[1,2],[1,2],[1,2]]) == 2
+    assert non_overlapping_intervals([[1,2],[2,3]]) == 0
