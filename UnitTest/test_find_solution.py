@@ -5,6 +5,7 @@ from find_solution import (twoSum, minSubArrayLen,
                            check_if_power_of_two, divide_two_integers, find_single_num, count_primes, reverse_integer,
                            find_missing_and_repeated_number, assign_cookies, lemonado_change, valid_parenthesis_string,
                            jump_game, jump_game_2, insert_interval, merge_intervals, non_overlapping_intervals)
+from find_solution import Solution, TreeNode
 import pytest
 
 
@@ -148,3 +149,13 @@ def test_non_overlapping_intervals():
     assert non_overlapping_intervals([[1,2],[2,3],[3,4],[1,3]]) == 1
     assert non_overlapping_intervals([[1,2],[1,2],[1,2]]) == 2
     assert non_overlapping_intervals([[1,2],[2,3]]) == 0
+
+@pytest.fixture
+def sample_tree():
+    root = TreeNode(1)
+    root.right = TreeNode(2)
+    root.right.left = TreeNode(3)
+    return root
+
+def test_postorderTraversal(sample_tree):
+    assert Solution().postorderTraversal(sample_tree) == [3,2,1]
