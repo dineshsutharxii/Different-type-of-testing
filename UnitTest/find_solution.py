@@ -312,8 +312,9 @@ def merge_intervals(intervals):
     merged.append(prev)
     return merged
 
+
 def non_overlapping_intervals(intervals):
-    intervals.sort(key= lambda x:x[1])
+    intervals.sort(key=lambda x: x[1])
     count, prev, l = 1, 0, len(intervals)
     for i in range(1, l):
         if intervals[i][0] >= intervals[prev][1]:
@@ -328,6 +329,7 @@ class TreeNode:
         self.left = left
         self.right = right
 
+
 class Solution:
     def postorderTraversal(self, root):
         res = []
@@ -335,4 +337,20 @@ class Solution:
         res += self.postorderTraversal(root.left)
         res += self.postorderTraversal(root.right)
         res += [root.val]
+        return res
+
+    def preorderTraversal(self, root):
+        res = []
+        if not root: return res
+        res += [root.val]
+        res += self.preorderTraversal(root.left)
+        res += self.preorderTraversal(root.right)
+        return res
+
+    def inorderTraversal(self, root):
+        res = []
+        if not root: return res
+        res += self.inorderTraversal(root.left)
+        res += [root.val]
+        res += self.inorderTraversal(root.right)
         return res

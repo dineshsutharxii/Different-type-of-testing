@@ -146,6 +146,7 @@ def test_merge_intervals():
     assert merge_intervals([[1,4],[4,5]]) == [[1,5]]
 
 def test_non_overlapping_intervals():
+    print(' --- Inside test_non_overlapping_intervals ---')
     assert non_overlapping_intervals([[1,2],[2,3],[3,4],[1,3]]) == 1
     assert non_overlapping_intervals([[1,2],[1,2],[1,2]]) == 2
     assert non_overlapping_intervals([[1,2],[2,3]]) == 0
@@ -157,5 +158,14 @@ def sample_tree():
     root.right.left = TreeNode(3)
     return root
 
-def test_postorderTraversal(sample_tree):
+def test_postorderTraversal(sample_tree): #left->right->Node
+    print(' --- Inside test_postorderTraversal ---')
     assert Solution().postorderTraversal(sample_tree) == [3,2,1]
+
+def test_preorderTraversal(sample_tree): #Node->left->right
+    print(' --- Inside test_preorderTraversal ---')
+    assert Solution().preorderTraversal(sample_tree) == [1,2,3]
+
+def test_inorderTraversal(sample_tree): #left->node->Right
+    print(' --- Inside test_inorderTraversal ---')
+    assert Solution().inorderTraversal(sample_tree) == [1,3,2]
