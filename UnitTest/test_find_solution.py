@@ -169,3 +169,7 @@ def test_preorderTraversal(sample_tree): #Node->left->right
 def test_inorderTraversal(sample_tree): #left->node->Right
     print(' --- Inside test_inorderTraversal ---')
     assert Solution().inorderTraversal(sample_tree) == [1,3,2]
+
+def test_levelorderTraversal(sample_tree):
+    print(' --- Inside test_levelorderTraversal ---')
+    assert Solution().levelorderTraversal(sample_tree) == [[1], [2], [3]]
