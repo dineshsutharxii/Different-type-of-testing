@@ -173,3 +173,7 @@ def test_inorderTraversal(sample_tree): #left->node->Right
 def test_levelorderTraversal(sample_tree):
     print(' --- Inside test_levelorderTraversal ---')
     assert Solution().levelorderTraversal(sample_tree) == [[1], [2], [3]]
+
+def test_depth_of_binary_tree(sample_tree):
+    print(' --- Inside test_depth_of_binary_tree ---')
+    assert Solution().depth_of_binary_tree(sample_tree) == 3

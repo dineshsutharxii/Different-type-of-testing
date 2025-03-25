@@ -371,3 +371,9 @@ class Solution:
                     queue.append(node.right)
             res.append(level)
         return res
+
+    def depth_of_binary_tree(self, root):
+        if not root: return 0
+        left_subtree = self.depth_of_binary_tree(root.left)
+        right_subtree = self.depth_of_binary_tree(root.right)
+        return max(left_subtree, right_subtree) + 1
