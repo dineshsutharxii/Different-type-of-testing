@@ -377,3 +377,15 @@ class Solution:
         left_subtree = self.depth_of_binary_tree(root.left)
         right_subtree = self.depth_of_binary_tree(root.right)
         return max(left_subtree, right_subtree) + 1
+
+    def balanced_binary_tree(self, root):
+        return self.height(root) != -1
+
+    def height(self, root):
+        if root == None: return 0
+        lh = self.height(root.left)
+        rh = self.height(root.right)
+        if rh == -1 or lh == -1: return -1
+
+        if abs(lh - rh) > 1: return -1
+        return max(lh, rh) + 1

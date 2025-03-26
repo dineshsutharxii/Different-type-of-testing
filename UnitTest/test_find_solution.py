@@ -158,6 +158,14 @@ def sample_tree():
     root.right.left = TreeNode(3)
     return root
 
+@pytest.fixture
+def sample_tree_2():
+    root = TreeNode(3)
+    root.left = TreeNode(9)
+    root.right = TreeNode(20)
+    root.right.left = TreeNode(15)
+    root.right.right = TreeNode(7)
+
 def test_postorderTraversal(sample_tree): #left->right->Node
     print(' --- Inside test_postorderTraversal ---')
     assert Solution().postorderTraversal(sample_tree) == [3,2,1]
@@ -177,3 +185,10 @@ def test_levelorderTraversal(sample_tree):
 def test_depth_of_binary_tree(sample_tree):
     print(' --- Inside test_depth_of_binary_tree ---')
     assert Solution().depth_of_binary_tree(sample_tree) == 3
+
+def test_balanced_binary_tree(sample_tree, sample_tree_2):
+    print(' --- Inside test_balanced_binary_tree ---')
+    assert Solution().balanced_binary_tree(sample_tree) == False
+    assert Solution().balanced_binary_tree(sample_tree_2) == True
+
+
