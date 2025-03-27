@@ -389,3 +389,22 @@ class Solution:
 
         if abs(lh - rh) > 1: return -1
         return max(lh, rh) + 1
+
+    def diameter_of_binary_tree(self, root):
+        """
+        :type root: Optional[TreeNode]
+        :rtype: int
+        """
+
+        def diameter(node, res):
+            if not node:
+                return 0
+            lh = diameter(node.left, res)
+            rh = diameter(node.right, res)
+
+            res[0] = max(res[0], lh + rh)
+            return max(lh, rh) + 1
+
+        res = [0]
+        diameter(root, res)
+        return res[0]

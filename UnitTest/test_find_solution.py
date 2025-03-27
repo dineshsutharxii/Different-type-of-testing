@@ -131,25 +131,28 @@ def test_jump_game():
 def test_jump_game_2():
     print(' --- Inside test_jump_game_2 ---')
     assert jump_game_2([2, 3, 1, 1, 4]) == 2
-    assert jump_game_2([2,3,0,1,4]) == 2
-    assert jump_game_2([2,2,0,1,4]) == 3
+    assert jump_game_2([2, 3, 0, 1, 4]) == 2
+    assert jump_game_2([2, 2, 0, 1, 4]) == 3
+
 
 def test_insert_interval():
     print(' --- Inside test_insert_interval ---')
-    assert insert_interval([[1,3],[6,9]], [2,5]) == [[1,5],[6,9]]
-    assert insert_interval([[1,2],[3,5],[6,7],[8,10],[12,16]], [4,8]) == [[1,2],[3,10],[12,16]]
+    assert insert_interval([[1, 3], [6, 9]], [2, 5]) == [[1, 5], [6, 9]]
+    assert insert_interval([[1, 2], [3, 5], [6, 7], [8, 10], [12, 16]], [4, 8]) == [[1, 2], [3, 10], [12, 16]]
 
 
 def test_merge_intervals():
     print(' --- Inside test_merge_intervals ---')
-    assert merge_intervals([[1,3],[2,6],[8,10],[15,18]]) == [[1,6],[8,10],[15,18]]
-    assert merge_intervals([[1,4],[4,5]]) == [[1,5]]
+    assert merge_intervals([[1, 3], [2, 6], [8, 10], [15, 18]]) == [[1, 6], [8, 10], [15, 18]]
+    assert merge_intervals([[1, 4], [4, 5]]) == [[1, 5]]
+
 
 def test_non_overlapping_intervals():
     print(' --- Inside test_non_overlapping_intervals ---')
-    assert non_overlapping_intervals([[1,2],[2,3],[3,4],[1,3]]) == 1
-    assert non_overlapping_intervals([[1,2],[1,2],[1,2]]) == 2
-    assert non_overlapping_intervals([[1,2],[2,3]]) == 0
+    assert non_overlapping_intervals([[1, 2], [2, 3], [3, 4], [1, 3]]) == 1
+    assert non_overlapping_intervals([[1, 2], [1, 2], [1, 2]]) == 2
+    assert non_overlapping_intervals([[1, 2], [2, 3]]) == 0
+
 
 @pytest.fixture
 def sample_tree():
@@ -157,6 +160,7 @@ def sample_tree():
     root.right = TreeNode(2)
     root.right.left = TreeNode(3)
     return root
+
 
 @pytest.fixture
 def sample_tree_2():
@@ -166,25 +170,31 @@ def sample_tree_2():
     root.right.left = TreeNode(15)
     root.right.right = TreeNode(7)
 
-def test_postorderTraversal(sample_tree): #left->right->Node
+
+def test_postorderTraversal(sample_tree):  #left->right->Node
     print(' --- Inside test_postorderTraversal ---')
-    assert Solution().postorderTraversal(sample_tree) == [3,2,1]
+    assert Solution().postorderTraversal(sample_tree) == [3, 2, 1]
 
-def test_preorderTraversal(sample_tree): #Node->left->right
+
+def test_preorderTraversal(sample_tree):  #Node->left->right
     print(' --- Inside test_preorderTraversal ---')
-    assert Solution().preorderTraversal(sample_tree) == [1,2,3]
+    assert Solution().preorderTraversal(sample_tree) == [1, 2, 3]
 
-def test_inorderTraversal(sample_tree): #left->node->Right
+
+def test_inorderTraversal(sample_tree):  #left->node->Right
     print(' --- Inside test_inorderTraversal ---')
-    assert Solution().inorderTraversal(sample_tree) == [1,3,2]
+    assert Solution().inorderTraversal(sample_tree) == [1, 3, 2]
+
 
 def test_levelorderTraversal(sample_tree):
     print(' --- Inside test_levelorderTraversal ---')
     assert Solution().levelorderTraversal(sample_tree) == [[1], [2], [3]]
 
+
 def test_depth_of_binary_tree(sample_tree):
     print(' --- Inside test_depth_of_binary_tree ---')
     assert Solution().depth_of_binary_tree(sample_tree) == 3
+
 
 def test_balanced_binary_tree(sample_tree, sample_tree_2):
     print(' --- Inside test_balanced_binary_tree ---')
@@ -192,3 +202,5 @@ def test_balanced_binary_tree(sample_tree, sample_tree_2):
     assert Solution().balanced_binary_tree(sample_tree_2) == True
 
 
+def test_diameter_of_binary_tree(sample_tree_2):
+    assert Solution().diameter_of_binary_tree(sample_tree_2) == 4
