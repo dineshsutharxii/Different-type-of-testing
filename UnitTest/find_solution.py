@@ -1,3 +1,6 @@
+from collections import deque
+
+
 def twoSum(nums, target):
     h = {}
     for i, num in enumerate(nums):
@@ -409,3 +412,21 @@ class Solution:
         elif p and q and p.val == q.val: return self.identical_trees_or_not(p.left, q.left) and self.identical_trees_or_not(p.right, q.right)
         else:
             return False
+
+    def zigzagLevelOrder(self, root):
+        if not root: return []
+        queue = deque([root])
+        result, direction = [], 1
+        while queue:
+            level = [node.val for node in queue]
+            if direction == -1:
+                level.reverse()
+            result.append(level)
+            direction *= -1
+            for i in range(len(queue)):
+                node = queue.popleft()
+                if node.left:
+                    queue.append(node.left)
+                if node.right:
+                    queue.append(node.right)
+        return result
