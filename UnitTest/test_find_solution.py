@@ -204,3 +204,7 @@ def test_balanced_binary_tree(sample_tree, sample_tree_2):
 
 def test_diameter_of_binary_tree(sample_tree_2):
     assert Solution().diameter_of_binary_tree(sample_tree_2) == 4
+
+def test_identical_trees_or_not(sample_tree, sample_tree_2):
+    assert Solution().identical_trees_or_not(sample_tree,sample_tree) == True
+    assert Solution().identical_trees_or_not(sample_tree, sample_tree_2) == False

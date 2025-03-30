@@ -403,3 +403,9 @@ class Solution:
         res = [0]
         diameter(root, res)
         return res[0]
+
+    def identical_trees_or_not(self, p, q):
+        if not p and not q: return True
+        elif p and q and p.val == q.val: return self.identical_trees_or_not(p.left, q.left) and self.identical_trees_or_not(p.right, q.right)
+        else:
+            return False
