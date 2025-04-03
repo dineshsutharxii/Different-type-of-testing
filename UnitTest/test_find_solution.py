@@ -203,11 +203,18 @@ def test_balanced_binary_tree(sample_tree, sample_tree_2):
 
 
 def test_diameter_of_binary_tree(sample_tree_2):
+    print(' --- Inside test_diameter_of_binary_tree ---')
     assert Solution().diameter_of_binary_tree(sample_tree_2) == 4
 
 def test_identical_trees_or_not(sample_tree, sample_tree_2):
+    print(' --- Inside test_zigzagLevelOrder ---')
     assert Solution().identical_trees_or_not(sample_tree,sample_tree) == True
     assert Solution().identical_trees_or_not(sample_tree, sample_tree_2) == False
 
 def test_zigzagLevelOrder(sample_tree_2):
+    print(' --- Inside test_zigzagLevelOrder ---')
     assert Solution().zigzagLevelOrder(sample_tree_2) == []
+
+def test_search_in_bst(sample_tree):
+    print(' --- Inside test_search_in_bst ---')
+    assert Solution().search_in_bst(sample_tree, 2) == []

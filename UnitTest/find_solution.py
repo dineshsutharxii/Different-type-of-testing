@@ -430,3 +430,16 @@ class Solution:
                 if node.right:
                     queue.append(node.right)
         return result
+
+    def search_in_bst(self, root, val):
+        stk = [root]
+        if stk:
+            node = stk.pop()
+            print(node)
+            if node.val == val:
+                return node
+            elif node.val < val and node.right:
+                stk.append(node.right)
+            elif node.val > val and node.left:
+                stk.append(node.left)
+        return None
