@@ -443,3 +443,28 @@ class Solution:
             elif node.val > val and node.left:
                 stk.append(node.left)
         return None
+
+    def max_sum_path(self, arr1, arr2):
+        i = j = 0
+        len_arr1, len_arr2 = len(arr1), len(arr2)
+        sum_arr1 = sum_arr2 = res = 0
+        while i < len_arr1 and j < len_arr2:
+            if arr1[i] < arr2[j]:
+                sum_arr1 += arr1[i]
+                i += 1
+            elif arr2[j] < arr1[i]:
+                sum_arr2 += arr2[j]
+                j += 1
+            else:
+                res += max(sum_arr1, sum_arr2) + arr1[i]
+                i += 1
+                j += 1
+                sum_arr1 = sum_arr2 = 0
+        while i < len_arr1:
+            sum_arr1 += arr1[i]
+            i += 1
+        while j < len_arr2:
+            sum_arr2 += arr2[j]
+            j += 1
+        res += max(sum_arr1, sum_arr2)
+        return res
