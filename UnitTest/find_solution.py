@@ -468,3 +468,8 @@ class Solution:
             j += 1
         res += max(sum_arr1, sum_arr2)
         return res
+    def subsetXORSum(self, nums):
+        total = 0
+        for num in nums:
+            total |= num
+        return total * (1 << (len(nums) - 1))
