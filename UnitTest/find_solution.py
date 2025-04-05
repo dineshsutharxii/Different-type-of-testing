@@ -408,8 +408,10 @@ class Solution:
         return res[0]
 
     def identical_trees_or_not(self, p, q):
-        if not p and not q: return True
-        elif p and q and p.val == q.val: return self.identical_trees_or_not(p.left, q.left) and self.identical_trees_or_not(p.right, q.right)
+        if not p and not q:
+            return True
+        elif p and q and p.val == q.val:
+            return self.identical_trees_or_not(p.left, q.left) and self.identical_trees_or_not(p.right, q.right)
         else:
             return False
 
@@ -468,8 +470,15 @@ class Solution:
             j += 1
         res += max(sum_arr1, sum_arr2)
         return res
+
     def subsetXORSum(self, nums):
         total = 0
         for num in nums:
             total |= num
         return total * (1 << (len(nums) - 1))
+
+    def find_subset(self, arr):
+        if not arr:
+            return [[]]
+        subsets = self.find_subset(arr[1:])
+        return subsets + [[arr[0]] + s for s in subsets]
