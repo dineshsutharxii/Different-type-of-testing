@@ -236,4 +236,5 @@ def test_subsetXORSum():
 
 def test_find_subset():
     print(' --- Inside test_max_sum_path ---')
+    assert Solution().find_subset([1, 2]) == [[], [2], [1], [1, 2]]
     assert Solution().find_subset([1, 2, 3]) == [[], [3], [2], [2, 3], [1], [1, 3], [1, 2], [1, 2, 3]]
