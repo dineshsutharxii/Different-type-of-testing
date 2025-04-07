@@ -486,10 +486,10 @@ class Solution:
     def hourglassSum(self, arr):
         l = len(arr)
         max_sum = float('-inf')
-        for i in range(l-2):
-            for j in range(l-2):
-                hourglass_sum =(arr[i][j]+ arr[i][j+1]+ arr[i][j+2] +
-                                arr[i+1][j+1] +
-                                arr[i+2][j] + arr[i+2][j+1] + arr[i+2][j+2])
+        for i in range(l - 2):
+            for j in range(l - 2):
+                hourglass_sum = (arr[i][j] + arr[i][j + 1] + arr[i][j + 2] +
+                                 arr[i + 1][j + 1] +
+                                 arr[i + 2][j] + arr[i + 2][j + 1] + arr[i + 2][j + 2])
                 max_sum = max(max_sum, hourglass_sum)
         return max_sum
