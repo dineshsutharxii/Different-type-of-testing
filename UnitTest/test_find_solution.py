@@ -247,3 +247,6 @@ def test_hourglassSum():
     assert Solution().hourglassSum(
         [[1, 1, 1, 0, 0, 0], [0, 1, 0, 0, 0, 0], [1, 1, 1, 0, 0, 0], [0, 0, 2, 4, 4, 0], [0, 0, 0, 2, 0, 0],
          [0, 0, 1, 2, 4, 0]]) == 19
+def test_minOperationsToMakeK():
+    print(' --- Inside test_minOperationsToMakeK ---')
+    assert Solution().minOperationsToMakeK([5,2,5,4,5], 2) == 2

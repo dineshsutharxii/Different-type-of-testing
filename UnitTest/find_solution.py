@@ -493,3 +493,13 @@ class Solution:
                                  arr[i + 2][j] + arr[i + 2][j + 1] + arr[i + 2][j + 2])
                 max_sum = max(max_sum, hourglass_sum)
         return max_sum
+
+    def minOperationsToMakeK(self, nums, k):
+        if k > min(nums):
+            return -1
+        unique_elements = set(nums)
+        unique_count = len(unique_elements)
+        if k in unique_elements:
+            return unique_count - 1
+        else:
+            return unique_count
