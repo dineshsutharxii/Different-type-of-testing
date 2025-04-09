@@ -250,3 +250,4 @@ def test_hourglassSum():
 def test_minOperationsToMakeK():
     print(' --- Inside test_minOperationsToMakeK ---')
     assert Solution().minOperationsToMakeK([5,2,5,4,5], 2) == 2
+    assert Solution().minOperationsToMakeK([2,1,2], 2) == -1
