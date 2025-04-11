@@ -255,3 +255,7 @@ def test_minOperationsToMakeK():
 def test_maximumBeauty():
     print(' --- Inside test_maximumBeauty ---')
     assert Solution().maximumBeauty([[1,2],[3,2],[2,4],[5,6],[3,5]], [1,2,3,4,5,6]) == [2,4,5,5,6,6]
+
+def test_kthSmallest(sample_tree_2):
+    print(' --- Inside test_maximumBeauty ---')
+    assert Solution().kthSmallest(sample_tree_2, 1) == 5
