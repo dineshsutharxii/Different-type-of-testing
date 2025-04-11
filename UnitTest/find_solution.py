@@ -521,3 +521,17 @@ class Solution:
                     ans.append(res[i][1])
                     break
         return ans
+
+
+def kthSmallest(self, root, k):
+    res = []
+    def inorder(node):
+        if not node: return
+        inorder(node.left)
+        if len(res) == k:
+            return
+        res.append(node.val)
+        inorder(node.right)
+
+    inorder(root)
+    return res[-1]
