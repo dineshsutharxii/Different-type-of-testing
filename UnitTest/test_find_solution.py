@@ -259,3 +259,8 @@ def test_maximumBeauty():
 def test_kthSmallest(sample_tree_2):
     print(' --- Inside test_maximumBeauty ---')
     assert Solution().kthSmallest(sample_tree_2, 1) == 5
+
+def test_countPairs():
+    print(' --- Inside test_countPairs ---')
+    assert Solution().countPairs([3,1,2,2,2,1,3], 2) == 4
+    assert Solution().countPairs([1,2,3,4], 1) == 0
