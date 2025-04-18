@@ -264,3 +264,8 @@ def test_countPairs():
     print(' --- Inside test_countPairs ---')
     assert Solution().countPairs([3,1,2,2,2,1,3], 2) == 4
     assert Solution().countPairs([1,2,3,4], 1) == 0
+
+def test_countAndSay():
+    print(' --- Inside test_countAndSay ---')
+    assert Solution().countAndSay(4) == "1211"
+    assert Solution().countAndSay(1) == "1"
