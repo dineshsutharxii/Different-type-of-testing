@@ -522,9 +522,9 @@ class Solution:
                     break
         return ans
 
-
     def kthSmallest(self, root, k):
         res = []
+
         def inorder(node):
             if not node: return
             inorder(node.left)
@@ -539,8 +539,8 @@ class Solution:
     def countPairs(self, nums, k) -> int:
         c = 0
         for i in range(len(nums)):
-            for j in range(i+1, len(nums)):
-                if nums[i] == nums[j] and (i*j)%k == 0:
+            for j in range(i + 1, len(nums)):
+                if nums[i] == nums[j] and (i * j) % k == 0:
                     c += 1
         return c
 
@@ -563,3 +563,18 @@ class Solution:
         for _ in range(n - 1):
             result = find_count(result)
         return result
+
+    def countFairPairs(self, nums, lower, upper):
+        def count(t):
+            i, j = 0, len(nums) - 1
+            res = 0
+            while i < j:
+                if nums[i] + nums[j] > t:
+                    j -= 1
+                else:
+                    res += j - i
+                    i += 1
+            return res
+
+        nums.sort()
+        return count(upper) - count(lower - 1)
