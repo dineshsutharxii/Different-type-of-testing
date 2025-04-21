@@ -592,3 +592,16 @@ class Solution:
                 else:
                     d[i] += 1
         return count
+
+    def numberOfArrays(self, differences, lower, upper):
+        mini_sum, maxi_sum, curr_sum = 0, 0, 0
+        for diff in differences:
+            curr_sum += diff
+            mini_sum = min(mini_sum, curr_sum)
+            maxi_sum = max(maxi_sum, curr_sum)
+        seq_range = maxi_sum - mini_sum
+        allowed_range = upper - lower
+        if seq_range > allowed_range:
+            return 0
+        else:
+            return allowed_range - seq_range + 1

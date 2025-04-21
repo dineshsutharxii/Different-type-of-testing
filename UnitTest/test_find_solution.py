@@ -279,3 +279,8 @@ def test_numRabbits():
     print(' --- Inside test_numRabbits ---')
     assert Solution().numRabbits([1,1,2]) == 5
     assert Solution().numRabbits([10,10,10]) == 11
+
+def test_numberOfArrays():
+    print(' --- Inside test_numberOfArrays ---')
+    assert Solution().numberOfArrays([1,-3,4], 1, 6) == 2
+    assert Solution().numberOfArrays([3,-4,5,1,-2], -4, 5) == 4
