@@ -605,3 +605,17 @@ class Solution:
             return 0
         else:
             return allowed_range - seq_range + 1
+
+    def maxMatrixSum(self, matrix):
+        res = 0
+        mini = float('inf')
+        neg_cnt = 0
+        for row in matrix:
+            for val in row:
+                res += abs(val)
+                mini = min(mini, abs(val))
+                if val < 0:
+                    neg_cnt += 1
+        if neg_cnt % 2 == 1:
+            res -= 2 * mini
+        return res
