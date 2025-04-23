@@ -286,6 +286,11 @@ def test_numberOfArrays():
     assert Solution().numberOfArrays([3,-4,5,1,-2], -4, 5) == 4
 
 def test_maxMatrixSum():
-    print(' --- Inside test_numberOfArrays ---')
+    print(' --- Inside test_maxMatrixSum ---')
     assert Solution().maxMatrixSum([[1,-1],[-1,1]]) == 4
     assert Solution().maxMatrixSum([[1,2,3],[-1,-2,-3],[1,2,3]]) ==16
+
+def test_countLargestGroup():
+    print(' --- Inside test_countLargestGroup ---')
+    assert Solution().countLargestGroup(13) == 4
+    assert Solution().countLargestGroup(2) == 2
