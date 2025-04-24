@@ -628,3 +628,16 @@ class Solution:
         c = collections.Counter(res)
         x = [i for i in c.values() if i == max(c.values())]
         return len(x)
+
+    def countCompleteSubarrays(self, nums):
+        n = len(nums)
+        target = len(set(nums))
+        res = 0
+        for i in range(n):
+            seen = set()
+            for j in range(i, n):
+                seen.add(nums[j])
+                if len(seen) == target:
+                    res += n - j
+                    break
+        return res

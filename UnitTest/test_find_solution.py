@@ -294,3 +294,8 @@ def test_countLargestGroup():
     print(' --- Inside test_countLargestGroup ---')
     assert Solution().countLargestGroup(13) == 4
     assert Solution().countLargestGroup(2) == 2
+
+def test_countCompleteSubarrays():
+    print(' --- Inside test_countLargestGroup ---')
+    assert Solution().countCompleteSubarrays([1,3,1,2,2]) == 4
+    assert Solution().countCompleteSubarrays([5,5,5,5]) == 10
