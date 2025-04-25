@@ -641,3 +641,13 @@ class Solution:
                     res += n - j
                     break
         return res
+
+    def countInterestingSubarrays(self, nums, modulo, k):
+        ans = prefix = 0
+        freq = collections.Counter({0 : 1})
+        for x in nums:
+            if x % modulo == k: prefix += 1
+            prefix %= modulo
+            ans += freq[(prefix-k) % modulo]
+            freq[prefix] += 1
+        return ans
