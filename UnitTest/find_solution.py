@@ -644,10 +644,25 @@ class Solution:
 
     def countInterestingSubarrays(self, nums, modulo, k):
         ans = prefix = 0
-        freq = collections.Counter({0 : 1})
+        freq = collections.Counter({0: 1})
         for x in nums:
             if x % modulo == k: prefix += 1
             prefix %= modulo
-            ans += freq[(prefix-k) % modulo]
+            ans += freq[(prefix - k) % modulo]
             freq[prefix] += 1
+        return ans
+
+    def countSubarrays(self, nums, minK, maxK):
+        ans = 0
+        j = -1
+        prevMinKIndex = -1
+        prevMaxKIndex = -1
+        for i, num in enumerate(nums):
+            if num < minK or num > maxK:
+                j = i
+            if num == minK:
+                prevMinKIndex = i
+            if num == maxK:
+                prevMaxKIndex = i
+            ans += max(0, min(prevMinKIndex, prevMaxKIndex) - j)
         return ans
