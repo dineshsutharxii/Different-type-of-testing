@@ -308,3 +308,8 @@ def test_countInterestingSubarrays():
 def test_countSubarrays():
     print(' --- Inside test_countSubarrays ---')
     assert Solution().countSubarrays([1,3,5,2,7,5], 1, 5) == 2
+
+def test_countSubarraysWithCondition():
+    print(' --- Inside test_countSubarrays ---')
+    assert Solution().countSubarraysWithCondition([1,2,1,4,1]) == 1
+    assert Solution().countSubarraysWithCondition([1,1,1]) == 0

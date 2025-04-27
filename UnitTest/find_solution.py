@@ -666,3 +666,10 @@ class Solution:
                 prevMaxKIndex = i
             ans += max(0, min(prevMinKIndex, prevMaxKIndex) - j)
         return ans
+
+    def countSubarraysWithCondition(self, nums):
+        cnt_of_subarray = 0
+        for i in range(len(nums) - 2):
+            if float(nums[i] + nums[i + 2]) == float(nums[i + 1] / 2):
+                cnt_of_subarray += 1
+        return cnt_of_subarray
