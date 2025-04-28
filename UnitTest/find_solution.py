@@ -673,3 +673,18 @@ class Solution:
             if float(nums[i] + nums[i + 2]) == float(nums[i + 1] / 2):
                 cnt_of_subarray += 1
         return cnt_of_subarray
+
+    def countSubarraysWithScoreLessThanK(self, nums, k: int) -> int:
+        def sum_and_max_multiplication(arr1):
+            return sum(arr1) * (len(arr1))
+
+        l, cnt = len(nums), 0
+        subarray = []
+        for i in range(l):
+            for j in range(i, l):
+                subarray.append(nums[i:j + 1])
+        print(subarray)
+        for ele in subarray:
+            if sum_and_max_multiplication(ele) < k:
+                cnt += 1
+        return cnt

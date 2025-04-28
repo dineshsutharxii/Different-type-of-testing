@@ -313,3 +313,8 @@ def test_countSubarraysWithCondition():
     print(' --- Inside test_countSubarrays ---')
     assert Solution().countSubarraysWithCondition([1,2,1,4,1]) == 1
     assert Solution().countSubarraysWithCondition([1,1,1]) == 0
+
+def test_countSubarraysWithScoreLessThanK():
+    print(' --- Inside test_countSubarraysWithScoreLessThanK ---')
+    assert Solution().countSubarraysWithScoreLessThanK([2,1,4,3,5], 10)
+    assert Solution().countSubarraysWithScoreLessThanK([1,1,1], 5)
