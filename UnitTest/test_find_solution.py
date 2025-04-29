@@ -318,3 +318,8 @@ def test_countSubarraysWithScoreLessThanK():
     print(' --- Inside test_countSubarraysWithScoreLessThanK ---')
     assert Solution().countSubarraysWithScoreLessThanK([2,1,4,3,5], 10)
     assert Solution().countSubarraysWithScoreLessThanK([1,1,1], 5)
+
+def test_count_Subarrays_max_Element_Appears_at_Least_K_Times():
+    print(' --- Inside test_count_Subarrays_max_Element_Appears_at_Least_K_Times ---')
+    assert Solution().count_Subarrays_max_Element_Appears_at_Least_K_Times([1,3,2,3,3], 2) == 6
+    assert Solution().count_Subarrays_max_Element_Appears_at_Least_K_Times([1,4,2,1],3) == 0

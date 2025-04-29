@@ -688,3 +688,19 @@ class Solution:
             if sum_and_max_multiplication(ele) < k:
                 cnt += 1
         return cnt
+
+    def count_Subarrays_max_Element_Appears_at_Least_K_Times(self, nums, k):
+        subarr = []
+        n, cnt = len(nums), 0
+        maxi = max(nums)
+        for i in range(n):
+            for j in range(i, n):
+                if nums[i:j + 1] not in subarr:
+                    subarr.append(nums[i:j + 1])
+        def max_element_k_times(arr1, k):
+            if arr1.count(maxi) >= k:
+                return True
+        for arr in subarr:
+            if max_element_k_times(arr, k):
+                cnt += 1
+        return cnt
