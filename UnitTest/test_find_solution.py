@@ -323,3 +323,8 @@ def test_count_Subarrays_max_Element_Appears_at_Least_K_Times():
     print(' --- Inside test_count_Subarrays_max_Element_Appears_at_Least_K_Times ---')
     assert Solution().count_Subarrays_max_Element_Appears_at_Least_K_Times([1,3,2,3,3], 2) == 6
     assert Solution().count_Subarrays_max_Element_Appears_at_Least_K_Times([1,4,2,1],3) == 0
+
+def test_findCountOfNumbersWithEvenString():
+    print(' --- Inside test_count_Subarrays_max_Element_Appears_at_Least_K_Times ---')
+    assert Solution().findCountOfNumbersWithEvenString([12,345,2,6,7896]) == 2
+    assert Solution().findCountOfNumbersWithEvenString([555,901,482,1771]) == 1

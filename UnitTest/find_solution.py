@@ -1,5 +1,6 @@
 import collections
 from collections import deque
+from math import floor, log10
 
 
 def twoSum(nums, target):
@@ -704,3 +705,16 @@ class Solution:
             if max_element_k_times(arr, k):
                 cnt += 1
         return cnt
+
+    def findCountOfNumbersWithEvenString(self, nums):
+        # cnt = 0
+        # for ele in nums:
+        #     if len(str(ele))%2 == 0:
+        #         cnt += 1
+        # return cnt
+        result = 0
+        for num in nums:
+            num_digits = floor(log10(num)) + 1
+            if num_digits % 2 == 0:
+                result += 1
+        return result
