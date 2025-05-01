@@ -718,3 +718,13 @@ class Solution:
             if num_digits % 2 == 0:
                 result += 1
         return result
+
+    def addSpaces(self, s: str, spaces):
+        m, n = len(spaces), len(s)
+        t = [' '] * (m + n)
+        j = 0
+        for i, c in enumerate(s):
+            if j < m and i == spaces[j]:
+                j += 1
+            t[i + j] = s[i]
+        return "".join(t)

@@ -328,3 +328,7 @@ def test_findCountOfNumbersWithEvenString():
     print(' --- Inside test_count_Subarrays_max_Element_Appears_at_Least_K_Times ---')
     assert Solution().findCountOfNumbersWithEvenString([12,345,2,6,7896]) == 2
     assert Solution().findCountOfNumbersWithEvenString([555,901,482,1771]) == 1
+
+def test_addSpaces():
+    print(' --- Inside test_addSpaces ---')
+    assert Solution().addSpaces("LeetcodeHelpsMeLearn", [8,13,15]) == "Leetcode Helps Me Learn"
