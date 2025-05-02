@@ -332,7 +332,7 @@ def test_findCountOfNumbersWithEvenString():
 def test_addSpaces():
     print(' --- Inside test_addSpaces ---')
     assert Solution().addSpaces("LeetcodeHelpsMeLearn", [8,13,15]) == "Leetcode Helps Me Learn"
-
+    assert Solution().addSpaces("icodeinpython", [1,5,7,9]) == "i code in py thon"
 def test_pushDominoes():
     print(' --- Inside test_pushDominoes ---')
     assert Solution().pushDominoes("RR.L") == "RR.L"
