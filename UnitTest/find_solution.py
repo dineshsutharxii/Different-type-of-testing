@@ -738,3 +738,15 @@ class Solution:
             dominoes = dominoes.replace('.L', 'LL')
 
         return dominoes.replace('xxx', 'R.L')
+
+
+    def minDominoRotations(self, A, B) -> int:
+        if len(A) != len(B): return -1
+        same, countA, countB = collections.Counter(), collections.Counter(A), collections.Counter(B)
+        for a, b in zip(A, B):
+            if a == b:
+                same[a] += 1
+        for i in range(1, 7):
+            if countA[i] + countB[i] - same[i] == len(A):
+                return min(countA[i], countB[i]) - same[i]
+        return -1

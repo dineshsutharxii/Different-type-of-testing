@@ -337,3 +337,8 @@ def test_pushDominoes():
     print(' --- Inside test_pushDominoes ---')
     assert Solution().pushDominoes("RR.L") == "RR.L"
     assert Solution().pushDominoes(".L.R...LR..L..") == "LL.RR.LLRRLL.."
+
+def test_minDominoRotations():
+    print(' --- Inside test_minDominoRotations ---')
+    assert Solution().minDominoRotations([3,5,1,2,3], [3,6,3,3,4]) == -1
+    assert Solution().minDominoRotations([2,1,2,4,2,2], [5,2,6,2,3,2]) == 2
