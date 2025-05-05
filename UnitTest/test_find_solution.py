@@ -342,3 +342,8 @@ def test_minDominoRotations():
     print(' --- Inside test_minDominoRotations ---')
     assert Solution().minDominoRotations([3,5,1,2,3], [3,6,3,3,4]) == -1
     assert Solution().minDominoRotations([2,1,2,4,2,2], [5,2,6,2,3,2]) == 2
+
+def test_numTilings():
+    print(' --- Inside test_minDominoRotations ---')
+    assert Solution().numTilings(3) == 5
+    assert Solution().numTilings(1) == 1
