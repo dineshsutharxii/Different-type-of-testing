@@ -247,103 +247,131 @@ def test_hourglassSum():
     assert Solution().hourglassSum(
         [[1, 1, 1, 0, 0, 0], [0, 1, 0, 0, 0, 0], [1, 1, 1, 0, 0, 0], [0, 0, 2, 4, 4, 0], [0, 0, 0, 2, 0, 0],
          [0, 0, 1, 2, 4, 0]]) == 19
+
+
 def test_minOperationsToMakeK():
     print(' --- Inside test_minOperationsToMakeK ---')
-    assert Solution().minOperationsToMakeK([5,2,5,4,5], 2) == 2
-    assert Solution().minOperationsToMakeK([2,1,2], 2) == -1
+    assert Solution().minOperationsToMakeK([5, 2, 5, 4, 5], 2) == 2
+    assert Solution().minOperationsToMakeK([2, 1, 2], 2) == -1
+
 
 def test_maximumBeauty():
     print(' --- Inside test_maximumBeauty ---')
-    assert Solution().maximumBeauty([[1,2],[3,2],[2,4],[5,6],[3,5]], [1,2,3,4,5,6]) == [2,4,5,5,6,6]
+    assert Solution().maximumBeauty([[1, 2], [3, 2], [2, 4], [5, 6], [3, 5]], [1, 2, 3, 4, 5, 6]) == [2, 4, 5, 5, 6, 6]
+
 
 def test_kthSmallest(sample_tree_2):
     print(' --- Inside test_maximumBeauty ---')
     assert Solution().kthSmallest(sample_tree_2, 1) == 5
 
+
 def test_countPairs():
     print(' --- Inside test_countPairs ---')
-    assert Solution().countPairs([3,1,2,2,2,1,3], 2) == 4
-    assert Solution().countPairs([1,2,3,4], 1) == 0
+    assert Solution().countPairs([3, 1, 2, 2, 2, 1, 3], 2) == 4
+    assert Solution().countPairs([1, 2, 3, 4], 1) == 0
+
 
 def test_countAndSay():
     print(' --- Inside test_countAndSay ---')
     assert Solution().countAndSay(4) == "1211"
     assert Solution().countAndSay(1) == "1"
 
+
 def test_countFairPairs():
     print(' --- Inside test_countFairPairs ---')
-    assert Solution().countFairPairs([0,1,7,4,4,5], 3, 6) == 6
-    assert Solution().countFairPairs([1,7,9,2,5], 11, 11) == 1
+    assert Solution().countFairPairs([0, 1, 7, 4, 4, 5], 3, 6) == 6
+    assert Solution().countFairPairs([1, 7, 9, 2, 5], 11, 11) == 1
+
 
 def test_numRabbits():
     print(' --- Inside test_numRabbits ---')
-    assert Solution().numRabbits([1,1,2]) == 5
-    assert Solution().numRabbits([10,10,10]) == 11
+    assert Solution().numRabbits([1, 1, 2]) == 5
+    assert Solution().numRabbits([10, 10, 10]) == 11
+
 
 def test_numberOfArrays():
     print(' --- Inside test_numberOfArrays ---')
-    assert Solution().numberOfArrays([1,-3,4], 1, 6) == 2
-    assert Solution().numberOfArrays([3,-4,5,1,-2], -4, 5) == 4
+    assert Solution().numberOfArrays([1, -3, 4], 1, 6) == 2
+    assert Solution().numberOfArrays([3, -4, 5, 1, -2], -4, 5) == 4
+
 
 def test_maxMatrixSum():
     print(' --- Inside test_maxMatrixSum ---')
-    assert Solution().maxMatrixSum([[1,-1],[-1,1]]) == 4
-    assert Solution().maxMatrixSum([[1,2,3],[-1,-2,-3],[1,2,3]]) ==16
+    assert Solution().maxMatrixSum([[1, -1], [-1, 1]]) == 4
+    assert Solution().maxMatrixSum([[1, 2, 3], [-1, -2, -3], [1, 2, 3]]) == 16
+
 
 def test_countLargestGroup():
     print(' --- Inside test_countLargestGroup ---')
     assert Solution().countLargestGroup(13) == 4
     assert Solution().countLargestGroup(2) == 2
 
+
 def test_countCompleteSubarrays():
     print(' --- Inside test_countCompleteSubarrays ---')
-    assert Solution().countCompleteSubarrays([1,3,1,2,2]) == 4
-    assert Solution().countCompleteSubarrays([5,5,5,5]) == 10
+    assert Solution().countCompleteSubarrays([1, 3, 1, 2, 2]) == 4
+    assert Solution().countCompleteSubarrays([5, 5, 5, 5]) == 10
 
 
 def test_countInterestingSubarrays():
     print(' --- Inside test_countInterestingSubarrays ---')
-    assert Solution().countInterestingSubarrays([3,2,4], 2, 1) == 3
+    assert Solution().countInterestingSubarrays([3, 2, 4], 2, 1) == 3
+
 
 def test_countSubarrays():
     print(' --- Inside test_countSubarrays ---')
-    assert Solution().countSubarrays([1,3,5,2,7,5], 1, 5) == 2
+    assert Solution().countSubarrays([1, 3, 5, 2, 7, 5], 1, 5) == 2
+
 
 def test_countSubarraysWithCondition():
     print(' --- Inside test_countSubarrays ---')
-    assert Solution().countSubarraysWithCondition([1,2,1,4,1]) == 1
-    assert Solution().countSubarraysWithCondition([1,1,1]) == 0
+    assert Solution().countSubarraysWithCondition([1, 2, 1, 4, 1]) == 1
+    assert Solution().countSubarraysWithCondition([1, 1, 1]) == 0
+
 
 def test_countSubarraysWithScoreLessThanK():
     print(' --- Inside test_countSubarraysWithScoreLessThanK ---')
-    assert Solution().countSubarraysWithScoreLessThanK([2,1,4,3,5], 10)
-    assert Solution().countSubarraysWithScoreLessThanK([1,1,1], 5)
+    assert Solution().countSubarraysWithScoreLessThanK([2, 1, 4, 3, 5], 10)
+    assert Solution().countSubarraysWithScoreLessThanK([1, 1, 1], 5)
+
 
 def test_count_Subarrays_max_Element_Appears_at_Least_K_Times():
     print(' --- Inside test_count_Subarrays_max_Element_Appears_at_Least_K_Times ---')
-    assert Solution().count_Subarrays_max_Element_Appears_at_Least_K_Times([1,3,2,3,3], 2) == 6
-    assert Solution().count_Subarrays_max_Element_Appears_at_Least_K_Times([1,4,2,1],3) == 0
+    assert Solution().count_Subarrays_max_Element_Appears_at_Least_K_Times([1, 3, 2, 3, 3], 2) == 6
+    assert Solution().count_Subarrays_max_Element_Appears_at_Least_K_Times([1, 4, 2, 1], 3) == 0
+
 
 def test_findCountOfNumbersWithEvenString():
     print(' --- Inside test_count_Subarrays_max_Element_Appears_at_Least_K_Times ---')
-    assert Solution().findCountOfNumbersWithEvenString([12,345,2,6,7896]) == 2
-    assert Solution().findCountOfNumbersWithEvenString([555,901,482,1771]) == 1
+    assert Solution().findCountOfNumbersWithEvenString([12, 345, 2, 6, 7896]) == 2
+    assert Solution().findCountOfNumbersWithEvenString([555, 901, 482, 1771]) == 1
+
 
 def test_addSpaces():
     print(' --- Inside test_addSpaces ---')
-    assert Solution().addSpaces("LeetcodeHelpsMeLearn", [8,13,15]) == "Leetcode Helps Me Learn"
-    assert Solution().addSpaces("icodeinpython", [1,5,7,9]) == "i code in py thon"
+    assert Solution().addSpaces("LeetcodeHelpsMeLearn", [8, 13, 15]) == "Leetcode Helps Me Learn"
+    assert Solution().addSpaces("icodeinpython", [1, 5, 7, 9]) == "i code in py thon"
+
+
 def test_pushDominoes():
     print(' --- Inside test_pushDominoes ---')
     assert Solution().pushDominoes("RR.L") == "RR.L"
     assert Solution().pushDominoes(".L.R...LR..L..") == "LL.RR.LLRRLL.."
 
+
 def test_minDominoRotations():
     print(' --- Inside test_minDominoRotations ---')
-    assert Solution().minDominoRotations([3,5,1,2,3], [3,6,3,3,4]) == -1
-    assert Solution().minDominoRotations([2,1,2,4,2,2], [5,2,6,2,3,2]) == 2
+    assert Solution().minDominoRotations([3, 5, 1, 2, 3], [3, 6, 3, 3, 4]) == -1
+    assert Solution().minDominoRotations([2, 1, 2, 4, 2, 2], [5, 2, 6, 2, 3, 2]) == 2
+
 
 def test_numTilings():
     print(' --- Inside test_minDominoRotations ---')
     assert Solution().numTilings(3) == 5
     assert Solution().numTilings(1) == 1
+
+
+def test_buildArray():
+    print(' --- Inside test_minDominoRotations ---')
+    assert Solution().buildArray([0, 2, 1, 5, 3, 4]) == [0, 1, 2, 4, 5, 3]
+    assert Solution().buildArray([5, 0, 1, 2, 3, 4]) == [4, 5, 0, 1, 2, 3]
