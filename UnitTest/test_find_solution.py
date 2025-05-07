@@ -369,7 +369,7 @@ def test_numTilings():
     print(' --- Inside test_minDominoRotations ---')
     assert Solution().numTilings(3) == 5
     assert Solution().numTilings(1) == 1
-
+    assert Solution().numTilings(9) == 569
 
 def test_buildArray():
     print(' --- Inside test_minDominoRotations ---')
