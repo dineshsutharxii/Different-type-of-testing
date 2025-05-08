@@ -366,12 +366,18 @@ def test_minDominoRotations():
 
 
 def test_numTilings():
-    print(' --- Inside test_minDominoRotations ---')
+    print(' --- Inside test_numTilings ---')
     assert Solution().numTilings(3) == 5
     assert Solution().numTilings(1) == 1
     assert Solution().numTilings(9) == 569
 
 def test_buildArray():
-    print(' --- Inside test_minDominoRotations ---')
+    print(' --- Inside test_buildArray ---')
     assert Solution().buildArray([0, 2, 1, 5, 3, 4]) == [0, 1, 2, 4, 5, 3]
     assert Solution().buildArray([5, 0, 1, 2, 3, 4]) == [4, 5, 0, 1, 2, 3]
+
+def test_minTimeToReach():
+    print(' --- Inside test_minTimeToReach ---')
+    assert Solution().minTimeToReach([[0,4],[4,4]]) == 7
+    assert Solution().minTimeToReach([[0,0,0,0],[0,0,0,0]]) == 6
+
