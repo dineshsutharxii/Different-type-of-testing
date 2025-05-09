@@ -381,3 +381,7 @@ def test_minTimeToReach():
     assert Solution().minTimeToReach([[0,4],[4,4]]) == 7
     assert Solution().minTimeToReach([[0,0,0,0],[0,0,0,0]]) == 6
 
+def test_maximumBeauty():
+    print(' --- Inside test_maximumBeauty ---')
+    assert Solution().maximumBeauty([4,6,1,2], 2) == 3
+

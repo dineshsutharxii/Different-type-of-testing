@@ -779,3 +779,10 @@ class Solution:
                     t = max(time, moveTime[X][Y]) + step
                     heappush(heap, [t, X, Y, 3 - step])
                     seen.add((X, Y))
+
+    def maximumBeauty(self, nums, k):
+        nums.sort()
+        l = 0
+        for r in range(len(nums)):
+            if nums[r] - nums[l] > k * 2: l += 1
+        return r - l + 1
