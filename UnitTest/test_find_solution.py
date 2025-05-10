@@ -385,3 +385,7 @@ def test_maximumBeauty():
     print(' --- Inside test_maximumBeauty ---')
     assert Solution().maximumBeauty([4,6,1,2], 2) == 3
 
+def test_minSum():
+    print(' --- Inside test_minSum ---')
+    assert Solution().minSum([3,2,0,1,0], [6,5,0]) == 12
+
