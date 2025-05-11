@@ -699,9 +699,11 @@ class Solution:
             for j in range(i, n):
                 if nums[i:j + 1] not in subarr:
                     subarr.append(nums[i:j + 1])
+
         def max_element_k_times(arr1, k):
             if arr1.count(maxi) >= k:
                 return True
+
         for arr in subarr:
             if max_element_k_times(arr, k):
                 cnt += 1
@@ -739,7 +741,6 @@ class Solution:
             dominoes = dominoes.replace('.L', 'LL')
 
         return dominoes.replace('xxx', 'R.L')
-
 
     def minDominoRotations(self, A, B) -> int:
         if len(A) != len(B): return -1
@@ -798,3 +799,13 @@ class Solution:
             return sum1 if count2 else -1
         else:
             return sum2 if count1 else -1
+
+    def threeConsecutiveOdds(self, arr):
+        cnt = 0
+        for ele in arr:
+            if ele % 2 == 1:
+                cnt += 1
+            else:
+                cnt = 0
+            if cnt == 3: return True
+        return False

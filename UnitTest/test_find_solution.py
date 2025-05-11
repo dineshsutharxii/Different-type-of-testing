@@ -371,21 +371,30 @@ def test_numTilings():
     assert Solution().numTilings(1) == 1
     assert Solution().numTilings(9) == 569
 
+
 def test_buildArray():
     print(' --- Inside test_buildArray ---')
     assert Solution().buildArray([0, 2, 1, 5, 3, 4]) == [0, 1, 2, 4, 5, 3]
     assert Solution().buildArray([5, 0, 1, 2, 3, 4]) == [4, 5, 0, 1, 2, 3]
 
+
 def test_minTimeToReach():
     print(' --- Inside test_minTimeToReach ---')
-    assert Solution().minTimeToReach([[0,4],[4,4]]) == 7
-    assert Solution().minTimeToReach([[0,0,0,0],[0,0,0,0]]) == 6
+    assert Solution().minTimeToReach([[0, 4], [4, 4]]) == 7
+    assert Solution().minTimeToReach([[0, 0, 0, 0], [0, 0, 0, 0]]) == 6
+
 
 def test_maximumBeauty():
     print(' --- Inside test_maximumBeauty ---')
-    assert Solution().maximumBeauty([4,6,1,2], 2) == 3
+    assert Solution().maximumBeauty([4, 6, 1, 2], 2) == 3
+
 
 def test_minSum():
     print(' --- Inside test_minSum ---')
-    assert Solution().minSum([3,2,0,1,0], [6,5,0]) == 12
+    assert Solution().minSum([3, 2, 0, 1, 0], [6, 5, 0]) == 12
 
+
+def test_threeConsecutiveOdds():
+    print(' --- Inside test_threeConsecutiveOdds ---')
+    assert Solution().threeConsecutiveOdds([2,6,4,1]) == False
+    assert Solution().threeConsecutiveOdds([1,2,34,3,4,5,7,23,12]) == True
