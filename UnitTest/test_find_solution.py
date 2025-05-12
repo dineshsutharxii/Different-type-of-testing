@@ -398,3 +398,8 @@ def test_threeConsecutiveOdds():
     print(' --- Inside test_threeConsecutiveOdds ---')
     assert Solution().threeConsecutiveOdds([2,6,4,1]) == False
     assert Solution().threeConsecutiveOdds([1,2,34,3,4,5,7,23,12]) == True
+
+def test_findScore():
+    print(' --- Inside test_findScore ---')
+    assert Solution().findScore([2,1,3,4,5,2]) == 7
+    assert Solution().findScore([2,3,5,1,3,2]) == 5
