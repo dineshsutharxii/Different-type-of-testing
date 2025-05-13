@@ -823,3 +823,14 @@ class Solution:
                 i += 1
             i += 1
         return res
+
+    def lengthAfterTransformations(self, s, t):
+        for i in range(t):
+            new_str = ""
+            for ele in s:
+                if ele == 'z':
+                    new_str += 'ab'
+                else:
+                    new_str += chr(ord(ele) + 1)
+            s = new_str
+        return len(new_str)
