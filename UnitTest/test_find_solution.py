@@ -410,3 +410,8 @@ def test_lengthAfterTransformations():
     print(' --- Inside test_lengthAfterTransformations ---')
     assert Solution().lengthAfterTransformations("abcyy", 2) == 7
     assert Solution().lengthAfterTransformations("azbk", 1) == 5
+
+def test_getFinalState():
+    print(' --- Inside test_getFinalState ---')
+    assert Solution().getFinalState([2,1,3,5,6], 5, 2) == [8,4,6,5,6]
+    assert Solution().getFinalState([1,2], 3, 4) == [16,8]

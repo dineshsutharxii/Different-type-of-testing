@@ -834,3 +834,10 @@ class Solution:
                     new_str += chr(ord(ele) + 1)
             s = new_str
         return len(new_str)
+
+    def getFinalState(self, nums, k, multiplier: int):
+        mini = 0
+        for i in range(k):
+            mini = min(nums)
+            nums[nums.index(mini)] = mini * multiplier
+        return nums
