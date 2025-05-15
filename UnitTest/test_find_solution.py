@@ -411,7 +411,15 @@ def test_lengthAfterTransformations():
     assert Solution().lengthAfterTransformations("abcyy", 2) == 7
     assert Solution().lengthAfterTransformations("azbk", 1) == 5
 
+
 def test_getFinalState():
     print(' --- Inside test_getFinalState ---')
-    assert Solution().getFinalState([2,1,3,5,6], 5, 2) == [8,4,6,5,6]
-    assert Solution().getFinalState([1,2], 3, 4) == [16,8]
+    assert Solution().getFinalState([2, 1, 3, 5, 6], 5, 2) == [8, 4, 6, 5, 6]
+    assert Solution().getFinalState([1, 2], 3, 4) == [16, 8]
+
+
+def test_getLongestSubsequence():
+    print(' --- Inside test_getLongestSubsequence ---')
+    assert Solution().getLongestSubsequence(["c"], [0]) == ["c"]
+    assert Solution().getLongestSubsequence(["e","a","b"], [0,0,1]) == ["e","b"]
+    assert Solution().getLongestSubsequence(["a","b","c","d"], [1,0,1,1]) == ["a","b","c"]
