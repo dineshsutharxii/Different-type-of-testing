@@ -848,3 +848,12 @@ class Solution:
             if groups[i] != groups[i - 1]:
                 res.append(words[i])
         return res
+
+
+    def finalPrices(self, prices):
+        stk = []
+        for i in range(len(prices)):
+            while stk and (prices[stk[-1]] >= prices[i]):
+                prices[stk.pop()] -= prices[i]
+            stk.append(i)
+        return prices

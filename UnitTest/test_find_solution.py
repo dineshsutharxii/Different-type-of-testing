@@ -421,5 +421,12 @@ def test_getFinalState():
 def test_getLongestSubsequence():
     print(' --- Inside test_getLongestSubsequence ---')
     assert Solution().getLongestSubsequence(["c"], [0]) == ["c"]
-    assert Solution().getLongestSubsequence(["e","a","b"], [0,0,1]) == ["e","b"]
-    assert Solution().getLongestSubsequence(["a","b","c","d"], [1,0,1,1]) == ["a","b","c"]
+    assert Solution().getLongestSubsequence(["e", "a", "b"], [0, 0, 1]) == ["e", "b"]
+    assert Solution().getLongestSubsequence(["a", "b", "c", "d"], [1, 0, 1, 1]) == ["a", "b", "c"]
+
+
+def test_finalPrices():
+    print(' --- Inside test_finalPrices ---')
+    assert Solution().finalPrices([8, 4, 6, 2, 3]) == [4, 2, 4, 2, 3]
+    assert Solution().finalPrices([10, 1, 1, 6]) == [9, 0, 1, 6]
+    assert Solution().finalPrices([1, 2, 3, 4, 5]) == [1, 2, 3, 4, 5]
