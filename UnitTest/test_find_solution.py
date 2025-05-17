@@ -430,3 +430,9 @@ def test_finalPrices():
     assert Solution().finalPrices([8, 4, 6, 2, 3]) == [4, 2, 4, 2, 3]
     assert Solution().finalPrices([10, 1, 1, 6]) == [9, 0, 1, 6]
     assert Solution().finalPrices([1, 2, 3, 4, 5]) == [1, 2, 3, 4, 5]
+
+
+def test_sortColors():
+    print(' --- Inside test_finalPrices ---')
+    assert Solution().sortColors([2, 0, 2, 1, 1, 0]) == [0, 0, 1, 1, 2, 2]
+    assert Solution().sortColors([2, 0, 1]) == [0, 1, 2]

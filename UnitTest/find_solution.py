@@ -857,3 +857,17 @@ class Solution:
                 prices[stk.pop()] -= prices[i]
             stk.append(i)
         return prices
+
+    def sortColors(self, nums) -> None:
+        count_0, count_1, count_2 = 0, 0, 0
+        for ele in nums:
+            if ele == 0:
+                count_0 += 1
+            if ele == 1:
+                count_1 += 1
+            if ele == 2:
+                count_2 += 1
+        for i in range(count_0): nums[i] = 0
+        for i in range(count_0, count_0 + count_1): nums[i] = 1
+        for i in range(count_0 + count_1, count_0 + count_1 + count_2): nums[i] = 2
+        return nums
