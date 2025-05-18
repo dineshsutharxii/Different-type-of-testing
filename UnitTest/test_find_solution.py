@@ -436,3 +436,8 @@ def test_sortColors():
     print(' --- Inside test_finalPrices ---')
     assert Solution().sortColors([2, 0, 2, 1, 1, 0]) == [0, 0, 1, 1, 2, 2]
     assert Solution().sortColors([2, 0, 1]) == [0, 1, 2]
+
+def test_maxChunksToSorted():
+    print(' --- Inside test_maxChunksToSorted ---')
+    assert Solution().maxChunksToSorted([4,3,2,1,0]) == 1
+    assert Solution().maxChunksToSorted([1,0,2,3,4]) == 4

@@ -871,3 +871,12 @@ class Solution:
         for i in range(count_0, count_0 + count_1): nums[i] = 1
         for i in range(count_0 + count_1, count_0 + count_1 + count_2): nums[i] = 2
         return nums
+
+    def maxChunksToSorted(self, arr):
+        ans = 0
+        prev_max = 0
+        for idx, x in enumerate(arr):
+            prev_max = max(prev_max, x)
+            if prev_max == idx:
+                ans += 1
+        return ans
