@@ -448,3 +448,8 @@ def test_triangleType():
     assert Solution().triangleType([3,3,3]) == "equilateral"
     assert Solution().triangleType([3,4,5]) == "scalene"
     assert Solution().triangleType([8,4,2]) == "none"
+
+def test_isZeroArray():
+    print(' --- Inside test_isZeroArray ---')
+    assert Solution().isZeroArray([1,0,1], [[0,2]]) == True
+    assert Solution().isZeroArray([4,3,2,1], [[1,3],[0,2]]) == False
