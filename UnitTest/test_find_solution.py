@@ -455,3 +455,8 @@ def test_isZeroArray():
     print(' --- Inside test_isZeroArray ---')
     assert Solution().isZeroArray([1, 0, 1], [[0, 2]])
     assert not Solution().isZeroArray([4, 3, 2, 1], [[1, 3], [0, 2]])
+
+def test_setZeroes():
+    print(' --- Inside test_setZeroes ---')
+    assert Solution().setZeroes([[1,1,1],[1,0,1],[1,1,1]]) == [[1,0,1],[0,0,0],[1,0,1]]
+

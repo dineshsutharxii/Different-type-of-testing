@@ -905,3 +905,18 @@ class Solution:
             if curFreq < nums[i]:
                 return False
         return True
+
+    def setZeroes(self, matrix) -> None:
+        m = len(matrix)
+        n = len(matrix[0])
+        arr1 = [float("-inf")] * m
+        arr2 = [float("-inf")] * n
+        for i in range(m):
+            for j in range(n):
+                if matrix[i][j] == 0:
+                    arr1[i] = arr2[j] = 0
+        for i in range(m):
+            for j in range(n):
+                if arr1[i] == 0 or arr2[j] == 0:
+                    matrix[i][j] = 0
+        return matrix
