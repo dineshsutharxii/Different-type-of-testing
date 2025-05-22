@@ -460,3 +460,7 @@ def test_setZeroes():
     print(' --- Inside test_setZeroes ---')
     assert Solution().setZeroes([[1,1,1],[1,0,1],[1,1,1]]) == [[1,0,1],[0,0,0],[1,0,1]]
 
+def test_maxRemoval():
+    print(' --- Inside test_setZeroes ---')
+    assert Solution().maxRemoval([2,0,2], [[0,2],[0,2],[1,1]]) == 1
+    assert Solution().maxRemoval([1,2,3,4], [[0,3]]) == -1

@@ -920,3 +920,19 @@ class Solution:
                 if arr1[i] == 0 or arr2[j] == 0:
                     matrix[i][j] = 0
         return matrix
+
+    def maxRemoval(self, nums, queries):
+        q = deque(sorted(queries))
+        available = []
+        working = []
+        for i in range(len(nums)):
+            while q and q[0][0] <= i:
+                heappush(available, -q.popleft()[1])
+            while working and working[0] < i:
+                heappop(working)
+            while nums[i] > len(working):
+                if available and -available[0] >= i:
+                    heappush(working, -heappop(available))
+                else:
+                    return -1
+        return len(available)
