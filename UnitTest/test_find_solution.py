@@ -464,3 +464,8 @@ def test_maxRemoval():
     print(' --- Inside test_setZeroes ---')
     assert Solution().maxRemoval([2,0,2], [[0,2],[0,2],[1,1]]) == 1
     assert Solution().maxRemoval([1,2,3,4], [[0,3]]) == -1
+
+def test_findTargetSumWays():
+    print(' --- Inside test_findTargetSumWays ---')
+    assert Solution().findTargetSumWays([1,1,1,1,1], 3) == 5
+    assert Solution().findTargetSumWays([1], 1) == 1

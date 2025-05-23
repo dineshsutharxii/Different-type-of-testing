@@ -936,3 +936,13 @@ class Solution:
                 else:
                     return -1
         return len(available)
+
+    def findTargetSumWays(self, nums, target):
+        counter = {0: 1}
+        for n in nums:
+            temp = {}
+            for total, count in counter.items():
+                temp[total + n] = temp.get(total + n, 0) + count
+                temp[total - n] = temp.get(total - n, 0) + count
+            counter = temp
+        return counter.get(target, 0)
