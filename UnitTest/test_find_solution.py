@@ -469,3 +469,8 @@ def test_findTargetSumWays():
     print(' --- Inside test_findTargetSumWays ---')
     assert Solution().findTargetSumWays([1,1,1,1,1], 3) == 5
     assert Solution().findTargetSumWays([1], 1) == 1
+
+def test_findWordsContaining():
+    print(' --- Inside test_findWordsContaining ---')
+    assert Solution().findTargetSumWays(["leet","code"], "e") == [0,1]
+    assert Solution().findTargetSumWays(["abc","bcd","aaaa","cbc"], "a") == [0, 2]

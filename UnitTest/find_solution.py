@@ -946,3 +946,10 @@ class Solution:
                 temp[total - n] = temp.get(total - n, 0) + count
             counter = temp
         return counter.get(target, 0)
+
+    def findWordsContaining(self, words, x):
+        res = []
+        for i in range(len(words)):
+            if x in words[i]:
+                res.append(i)
+        return res
