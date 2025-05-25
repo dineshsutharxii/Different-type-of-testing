@@ -474,3 +474,8 @@ def test_findWordsContaining():
     print(' --- Inside test_findWordsContaining ---')
     assert Solution().findTargetSumWays(["leet","code"], "e") == [0,1]
     assert Solution().findTargetSumWays(["abc","bcd","aaaa","cbc"], "a") == [0, 2]
+
+def test_longestPalindrome():
+    print(' --- Inside test_longestPalindrome ---')
+    assert Solution().longestPalindrome(["lc","cl","gg"]) == 6
+    assert Solution().longestPalindrome(["cc","ll","xx"]) == 2
