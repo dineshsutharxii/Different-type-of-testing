@@ -479,3 +479,8 @@ def test_longestPalindrome():
     print(' --- Inside test_longestPalindrome ---')
     assert Solution().longestPalindrome(["lc","cl","gg"]) == 6
     assert Solution().longestPalindrome(["cc","ll","xx"]) == 2
+
+def test_maxCount():
+    print(' --- Inside test_maxCount ---')
+    assert Solution().maxCount("011101") == 5
+    assert Solution().maxCount("1111") == 3
