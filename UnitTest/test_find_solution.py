@@ -484,3 +484,4 @@ def test_maxCount():
     print(' --- Inside test_maxCount ---')
     assert Solution().maxCount("011101") == 5
     assert Solution().maxCount("1111") == 3
+    assert Solution().maxCount("10011") == 4
