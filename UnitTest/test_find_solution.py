@@ -485,3 +485,7 @@ def test_maxCount():
     assert Solution().maxCount("011101") == 5
     assert Solution().maxCount("1111") == 3
     assert Solution().maxCount("10011") == 4
+
+def test_mincostTickets():
+    print(' --- Inside test_mincostTickets ---')
+    assert Solution().mincostTickets([1,4,6,7,8,20], [2,7,15]) == 11
