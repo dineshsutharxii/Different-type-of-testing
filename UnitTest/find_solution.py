@@ -1005,3 +1005,15 @@ class Solution:
             if travel[i]:
                 memo[i] = min(memo[i - 1] + costs[0], memo[max(0, i - 7)] + costs[1], memo[max(0, i - 30)] + costs[2])
         return memo[-1]
+
+    def waysToSplitArray(self, nums):
+        leftSideSum = 0
+        rightSideSum = sum(nums)
+        validSplits = 0
+        for i in range(len(nums) - 1):
+            leftSideSum += nums[i]
+            rightSideSum -= nums[i]
+            if leftSideSum >= rightSideSum:
+                validSplits += 1
+        return validSplits
+

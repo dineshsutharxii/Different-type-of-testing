@@ -456,29 +456,35 @@ def test_isZeroArray():
     assert Solution().isZeroArray([1, 0, 1], [[0, 2]])
     assert not Solution().isZeroArray([4, 3, 2, 1], [[1, 3], [0, 2]])
 
+
 def test_setZeroes():
     print(' --- Inside test_setZeroes ---')
-    assert Solution().setZeroes([[1,1,1],[1,0,1],[1,1,1]]) == [[1,0,1],[0,0,0],[1,0,1]]
+    assert Solution().setZeroes([[1, 1, 1], [1, 0, 1], [1, 1, 1]]) == [[1, 0, 1], [0, 0, 0], [1, 0, 1]]
+
 
 def test_maxRemoval():
     print(' --- Inside test_setZeroes ---')
-    assert Solution().maxRemoval([2,0,2], [[0,2],[0,2],[1,1]]) == 1
-    assert Solution().maxRemoval([1,2,3,4], [[0,3]]) == -1
+    assert Solution().maxRemoval([2, 0, 2], [[0, 2], [0, 2], [1, 1]]) == 1
+    assert Solution().maxRemoval([1, 2, 3, 4], [[0, 3]]) == -1
+
 
 def test_findTargetSumWays():
     print(' --- Inside test_findTargetSumWays ---')
-    assert Solution().findTargetSumWays([1,1,1,1,1], 3) == 5
+    assert Solution().findTargetSumWays([1, 1, 1, 1, 1], 3) == 5
     assert Solution().findTargetSumWays([1], 1) == 1
+
 
 def test_findWordsContaining():
     print(' --- Inside test_findWordsContaining ---')
-    assert Solution().findTargetSumWays(["leet","code"], "e") == [0,1]
-    assert Solution().findTargetSumWays(["abc","bcd","aaaa","cbc"], "a") == [0, 2]
+    assert Solution().findTargetSumWays(["leet", "code"], "e") == [0, 1]
+    assert Solution().findTargetSumWays(["abc", "bcd", "aaaa", "cbc"], "a") == [0, 2]
+
 
 def test_longestPalindrome():
     print(' --- Inside test_longestPalindrome ---')
-    assert Solution().longestPalindrome(["lc","cl","gg"]) == 6
-    assert Solution().longestPalindrome(["cc","ll","xx"]) == 2
+    assert Solution().longestPalindrome(["lc", "cl", "gg"]) == 6
+    assert Solution().longestPalindrome(["cc", "ll", "xx"]) == 2
+
 
 def test_maxCount():
     print(' --- Inside test_maxCount ---')
@@ -486,6 +492,12 @@ def test_maxCount():
     assert Solution().maxCount("1111") == 3
     assert Solution().maxCount("10011") == 4
 
+
 def test_mincostTickets():
     print(' --- Inside test_mincostTickets ---')
-    assert Solution().mincostTickets([1,4,6,7,8,20], [2,7,15]) == 11
+    assert Solution().mincostTickets([1, 4, 6, 7, 8, 20], [2, 7, 15]) == 11
+
+
+def test_waysToSplitArray():
+    print(' --- Inside test_waysToSplitArray ---')
+    assert Solution().waysToSplitArray([10, 4, -8, 7]) == 2
