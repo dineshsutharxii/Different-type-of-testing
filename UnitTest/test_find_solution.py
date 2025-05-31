@@ -501,3 +501,8 @@ def test_mincostTickets():
 def test_waysToSplitArray():
     print(' --- Inside test_waysToSplitArray ---')
     assert Solution().waysToSplitArray([10, 4, -8, 7]) == 2
+
+def test_snakesAndLadders():
+    print(' --- Inside test_snakesAndLadders ---')
+    assert Solution().snakesAndLadders([[-1,-1,-1,-1,-1,-1],[-1,-1,-1,-1,-1,-1],[-1,-1,-1,-1,-1,-1],[-1,35,-1,-1,13,-1],[-1,-1,-1,-1,-1,-1],[-1,15,-1,-1,-1,-1]]) == 4
+    assert Solution().snakesAndLadders([[-1,-1],[-1,3]]) == 1
