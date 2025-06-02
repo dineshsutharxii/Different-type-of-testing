@@ -506,3 +506,8 @@ def test_snakesAndLadders():
     print(' --- Inside test_snakesAndLadders ---')
     assert Solution().snakesAndLadders([[-1,-1,-1,-1,-1,-1],[-1,-1,-1,-1,-1,-1],[-1,-1,-1,-1,-1,-1],[-1,35,-1,-1,13,-1],[-1,-1,-1,-1,-1,-1],[-1,15,-1,-1,-1,-1]]) == 4
     assert Solution().snakesAndLadders([[-1,-1],[-1,3]]) == 1
+
+def test_distributeCandies():
+    print(' --- Inside test_distributeCandies ---')
+    assert Solution().distributeCandies(5,2) == 3
+    assert Solution().distributeCandies(3,3) == 10
