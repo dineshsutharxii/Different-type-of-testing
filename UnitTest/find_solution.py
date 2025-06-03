@@ -1042,3 +1042,19 @@ class Solution:
             if n - i <= 2 * limit:
                 res += min(n - i, limit) - max(0, n - i - limit) + 1
         return res
+
+    def findDifferentBinaryString(self, nums) -> str:
+        def generate_binary_combinations(n, current="", result=None):
+            if result is None:
+                result = []
+            if len(current) == n:
+                result.append(current)
+                return result
+            generate_binary_combinations(n, current + "0", result)
+            generate_binary_combinations(n, current + "1", result)
+            return result
+
+        combination = generate_binary_combinations(len(nums[0]))
+        for ele in combination:
+            if ele not in nums:
+                return ele
