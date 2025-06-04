@@ -1058,3 +1058,16 @@ class Solution:
         for ele in combination:
             if ele not in nums:
                 return ele
+
+    def answerString(self, word: str, numFriends: int) -> str:
+        if numFriends == 1:
+            return word
+        n = len(word)
+        length = n - numFriends + 1
+        maxi_c, res = max(word), ""
+
+        for i in range(n):
+            if word[i] == maxi_c:
+                sub_str = word[i:i + length]
+                res = max(res, sub_str)
+        return res

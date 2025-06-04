@@ -515,3 +515,7 @@ def test_distributeCandies():
 def test_findDifferentBinaryString():
     print(' --- Inside test_findDifferentBinaryString ---')
     assert Solution().findDifferentBinaryString(["01","10"]) == "00"
+
+def test_answerString():
+    print(' --- Inside test_answerString ---')
+    assert Solution().answerString("dbca", 2) == "dbc"
