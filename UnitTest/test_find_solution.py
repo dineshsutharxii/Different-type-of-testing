@@ -519,3 +519,7 @@ def test_findDifferentBinaryString():
 def test_answerString():
     print(' --- Inside test_answerString ---')
     assert Solution().answerString("dbca", 2) == "dbc"
+
+def test_smallestEquivalentString():
+    print(' --- Inside test_answerString ---')
+    assert Solution().smallestEquivalentString("parker", "morris", "parser") == "makkek"
