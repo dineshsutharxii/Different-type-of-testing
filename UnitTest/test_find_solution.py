@@ -523,3 +523,8 @@ def test_answerString():
 def test_smallestEquivalentString():
     print(' --- Inside test_answerString ---')
     assert Solution().smallestEquivalentString("parker", "morris", "parser") == "makkek"
+
+def test_clearStars():
+    print(' --- Inside test_clearStars ---')
+    assert Solution().clearStars("abc") == "abc"
+    assert Solution().clearStars("aaba*") == "aab"
