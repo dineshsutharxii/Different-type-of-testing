@@ -528,3 +528,8 @@ def test_clearStars():
     print(' --- Inside test_clearStars ---')
     assert Solution().clearStars("abc") == "abc"
     assert Solution().clearStars("aaba*") == "aab"
+
+def test_lexicalOrder():
+    print(' --- Inside test_lexicalOrder ---')
+    assert Solution().lexicalOrder(13) == [1,10,11,12,13,2,3,4,5,6,7,8,9]
+    assert Solution().lexicalOrder(2) == [1,2]
