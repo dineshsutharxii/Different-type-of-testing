@@ -1119,3 +1119,15 @@ class Solution:
                     curr //= 10
                 curr += 1
         return res
+
+    def canConstruct(self, s: str, k: int) -> bool:
+        if k > len(s):
+            return False
+        h = collections.Counter(s)
+        count_odd = 0
+        for value in h.values():
+            if value % 2:
+                count_odd += 1
+        if count_odd > k:
+            return False
+        return True

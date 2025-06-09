@@ -533,3 +533,8 @@ def test_lexicalOrder():
     print(' --- Inside test_lexicalOrder ---')
     assert Solution().lexicalOrder(13) == [1,10,11,12,13,2,3,4,5,6,7,8,9]
     assert Solution().lexicalOrder(2) == [1,2]
+
+def test_canConstruct():
+    print(' --- Inside test_canConstruct ---')
+    assert Solution().canConstruct("leetcode",3) == False
+    assert Solution().canConstruct("true", 4) == True
