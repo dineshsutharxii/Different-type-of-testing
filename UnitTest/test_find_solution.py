@@ -538,3 +538,8 @@ def test_canConstruct():
     print(' --- Inside test_canConstruct ---')
     assert Solution().canConstruct("leetcode",3) == False
     assert Solution().canConstruct("true", 4) == True
+
+def test_minimumLength():
+    print(' --- Inside test_minimumLength ---')
+    assert Solution().minimumLength("abaacbcbb") == 5
+    assert Solution().minimumLength("aa") == 2

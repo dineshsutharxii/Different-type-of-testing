@@ -1131,3 +1131,13 @@ class Solution:
         if count_odd > k:
             return False
         return True
+
+    def minimumLength(self, s: str) -> int:
+        n = len(s)
+        x = 0
+        mp = {}
+        for char in s:
+            mp[char] = mp.get(char, 0) + 1
+        for f in mp.values():
+            x += (f - 1) if (f % 2 == 1) else (f - 2)
+        return n - x
