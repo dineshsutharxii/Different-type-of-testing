@@ -547,3 +547,5 @@ def test_minimumLength():
 def test_maxAdjacentDistance():
     print(' --- Inside test_minimumLength ---')
     assert Solution().maxAdjacentDistance([-2,1,-5]) == 6
+    assert Solution().maxAdjacentDistance([1,2,4]) == 3
+    assert Solution().maxAdjacentDistance([-5,-10,-5]) == 5
