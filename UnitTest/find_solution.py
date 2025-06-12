@@ -1141,3 +1141,9 @@ class Solution:
         for f in mp.values():
             x += (f - 1) if (f % 2 == 1) else (f - 2)
         return n - x
+
+    def maxAdjacentDistance(self, nums) -> int:
+        maxi = abs(nums[0] - nums[len(nums) - 1])
+        for i in range(len(nums) - 1):
+            maxi = max(maxi, abs(nums[i] - nums[i + 1]))
+        return maxi

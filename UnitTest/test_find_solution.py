@@ -543,3 +543,7 @@ def test_minimumLength():
     print(' --- Inside test_minimumLength ---')
     assert Solution().minimumLength("abaacbcbb") == 5
     assert Solution().minimumLength("aa") == 2
+
+def test_maxAdjacentDistance():
+    print(' --- Inside test_minimumLength ---')
+    assert Solution().maxAdjacentDistance([-2,1,-5]) == 6
