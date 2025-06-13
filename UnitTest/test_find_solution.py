@@ -549,3 +549,7 @@ def test_maxAdjacentDistance():
     assert Solution().maxAdjacentDistance([-2,1,-5]) == 6
     assert Solution().maxAdjacentDistance([1,2,4]) == 3
     assert Solution().maxAdjacentDistance([-5,-10,-5]) == 5
+
+def test_minimizeMax():
+    print(' --- Inside test_minimizeMax ---')
+    assert Solution().minimizeMax([10,1,2,7,1,3], 2) == 1
