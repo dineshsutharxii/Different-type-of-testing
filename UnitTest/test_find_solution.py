@@ -553,3 +553,8 @@ def test_maxAdjacentDistance():
 def test_minimizeMax():
     print(' --- Inside test_minimizeMax ---')
     assert Solution().minimizeMax([10,1,2,7,1,3], 2) == 1
+
+def test_minMaxDifference():
+    print(' --- Inside test_minimizeMax ---')
+    assert Solution().minMaxDifference(11891) == 99009
+    assert Solution().minMaxDifference(90) == 99
