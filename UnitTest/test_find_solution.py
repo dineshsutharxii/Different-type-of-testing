@@ -562,4 +562,8 @@ def test_minMaxDifference():
 def test_maxDiff():
     print(' --- Inside test_minimizeMax ---')
     assert Solution().maxDiff(555) == 888
-    assert Solution().maxDiff(5689) ==8000
+    assert Solution().maxDiff(5689) == 8000
+
+def test_maximumDifference():
+    print(' --- Inside test_maximumDifference ---')
+    assert Solution().maximumDifference([1,5,2,10]) == 9

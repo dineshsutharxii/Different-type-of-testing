@@ -1186,3 +1186,11 @@ class Solution:
                     b = b.replace(digit, "0")
                     break
         return int(a) - int(b)
+
+    def maximumDifference(self, nums) -> int:
+        maxi = -1
+        min_num = nums[0]
+        for i in range(len(nums)):
+            maxi = max(maxi, nums[i] - min_num)
+            min_num = min(min_num, nums[i])
+        return maxi if maxi != 0 else -1
