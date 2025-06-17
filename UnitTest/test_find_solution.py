@@ -502,75 +502,91 @@ def test_waysToSplitArray():
     print(' --- Inside test_waysToSplitArray ---')
     assert Solution().waysToSplitArray([10, 4, -8, 7]) == 2
 
+
 def test_snakesAndLadders():
     print(' --- Inside test_snakesAndLadders ---')
-    assert Solution().snakesAndLadders([[-1,-1,-1,-1,-1,-1],[-1,-1,-1,-1,-1,-1],[-1,-1,-1,-1,-1,-1],[-1,35,-1,-1,13,-1],[-1,-1,-1,-1,-1,-1],[-1,15,-1,-1,-1,-1]]) == 4
-    assert Solution().snakesAndLadders([[-1,-1],[-1,3]]) == 1
+    assert Solution().snakesAndLadders(
+        [[-1, -1, -1, -1, -1, -1], [-1, -1, -1, -1, -1, -1], [-1, -1, -1, -1, -1, -1], [-1, 35, -1, -1, 13, -1],
+         [-1, -1, -1, -1, -1, -1], [-1, 15, -1, -1, -1, -1]]) == 4
+    assert Solution().snakesAndLadders([[-1, -1], [-1, 3]]) == 1
+
 
 def test_distributeCandies():
     print(' --- Inside test_distributeCandies ---')
-    assert Solution().distributeCandies(5,2) == 3
-    assert Solution().distributeCandies(3,3) == 10
+    assert Solution().distributeCandies(5, 2) == 3
+    assert Solution().distributeCandies(3, 3) == 10
+
 
 def test_findDifferentBinaryString():
     print(' --- Inside test_findDifferentBinaryString ---')
-    assert Solution().findDifferentBinaryString(["01","10"]) == "00"
+    assert Solution().findDifferentBinaryString(["01", "10"]) == "00"
+
 
 def test_answerString():
     print(' --- Inside test_answerString ---')
     assert Solution().answerString("dbca", 2) == "dbc"
 
+
 def test_smallestEquivalentString():
     print(' --- Inside test_answerString ---')
     assert Solution().smallestEquivalentString("parker", "morris", "parser") == "makkek"
+
 
 def test_clearStars():
     print(' --- Inside test_clearStars ---')
     assert Solution().clearStars("abc") == "abc"
     assert Solution().clearStars("aaba*") == "aab"
 
+
 def test_lexicalOrder():
     print(' --- Inside test_lexicalOrder ---')
-    assert Solution().lexicalOrder(13) == [1,10,11,12,13,2,3,4,5,6,7,8,9]
-    assert Solution().lexicalOrder(2) == [1,2]
+    assert Solution().lexicalOrder(13) == [1, 10, 11, 12, 13, 2, 3, 4, 5, 6, 7, 8, 9]
+    assert Solution().lexicalOrder(2) == [1, 2]
+
 
 def test_canConstruct():
     print(' --- Inside test_canConstruct ---')
-    assert Solution().canConstruct("leetcode",3) == False
+    assert Solution().canConstruct("leetcode", 3) == False
     assert Solution().canConstruct("true", 4) == True
+
 
 def test_minimumLength():
     print(' --- Inside test_minimumLength ---')
     assert Solution().minimumLength("abaacbcbb") == 5
     assert Solution().minimumLength("aa") == 2
 
+
 def test_maxAdjacentDistance():
     print(' --- Inside test_minimumLength ---')
-    assert Solution().maxAdjacentDistance([-2,1,-5]) == 6
-    assert Solution().maxAdjacentDistance([1,2,4]) == 3
-    assert Solution().maxAdjacentDistance([-5,-10,-5]) == 5
+    assert Solution().maxAdjacentDistance([-2, 1, -5]) == 6
+    assert Solution().maxAdjacentDistance([1, 2, 4]) == 3
+    assert Solution().maxAdjacentDistance([-5, -10, -5]) == 5
+
 
 def test_minimizeMax():
     print(' --- Inside test_minimizeMax ---')
-    assert Solution().minimizeMax([10,1,2,7,1,3], 2) == 1
+    assert Solution().minimizeMax([10, 1, 2, 7, 1, 3], 2) == 1
+
 
 def test_minMaxDifference():
     print(' --- Inside test_minimizeMax ---')
     assert Solution().minMaxDifference(11891) == 99009
     assert Solution().minMaxDifference(90) == 99
 
+
 def test_maxDiff():
     print(' --- Inside test_minimizeMax ---')
     assert Solution().maxDiff(555) == 888
     assert Solution().maxDiff(5689) == 8000
 
+
 def test_maximumDifference():
     print(' --- Inside test_maximumDifference ---')
-    assert Solution().maximumDifference([1,5,2,10]) == 9
+    assert Solution().maximumDifference([1, 5, 2, 10]) == 9
+
 
 def test_numOfSubarrays():
     print(' --- Inside test_numOfSubarrays ---')
-    assert Solution().numOfSubarrays([1,3,5]) == 4
-    assert Solution().numOfSubarrays([2,4,6]) == 0
-    assert Solution().numOfSubarrays([1,2,3,4,5,6,7]) == 16
-
+    assert Solution().numOfSubarrays([1, 3, 5]) == 4
+    assert Solution().numOfSubarrays([2, 4, 6]) == 0
+    assert Solution().numOfSubarrays([1, 2, 3, 4, 5, 6, 7]) == 16
