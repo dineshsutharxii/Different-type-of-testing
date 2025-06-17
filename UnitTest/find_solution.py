@@ -1194,3 +1194,14 @@ class Solution:
             maxi = max(maxi, nums[i] - min_num)
             min_num = min(min_num, nums[i])
         return maxi if maxi != 0 else -1
+
+    def numOfSubarrays(self, arr):
+        cnt = 0
+        sub_arr = []
+        for i in range(len(arr)):
+            for j in range(i, len(arr)):
+                sub_arr.append(arr[i:j + 1])
+        for ele in sub_arr:
+            if sum(ele) % 2 != 0:
+                cnt += 1
+        return cnt % (10 ^ 9 + 7)
