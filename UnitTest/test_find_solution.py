@@ -590,3 +590,9 @@ def test_numOfSubarrays():
     assert Solution().numOfSubarrays([1, 3, 5]) == 4
     assert Solution().numOfSubarrays([2, 4, 6]) == 0
     assert Solution().numOfSubarrays([1, 2, 3, 4, 5, 6, 7]) == 16
+
+def test_numOfSubarraysOptimize():
+    print(' --- Inside test_numOfSubarrays ---')
+    assert Solution().numOfSubarrays([1, 3, 5]) == 4
+    assert Solution().numOfSubarrays([2, 4, 6]) == 0
+    assert Solution().numOfSubarrays([1, 2, 3, 4, 5, 6, 7]) == 16
