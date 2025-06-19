@@ -1213,3 +1213,14 @@ class Solution:
             oddCount += prefixSum % 2
         oddCount += (len(arr) - oddCount) * oddCount
         return oddCount % mod
+
+    def partitionArray(self, nums, k: int):
+        nums.sort()
+        res, mini, maxi = 1, nums[0], nums[0]
+        for ele in nums:
+            mini = min(mini, ele)
+            maxi = max(maxi, ele)
+            if maxi - mini > k:
+                res += 1
+                mini = maxi = ele
+        return res
