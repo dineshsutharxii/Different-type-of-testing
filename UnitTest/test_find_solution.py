@@ -1,3 +1,5 @@
+from collections import Counter
+
 from find_solution import (twoSum, minSubArrayLen,
                            longest_substring_without_repeating_characters,
                            find_second_largest, find_nextGreaterElement,
@@ -601,3 +603,8 @@ def test_numOfSubarraysOptimize():
 def test_partitionArray():
     print(' --- Inside test_numOfSubarrays ---')
     assert Solution().partitionArray([3,6,1,2,5], 2) == 2
+
+def test_minimumDeletions():
+    print(' --- Inside test_numOfSubarrays ---')
+    assert Solution().minimumDeletions("aabcaba", 0) == 3
+    assert Solution().minimumDeletions("dabdcbdcdcd", 2) == 2

@@ -1224,3 +1224,19 @@ class Solution:
                 res += 1
                 mini = maxi = ele
         return res
+
+    def minimumDeletions(self, word: str, k: int) -> int:
+        def f(i, j, k, freq):
+            if abs(freq[i] - freq[j]) <= k:
+                return 0
+            if (i, j) not in memo:
+                a = b = float('inf')
+                a = freq[i] + f(i + 1, j, k, freq)
+                b = freq[j] - freq[i] - k + f(i, j - 1, k, freq)
+                memo[(i, j)] = min(a, b)
+            return memo[(i, j)]
+
+        d = collections.Counter(word)
+        memo = {}
+        freq = sorted(list(d.values()))
+        return f(0, len(freq) - 1, k, freq)
