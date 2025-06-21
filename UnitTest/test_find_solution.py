@@ -600,9 +600,11 @@ def test_numOfSubarraysOptimize():
     assert Solution().numOfSubarrays([2, 4, 6]) == 0
     assert Solution().numOfSubarrays([1, 2, 3, 4, 5, 6, 7]) == 16
 
+
 def test_partitionArray():
     print(' --- Inside test_numOfSubarrays ---')
-    assert Solution().partitionArray([3,6,1,2,5], 2) == 2
+    assert Solution().partitionArray([3, 6, 1, 2, 5], 2) == 2
+
 
 def test_minimumDeletions():
     print(' --- Inside test_numOfSubarrays ---')
