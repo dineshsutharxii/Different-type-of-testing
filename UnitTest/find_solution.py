@@ -1078,8 +1078,9 @@ class Solution:
             while root[i] != i:
                 i = root[i]
             return i
+
         root = list(range(26))
-        for c1, c2 in zip(s1,s2):
+        for c1, c2 in zip(s1, s2):
             r1 = find(c1)
             r2 = find(c2)
             if r1 > r2:
@@ -1240,3 +1241,11 @@ class Solution:
         memo = {}
         freq = sorted(list(d.values()))
         return f(0, len(freq) - 1, k, freq)
+
+    def divideString(self, s: str, k: int, fill: str):
+        res = []
+        if len(s) % k != 0:
+            s += fill * (k - len(s) % k)
+        for i in range(0, len(s), k):
+            res.append(s[i:i + k])
+        return res

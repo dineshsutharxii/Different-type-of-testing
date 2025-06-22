@@ -610,3 +610,9 @@ def test_minimumDeletions():
     print(' --- Inside test_numOfSubarrays ---')
     assert Solution().minimumDeletions("aabcaba", 0) == 3
     assert Solution().minimumDeletions("dabdcbdcdcd", 2) == 2
+
+
+def test_divideString():
+    print(' --- Inside test_numOfSubarrays ---')
+    assert Solution().divideString("abcdefghi", 3, "x") == ["abc","def","ghi"]
+    assert Solution().divideString("abcdefghij", 3, "x") == ["abc","def","ghi","jxx"]
