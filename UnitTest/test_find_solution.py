@@ -394,6 +394,7 @@ def test_maximumBeauty():
 def test_minSum():
     print(' --- Inside test_minSum ---')
     assert Solution().minSum([3, 2, 0, 1, 0], [6, 5, 0]) == 12
+    assert Solution().minSum([2,0,2,0], [1,4]) == -1
 
 
 def test_threeConsecutiveOdds():
