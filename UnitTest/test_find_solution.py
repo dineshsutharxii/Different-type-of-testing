@@ -596,24 +596,28 @@ def test_numOfSubarrays():
 
 
 def test_numOfSubarraysOptimize():
-    print(' --- Inside test_numOfSubarrays ---')
+    print(' --- Inside test_numOfSubarraysOptimize ---')
     assert Solution().numOfSubarrays([1, 3, 5]) == 4
     assert Solution().numOfSubarrays([2, 4, 6]) == 0
     assert Solution().numOfSubarrays([1, 2, 3, 4, 5, 6, 7]) == 16
 
 
 def test_partitionArray():
-    print(' --- Inside test_numOfSubarrays ---')
+    print(' --- Inside test_partitionArray ---')
     assert Solution().partitionArray([3, 6, 1, 2, 5], 2) == 2
 
 
 def test_minimumDeletions():
-    print(' --- Inside test_numOfSubarrays ---')
+    print(' --- Inside test_minimumDeletions ---')
     assert Solution().minimumDeletions("aabcaba", 0) == 3
     assert Solution().minimumDeletions("dabdcbdcdcd", 2) == 2
 
 
 def test_divideString():
-    print(' --- Inside test_numOfSubarrays ---')
+    print(' --- Inside test_divideString ---')
     assert Solution().divideString("abcdefghi", 3, "x") == ["abc","def","ghi"]
     assert Solution().divideString("abcdefghij", 3, "x") == ["abc","def","ghi","jxx"]
+
+def test_findKDistantIndices():
+    print(' --- Inside test_findKDistantIndices ---')
+    assert Solution().findKDistantIndices([2,2,2,2,2], 2, 2) == [0,1,2,3,4]
