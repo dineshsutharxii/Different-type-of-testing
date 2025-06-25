@@ -621,3 +621,8 @@ def test_divideString():
 def test_findKDistantIndices():
     print(' --- Inside test_findKDistantIndices ---')
     assert Solution().findKDistantIndices([2,2,2,2,2], 2, 2) == [0,1,2,3,4]
+
+def test_numberOfSubstrings():
+    print(' --- Inside test_numberOfSubstrings ---')
+    assert Solution().numberOfSubstrings("abcabc") == 10
+    assert Solution().numberOfSubstrings("aaacb") == 3
