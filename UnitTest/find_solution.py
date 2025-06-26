@@ -1269,3 +1269,17 @@ class Solution:
             count += (minIndex + 1)
             right += 1
         return count
+
+    def longestSubsequence(self, s: str, k: int) -> int:
+        n = len(s)
+        ones = []
+        for i, val in enumerate(s[::-1]):
+            if val == '1':
+                ones.append(i)
+        ans = n - len(ones)
+        i = 0
+        while i < len(ones) and k - 2 ** ones[i] >= 0:
+            ans += 1
+            k -= 2 ** ones[i]
+            i += 1
+        return ans

@@ -626,3 +626,9 @@ def test_numberOfSubstrings():
     print(' --- Inside test_numberOfSubstrings ---')
     assert Solution().numberOfSubstrings("abcabc") == 10
     assert Solution().numberOfSubstrings("aaacb") == 3
+
+def test_longestSubsequence():
+    print(' --- Inside test_longestSubsequence ---')
+    assert Solution().longestSubsequence("1001010", 5) == 5
+    assert Solution().longestSubsequence("00101001", 1) == 6
+
