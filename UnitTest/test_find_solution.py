@@ -632,3 +632,7 @@ def test_longestSubsequence():
     assert Solution().longestSubsequence("1001010", 5) == 5
     assert Solution().longestSubsequence("00101001", 1) == 6
 
+def test_kthCharacter():
+    print(' --- Inside test_kthCharacter ---')
+    assert Solution().kthCharacter(5) == "b"
+    assert Solution().kthCharacter(10) == "c"
