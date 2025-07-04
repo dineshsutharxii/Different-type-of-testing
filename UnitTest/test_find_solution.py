@@ -636,3 +636,8 @@ def test_kthCharacter():
     print(' --- Inside test_kthCharacter ---')
     assert Solution().kthCharacter(5) == "b"
     assert Solution().kthCharacter(10) == "c"
+
+def test_longestNiceSubarray():
+    print(' --- Inside test_longestNiceSubarray ---')
+    assert Solution().longestNiceSubarray([1,3,8,48,10]) == 3
+    assert Solution().longestNiceSubarray([3,1,5,11,13]) == 1

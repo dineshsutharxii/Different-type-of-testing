@@ -1292,3 +1292,17 @@ class Solution:
                 next_char = chr(ord('a') + ((ord(sb[i]) - ord('a') + 1) % 26))
                 sb.append(next_char)
         return sb[k - 1]
+
+    def longestNiceSubarray(self, nums) -> int:
+        l = len(nums)
+        max_l = 1
+        left = 0
+        used_bits = 0
+
+        for right in range(l):
+            while used_bits & nums[right] != 0:
+                used_bits ^= nums[left]
+                left += 1
+            used_bits |= nums[right]
+            max_l = max(max_l, right - left + 1)
+        return max_l
