@@ -1306,3 +1306,15 @@ class Solution:
             used_bits |= nums[right]
             max_l = max(max_l, right - left + 1)
         return max_l
+
+    def maxEvents(self, events) -> int:
+        events.sort()
+        used = [False] * 100001
+        count = 0
+        for start, end in events:
+            for d in range(start, end + 1):
+                if not used[d]:
+                    used[d] = True
+                    count += 1
+                    break
+        return count

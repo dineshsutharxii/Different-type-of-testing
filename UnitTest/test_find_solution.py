@@ -394,7 +394,7 @@ def test_maximumBeauty():
 def test_minSum():
     print(' --- Inside test_minSum ---')
     assert Solution().minSum([3, 2, 0, 1, 0], [6, 5, 0]) == 12
-    assert Solution().minSum([2,0,2,0], [1,4]) == -1
+    assert Solution().minSum([2, 0, 2, 0], [1, 4]) == -1
 
 
 def test_threeConsecutiveOdds():
@@ -615,29 +615,40 @@ def test_minimumDeletions():
 
 def test_divideString():
     print(' --- Inside test_divideString ---')
-    assert Solution().divideString("abcdefghi", 3, "x") == ["abc","def","ghi"]
-    assert Solution().divideString("abcdefghij", 3, "x") == ["abc","def","ghi","jxx"]
+    assert Solution().divideString("abcdefghi", 3, "x") == ["abc", "def", "ghi"]
+    assert Solution().divideString("abcdefghij", 3, "x") == ["abc", "def", "ghi", "jxx"]
+
 
 def test_findKDistantIndices():
     print(' --- Inside test_findKDistantIndices ---')
-    assert Solution().findKDistantIndices([2,2,2,2,2], 2, 2) == [0,1,2,3,4]
+    assert Solution().findKDistantIndices([2, 2, 2, 2, 2], 2, 2) == [0, 1, 2, 3, 4]
+
 
 def test_numberOfSubstrings():
     print(' --- Inside test_numberOfSubstrings ---')
     assert Solution().numberOfSubstrings("abcabc") == 10
     assert Solution().numberOfSubstrings("aaacb") == 3
 
+
 def test_longestSubsequence():
     print(' --- Inside test_longestSubsequence ---')
     assert Solution().longestSubsequence("1001010", 5) == 5
     assert Solution().longestSubsequence("00101001", 1) == 6
+
 
 def test_kthCharacter():
     print(' --- Inside test_kthCharacter ---')
     assert Solution().kthCharacter(5) == "b"
     assert Solution().kthCharacter(10) == "c"
 
+
 def test_longestNiceSubarray():
     print(' --- Inside test_longestNiceSubarray ---')
-    assert Solution().longestNiceSubarray([1,3,8,48,10]) == 3
-    assert Solution().longestNiceSubarray([3,1,5,11,13]) == 1
+    assert Solution().longestNiceSubarray([1, 3, 8, 48, 10]) == 3
+    assert Solution().longestNiceSubarray([3, 1, 5, 11, 13]) == 1
+
+
+def test_maxEvents():
+    print(' --- Inside test_maxEvents ---')
+    assert Solution().maxEvents([[1, 2], [2, 3], [3, 4], [1, 2]]) == 4
+    assert Solution().maxEvents([[1, 2], [2, 3], [3, 4]]) == 3
