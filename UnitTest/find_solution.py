@@ -1250,7 +1250,7 @@ class Solution:
             res.append(s[i:i + k])
         return res
 
-    def findKDistantIndices(self, nums, key: int, k: int) :
+    def findKDistantIndices(self, nums, key: int, k: int):
         ind = []
         n = len(nums)
         for i in range(n):
