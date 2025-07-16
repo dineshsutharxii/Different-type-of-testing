@@ -657,3 +657,4 @@ def test_maximumLength():
     print(' --- Inside test_maximumLength ---')
     assert Solution().maximumLength([1,2,3,4]) == 4
     assert Solution().maximumLength([1,2,1,1,2,1,2]) == 6
+    assert Solution().maximumLength([1,3]) == 2
