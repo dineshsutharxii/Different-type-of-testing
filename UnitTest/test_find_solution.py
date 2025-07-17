@@ -653,8 +653,9 @@ def test_maxEvents():
     assert Solution().maxEvents([[1, 2], [2, 3], [3, 4], [1, 2]]) == 4
     assert Solution().maxEvents([[1, 2], [2, 3], [3, 4]]) == 3
 
+
 def test_maximumLength():
     print(' --- Inside test_maximumLength ---')
-    assert Solution().maximumLength([1,2,3,4]) == 4
-    assert Solution().maximumLength([1,2,1,1,2,1,2]) == 6
-    assert Solution().maximumLength([1,3]) == 2
+    assert Solution().maximumLength([1, 2, 3, 4]) == 4
+    assert Solution().maximumLength([1, 2, 1, 1, 2, 1, 2]) == 6
+    assert Solution().maximumLength([1, 3]) == 2
