@@ -1331,3 +1331,12 @@ class Solution:
                 both += 1
                 c = 1 - c
         return max(odd, even, both)
+
+    def removeSubfolders(self, folder):
+        folder.sort()
+        ans = [folder[0]]
+        for i in range(1, len(folder)):
+            l_folder = ans[-1] + '/'
+            if not folder[i].startswith(l_folder):
+                ans.append(folder[i])
+        return ans
