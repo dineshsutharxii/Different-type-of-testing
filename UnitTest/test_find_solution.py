@@ -663,3 +663,4 @@ def test_maximumLength():
 def test_removeSubfolders():
     print(' --- Inside test_maximumLength ---')
     assert Solution().removeSubfolders(["/a","/a/b","/c/d","/c/d/e","/c/f"]) == ["/a","/c/d","/c/f"]
+    assert Solution().removeSubfolders(["/a/b/c","/a/b/ca","/a/b/d"]) == ["/a/b/c","/a/b/ca","/a/b/d"]
