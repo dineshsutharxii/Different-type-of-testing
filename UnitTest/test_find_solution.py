@@ -660,7 +660,14 @@ def test_maximumLength():
     assert Solution().maximumLength([1, 2, 1, 1, 2, 1, 2]) == 6
     assert Solution().maximumLength([1, 3]) == 2
 
+
 def test_removeSubfolders():
     print(' --- Inside test_maximumLength ---')
-    assert Solution().removeSubfolders(["/a","/a/b","/c/d","/c/d/e","/c/f"]) == ["/a","/c/d","/c/f"]
-    assert Solution().removeSubfolders(["/a/b/c","/a/b/ca","/a/b/d"]) == ["/a/b/c","/a/b/ca","/a/b/d"]
+    assert Solution().removeSubfolders(["/a", "/a/b", "/c/d", "/c/d/e", "/c/f"]) == ["/a", "/c/d", "/c/f"]
+    assert Solution().removeSubfolders(["/a/b/c", "/a/b/ca", "/a/b/d"]) == ["/a/b/c", "/a/b/ca", "/a/b/d"]
+
+
+def test_robotWithString():
+    print(' --- Inside test_robotWithString ---')
+    assert Solution().robotWithString("zza") == "azz"
+    assert Solution().robotWithString("bdda") == "addb"
