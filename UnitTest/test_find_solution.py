@@ -671,3 +671,8 @@ def test_robotWithString():
     print(' --- Inside test_robotWithString ---')
     assert Solution().robotWithString("zza") == "azz"
     assert Solution().robotWithString("bdda") == "addb"
+
+def test_makeFancyString():
+    print(' --- Inside test_makeFancyString ---')
+    assert Solution().makeFancyString('leeetcode') == 'leetcode'
+    assert Solution().makeFancyString('aab') == "aab"
