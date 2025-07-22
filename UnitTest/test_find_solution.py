@@ -672,7 +672,13 @@ def test_robotWithString():
     assert Solution().robotWithString("zza") == "azz"
     assert Solution().robotWithString("bdda") == "addb"
 
+
 def test_makeFancyString():
     print(' --- Inside test_makeFancyString ---')
     assert Solution().makeFancyString('leeetcode') == 'leetcode'
     assert Solution().makeFancyString('aab') == "aab"
+
+def test_maximumUniqueSubarray():
+    print(' --- Inside test_maximumUniqueSubarray ---')
+    assert Solution().maximumUniqueSubarray([4,2,4,5,6]) == 17
+    assert Solution().maximumUniqueSubarray([5,2,1,2,5,2,1,2,5]) == 8
