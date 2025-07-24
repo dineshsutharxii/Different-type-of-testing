@@ -678,10 +678,12 @@ def test_makeFancyString():
     assert Solution().makeFancyString('leeetcode') == 'leetcode'
     assert Solution().makeFancyString('aab') == "aab"
 
+
 def test_maximumUniqueSubarray():
     print(' --- Inside test_maximumUniqueSubarray ---')
-    assert Solution().maximumUniqueSubarray([4,2,4,5,6]) == 17
-    assert Solution().maximumUniqueSubarray([5,2,1,2,5,2,1,2,5]) == 8
+    assert Solution().maximumUniqueSubarray([4, 2, 4, 5, 6]) == 17
+    assert Solution().maximumUniqueSubarray([5, 2, 1, 2, 5, 2, 1, 2, 5]) == 8
+
 
 def test_maximumGain():
     print(' --- Inside test_maximumGain ---')
