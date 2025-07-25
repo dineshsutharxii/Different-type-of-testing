@@ -1405,3 +1405,16 @@ class Solution:
             s, additional_points = remove_and_score(s, 'a', 'b', x)
             points += additional_points
         return points
+
+    def maxSum(self, nums) -> int:
+        new_arr = set(nums)
+        sum_ = float('-inf')
+        for ele in new_arr:
+            if ele >= 0 and sum_ != float('-inf'):
+                sum_ += ele
+            elif ele >= 0:
+                sum_ = ele
+        if sum_ == float('-inf'):
+            return max(new_arr)
+        else:
+            return sum_

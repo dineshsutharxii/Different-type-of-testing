@@ -689,3 +689,9 @@ def test_maximumGain():
     print(' --- Inside test_maximumGain ---')
     assert Solution().maximumGain("cdbcbbaaabab", 4, 5) == 19
     assert Solution().maximumGain('aabbaaxybbaabb', 5, 4) == 20
+
+def test_maxSum():
+    print(' --- Inside test_maximumGain ---')
+    assert Solution().maxSum([1,2,3,4,5]) == 15
+    assert Solution().maxSum([1,1,0,1,1]) == 1
+
