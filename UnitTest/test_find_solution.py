@@ -694,4 +694,4 @@ def test_maxSum():
     print(' --- Inside test_maximumGain ---')
     assert Solution().maxSum([1,2,3,4,5]) == 15
     assert Solution().maxSum([1,1,0,1,1]) == 1
-
+    assert Solution().maxSum([1,2,-1,-2,1,0,-1]) == 3
