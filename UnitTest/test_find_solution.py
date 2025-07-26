@@ -695,3 +695,10 @@ def test_maxSum():
     assert Solution().maxSum([1,2,3,4,5]) == 15
     assert Solution().maxSum([1,1,0,1,1]) == 1
     assert Solution().maxSum([1,2,-1,-2,1,0,-1]) == 3
+
+def test_differenceOfSums_brute():
+    print(' --- Inside test_differenceOfSums_brute ---')
+    assert Solution().differenceOfSums_brute(10, 3) == 19
+    assert Solution().differenceOfSums_brute(5, 6) == 15
+    assert Solution().differenceOfSums_brute(5, 1) == -15
+

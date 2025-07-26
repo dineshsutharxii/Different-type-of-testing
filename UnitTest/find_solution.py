@@ -1418,3 +1418,13 @@ class Solution:
             return max(new_arr)
         else:
             return sum_
+
+    def differenceOfSums_brute(self, n: int, m: int) -> int:
+        sum_div_m = 0
+        sum_nondiv_m = 0
+        for i in range(n + 1):
+            if i % m == 0:
+                sum_div_m += i
+            else:
+                sum_nondiv_m += i
+        return sum_nondiv_m - sum_div_m
