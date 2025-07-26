@@ -1428,3 +1428,9 @@ class Solution:
             else:
                 sum_nondiv_m += i
         return sum_nondiv_m - sum_div_m
+
+    def differenceOfSums_optimize(self, n: int, m: int) -> int:
+        total_sum = n * (n + 1) // 2
+        divisible_cnt = n // m
+        divisible_sum = m * divisible_cnt * (divisible_cnt + 1) // 2
+        return total_sum - 2 * divisible_sum

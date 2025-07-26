@@ -702,3 +702,8 @@ def test_differenceOfSums_brute():
     assert Solution().differenceOfSums_brute(5, 6) == 15
     assert Solution().differenceOfSums_brute(5, 1) == -15
 
+def test_differenceOfSums_optimize():
+    print(' --- Inside test_differenceOfSums_optimize ---')
+    assert Solution().differenceOfSums_optimize(10, 3) == 19
+    assert Solution().differenceOfSums_optimize(5, 6) == 15
+    assert Solution().differenceOfSums_optimize(5, 1) == -15
