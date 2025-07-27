@@ -690,11 +690,13 @@ def test_maximumGain():
     assert Solution().maximumGain("cdbcbbaaabab", 4, 5) == 19
     assert Solution().maximumGain('aabbaaxybbaabb', 5, 4) == 20
 
+
 def test_maxSum():
     print(' --- Inside test_maximumGain ---')
-    assert Solution().maxSum([1,2,3,4,5]) == 15
-    assert Solution().maxSum([1,1,0,1,1]) == 1
-    assert Solution().maxSum([1,2,-1,-2,1,0,-1]) == 3
+    assert Solution().maxSum([1, 2, 3, 4, 5]) == 15
+    assert Solution().maxSum([1, 1, 0, 1, 1]) == 1
+    assert Solution().maxSum([1, 2, -1, -2, 1, 0, -1]) == 3
+
 
 def test_differenceOfSums_brute():
     print(' --- Inside test_differenceOfSums_brute ---')
@@ -702,8 +704,15 @@ def test_differenceOfSums_brute():
     assert Solution().differenceOfSums_brute(5, 6) == 15
     assert Solution().differenceOfSums_brute(5, 1) == -15
 
+
 def test_differenceOfSums_optimize():
     print(' --- Inside test_differenceOfSums_optimize ---')
     assert Solution().differenceOfSums_optimize(10, 3) == 19
     assert Solution().differenceOfSums_optimize(5, 6) == 15
     assert Solution().differenceOfSums_optimize(5, 1) == -15
+
+
+def test_countHillValley():
+    print(' --- Inside test_countHillValley ---')
+    assert Solution().countHillValley([2, 4, 1, 1, 6, 5]) == 3
+    assert Solution().countHillValley([6, 6, 5, 5, 4, 1]) == 0

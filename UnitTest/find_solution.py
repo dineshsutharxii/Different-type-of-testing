@@ -1434,3 +1434,13 @@ class Solution:
         divisible_cnt = n // m
         divisible_sum = m * divisible_cnt * (divisible_cnt + 1) // 2
         return total_sum - 2 * divisible_sum
+
+    def countHillValley(self, nums) -> int:
+        cnt, left = 0, 0
+        for i in range(1, len(nums) - 1):
+            if nums[i] != nums[i + 1]:
+                if (nums[i] > nums[left] and nums[i] > nums[i + 1]) or \
+                        (nums[i] < nums[left] and nums[i] < nums[i + 1]):
+                    cnt += 1
+                left = i
+        return cnt
