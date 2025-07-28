@@ -716,3 +716,8 @@ def test_countHillValley():
     print(' --- Inside test_countHillValley ---')
     assert Solution().countHillValley([2, 4, 1, 1, 6, 5]) == 3
     assert Solution().countHillValley([6, 6, 5, 5, 4, 1]) == 0
+
+def test_countMaxOrSubsets():
+    print(' --- Inside test_countMaxOrSubsets ---')
+    assert Solution().countMaxOrSubsets([3,1]) == 2
+    assert Solution().countMaxOrSubsets([2,2,2]) == 7

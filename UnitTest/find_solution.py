@@ -1444,3 +1444,12 @@ class Solution:
                     cnt += 1
                 left = i
         return cnt
+
+    def countMaxOrSubsets(self, nums) -> int:
+        dp = collections.Counter([0])
+        max_or = 0
+        for num in nums:
+            for val, count in list(dp.items()):
+                dp[val | num] += count
+            max_or |= num
+        return dp[max_or]
