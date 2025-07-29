@@ -721,3 +721,9 @@ def test_countMaxOrSubsets():
     print(' --- Inside test_countMaxOrSubsets ---')
     assert Solution().countMaxOrSubsets([3,1]) == 2
     assert Solution().countMaxOrSubsets([2,2,2]) == 7
+
+
+def test_smallestSubarrays():
+    print(' --- Inside test_smallestSubarrays ---')
+    assert Solution().smallestSubarrays([1,0,2,1,3]) == [3,3,2,2,1]
+    assert Solution().smallestSubarrays([1,2]) == [2,1]
