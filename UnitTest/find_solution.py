@@ -1466,3 +1466,14 @@ class Solution:
                 nums[j] |= x
                 j -= 1
         return answer
+
+    def longestSubarray(self, nums) -> int:
+        max_ele = max(nums)
+        longest = cur = 0
+        for ele in nums:
+            if ele == max_ele:
+                cur += 1
+                longest = max(longest, cur)
+            else:
+                cur = 0
+        return longest

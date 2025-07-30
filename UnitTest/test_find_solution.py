@@ -727,3 +727,8 @@ def test_smallestSubarrays():
     print(' --- Inside test_smallestSubarrays ---')
     assert Solution().smallestSubarrays([1,0,2,1,3]) == [3,3,2,2,1]
     assert Solution().smallestSubarrays([1,2]) == [2,1]
+
+def test_longestSubarray():
+    print(' --- Inside test_longestSubarray ---')
+    assert Solution().longestSubarray([1,2,3,3,2,2]) == 2
+    assert Solution().longestSubarray([1,2,3,4]) == 1
