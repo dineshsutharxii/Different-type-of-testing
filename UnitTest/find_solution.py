@@ -1477,3 +1477,10 @@ class Solution:
             else:
                 cur = 0
         return longest
+
+    def subarrayBitwiseORs(self, A) -> int:
+        cur, res = set(), set()
+        for i in A:
+            cur = {i | j for j in cur} | {i}
+            res |= cur
+        return len(res)

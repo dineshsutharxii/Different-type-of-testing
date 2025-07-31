@@ -732,3 +732,9 @@ def test_longestSubarray():
     print(' --- Inside test_longestSubarray ---')
     assert Solution().longestSubarray([1,2,3,3,2,2]) == 2
     assert Solution().longestSubarray([1,2,3,4]) == 1
+
+def test_subarrayBitwiseORs():
+    print(' --- Inside test_subarrayBitwiseORs ---')
+    assert Solution().subarrayBitwiseORs([1,2,4]) == 6
+    assert Solution().subarrayBitwiseORs([1,1,2]) == 3
+    assert Solution().subarrayBitwiseORs([0]) == 1
