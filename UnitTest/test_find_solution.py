@@ -738,3 +738,8 @@ def test_subarrayBitwiseORs():
     assert Solution().subarrayBitwiseORs([1,2,4]) == 6
     assert Solution().subarrayBitwiseORs([1,1,2]) == 3
     assert Solution().subarrayBitwiseORs([0]) == 1
+
+def test_generate():
+    print(' --- Inside test_generate ---')
+    assert Solution().generate(5) == [[1],[1,1],[1,2,1],[1,3,3,1],[1,4,6,4,1]]
+    assert Solution().generate(1) == [[1]]

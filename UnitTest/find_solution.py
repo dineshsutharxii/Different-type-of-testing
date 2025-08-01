@@ -1484,3 +1484,14 @@ class Solution:
             cur = {i | j for j in cur} | {i}
             res |= cur
         return len(res)
+
+    def generate(self, numRows: int):
+        res = []
+        for i in range(1, numRows + 1):
+            s_row = [1]
+            ans = 1
+            for j in range(1, i):
+                ans = ans * (i - j) // j
+                s_row.append(ans)
+            res.append(s_row)
+        return res
