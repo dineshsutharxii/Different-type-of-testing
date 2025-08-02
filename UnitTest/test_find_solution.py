@@ -743,3 +743,8 @@ def test_generate():
     print(' --- Inside test_generate ---')
     assert Solution().generate(5) == [[1],[1,1],[1,2,1],[1,3,3,1],[1,4,6,4,1]]
     assert Solution().generate(1) == [[1]]
+
+def test_minCost():
+    print(' --- Inside test_minCost ---')
+    assert Solution().minCost([4,2,2,2], [1,4,1,2]) == 1
+    assert Solution().minCost([2,3,4,1], [3,2,5,1]) == -1
