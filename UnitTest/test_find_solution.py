@@ -748,3 +748,8 @@ def test_minCost():
     print(' --- Inside test_minCost ---')
     assert Solution().minCost([4,2,2,2], [1,4,1,2]) == 1
     assert Solution().minCost([2,3,4,1], [3,2,5,1]) == -1
+
+def test_maxTotalFruits():
+    print(' --- Inside test_maxTotalFruits ---')
+    assert Solution().maxTotalFruits([[2,8],[6,3],[8,6]], 5, 4) == 9
+    assert Solution().maxTotalFruits([[0,9],[4,1],[5,7],[6,2],[7,4],[10,9]], 5, 4) == 14
