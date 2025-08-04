@@ -753,3 +753,9 @@ def test_maxTotalFruits():
     print(' --- Inside test_maxTotalFruits ---')
     assert Solution().maxTotalFruits([[2,8],[6,3],[8,6]], 5, 4) == 9
     assert Solution().maxTotalFruits([[0,9],[4,1],[5,7],[6,2],[7,4],[10,9]], 5, 4) == 14
+
+def test_totalFruit():
+    print(' --- Inside test_maxTotalFruits ---')
+    assert Solution().totalFruit([1,2,1]) == 3
+    assert Solution().totalFruit([0,1,2,2]) == 3
+    assert Solution().totalFruit([1,2,3,2,2]) == 4
