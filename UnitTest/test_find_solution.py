@@ -759,3 +759,8 @@ def test_totalFruit():
     assert Solution().totalFruit([1,2,1]) == 3
     assert Solution().totalFruit([0,1,2,2]) == 3
     assert Solution().totalFruit([1,2,3,2,2]) == 4
+
+def test_numOfUnplacedFruits():
+    print(' --- Inside test_numOfUnplacedFruits ---')
+    assert Solution().numOfUnplacedFruits([3,6,1], [6,4,7]) == 0
+    assert Solution().numOfUnplacedFruits([4,2,5], [3,5,4]) == 1

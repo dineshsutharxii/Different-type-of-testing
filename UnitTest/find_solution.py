@@ -1344,12 +1344,14 @@ class Solution:
     def robotWithString(self, s: str) -> str:
         freq = collections.Counter(s)
         st, res = [], []
+
         def min_char(freq):
             for i in range(26):
                 ch = chr(ord('a') + i)
                 if freq[ch] > 0:
                     return ch
             return 'a'
+
         for ch in s:
             st.append(ch)
             freq[ch] -= 1
@@ -1396,6 +1398,7 @@ class Solution:
                     stack.append(char)
             remaining = ''.join(stack)
             return remaining, points
+
         if x >= y:
             s, points = remove_and_score(s, 'a', 'b', x)
             s, additional_points = remove_and_score(s, 'b', 'a', y)
@@ -1550,3 +1553,14 @@ class Solution:
                     count.pop(f)
             res = max(res, total)
         return res
+
+    def numOfUnplacedFruits(self, fruits, baskets) -> int:
+        ans = 0
+        for fruit in fruits:
+            for basket in baskets:
+                if fruit <= basket:
+                    baskets[baskets.index(basket)] = 0
+                    break
+            else:
+                ans += 1
+        return ans
