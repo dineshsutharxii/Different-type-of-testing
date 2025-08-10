@@ -764,3 +764,8 @@ def test_numOfUnplacedFruits():
     print(' --- Inside test_numOfUnplacedFruits ---')
     assert Solution().numOfUnplacedFruits([3,6,1], [6,4,7]) == 0
     assert Solution().numOfUnplacedFruits([4,2,5], [3,5,4]) == 1
+
+def test_reorderedPowerOf2():
+    print(' --- Inside test_reorderedPowerOf2 ---')
+    assert Solution().reorderedPowerOf2(1) == True
+    assert Solution().reorderedPowerOf2(10) == False

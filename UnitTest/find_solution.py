@@ -1564,3 +1564,11 @@ class Solution:
             else:
                 ans += 1
         return ans
+
+    def reorderedPowerOf2(self, N: int) -> bool:
+        signature_of_N = collections.Counter(str(N))
+        for i in range(32):
+            power_of_2 = 1 << i
+            if collections.Counter(str(power_of_2)) == signature_of_N:
+                return True
+        return False
