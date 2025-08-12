@@ -717,59 +717,70 @@ def test_countHillValley():
     assert Solution().countHillValley([2, 4, 1, 1, 6, 5]) == 3
     assert Solution().countHillValley([6, 6, 5, 5, 4, 1]) == 0
 
+
 def test_countMaxOrSubsets():
     print(' --- Inside test_countMaxOrSubsets ---')
-    assert Solution().countMaxOrSubsets([3,1]) == 2
-    assert Solution().countMaxOrSubsets([2,2,2]) == 7
+    assert Solution().countMaxOrSubsets([3, 1]) == 2
+    assert Solution().countMaxOrSubsets([2, 2, 2]) == 7
 
 
 def test_smallestSubarrays():
     print(' --- Inside test_smallestSubarrays ---')
-    assert Solution().smallestSubarrays([1,0,2,1,3]) == [3,3,2,2,1]
-    assert Solution().smallestSubarrays([1,2]) == [2,1]
+    assert Solution().smallestSubarrays([1, 0, 2, 1, 3]) == [3, 3, 2, 2, 1]
+    assert Solution().smallestSubarrays([1, 2]) == [2, 1]
+
 
 def test_longestSubarray():
     print(' --- Inside test_longestSubarray ---')
-    assert Solution().longestSubarray([1,2,3,3,2,2]) == 2
-    assert Solution().longestSubarray([1,2,3,4]) == 1
+    assert Solution().longestSubarray([1, 2, 3, 3, 2, 2]) == 2
+    assert Solution().longestSubarray([1, 2, 3, 4]) == 1
+
 
 def test_subarrayBitwiseORs():
     print(' --- Inside test_subarrayBitwiseORs ---')
-    assert Solution().subarrayBitwiseORs([1,2,4]) == 6
-    assert Solution().subarrayBitwiseORs([1,1,2]) == 3
+    assert Solution().subarrayBitwiseORs([1, 2, 4]) == 6
+    assert Solution().subarrayBitwiseORs([1, 1, 2]) == 3
     assert Solution().subarrayBitwiseORs([0]) == 1
+
 
 def test_generate():
     print(' --- Inside test_generate ---')
-    assert Solution().generate(5) == [[1],[1,1],[1,2,1],[1,3,3,1],[1,4,6,4,1]]
+    assert Solution().generate(5) == [[1], [1, 1], [1, 2, 1], [1, 3, 3, 1], [1, 4, 6, 4, 1]]
     assert Solution().generate(1) == [[1]]
+
 
 def test_minCost():
     print(' --- Inside test_minCost ---')
-    assert Solution().minCost([4,2,2,2], [1,4,1,2]) == 1
-    assert Solution().minCost([2,3,4,1], [3,2,5,1]) == -1
+    assert Solution().minCost([4, 2, 2, 2], [1, 4, 1, 2]) == 1
+    assert Solution().minCost([2, 3, 4, 1], [3, 2, 5, 1]) == -1
+
 
 def test_maxTotalFruits():
     print(' --- Inside test_maxTotalFruits ---')
-    assert Solution().maxTotalFruits([[2,8],[6,3],[8,6]], 5, 4) == 9
-    assert Solution().maxTotalFruits([[0,9],[4,1],[5,7],[6,2],[7,4],[10,9]], 5, 4) == 14
+    assert Solution().maxTotalFruits([[2, 8], [6, 3], [8, 6]], 5, 4) == 9
+    assert Solution().maxTotalFruits([[0, 9], [4, 1], [5, 7], [6, 2], [7, 4], [10, 9]], 5, 4) == 14
+
 
 def test_totalFruit():
     print(' --- Inside test_maxTotalFruits ---')
-    assert Solution().totalFruit([1,2,1]) == 3
-    assert Solution().totalFruit([0,1,2,2]) == 3
-    assert Solution().totalFruit([1,2,3,2,2]) == 4
+    assert Solution().totalFruit([1, 2, 1]) == 3
+    assert Solution().totalFruit([0, 1, 2, 2]) == 3
+    assert Solution().totalFruit([1, 2, 3, 2, 2]) == 4
+
 
 def test_numOfUnplacedFruits():
     print(' --- Inside test_numOfUnplacedFruits ---')
-    assert Solution().numOfUnplacedFruits([3,6,1], [6,4,7]) == 0
-    assert Solution().numOfUnplacedFruits([4,2,5], [3,5,4]) == 1
+    assert Solution().numOfUnplacedFruits([3, 6, 1], [6, 4, 7]) == 0
+    assert Solution().numOfUnplacedFruits([4, 2, 5], [3, 5, 4]) == 1
+
 
 def test_reorderedPowerOf2():
     print(' --- Inside test_reorderedPowerOf2 ---')
     assert Solution().reorderedPowerOf2(1) == True
     assert Solution().reorderedPowerOf2(10) == False
 
+
 def test_numberOfWays():
     print(' --- Inside test_numberOfWays ---')
     assert Solution().numberOfWays(10, 2) == 1
+    assert Solution().numberOfWays(4, 1) == 2
