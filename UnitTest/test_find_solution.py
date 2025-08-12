@@ -769,3 +769,7 @@ def test_reorderedPowerOf2():
     print(' --- Inside test_reorderedPowerOf2 ---')
     assert Solution().reorderedPowerOf2(1) == True
     assert Solution().reorderedPowerOf2(10) == False
+
+def test_numberOfWays():
+    print(' --- Inside test_numberOfWays ---')
+    assert Solution().numberOfWays(10, 2) == 1

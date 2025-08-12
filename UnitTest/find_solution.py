@@ -1572,3 +1572,19 @@ class Solution:
             if collections.Counter(str(power_of_2)) == signature_of_N:
                 return True
         return False
+
+    def numberOfWays(self, n: int, x: int) -> int:
+        powers = []
+        i = 1
+        while True:
+            p = pow(i, x)
+            if p > n:
+                break
+            powers.append(p)
+            i += 1
+        dp = [0] * (n + 1)
+        dp[0] = 1
+        for p in powers:
+            for s in range(n, p - 1, -1):
+                dp[s] = (dp[s] + dp[s - p]) % 1_000_000_007
+        return dp[n]
