@@ -788,3 +788,5 @@ def test_numberOfWays():
 def test_convertToZigzag():
     print(' --- Inside test_convertToZigzag ---')
     assert Solution().convertToZigzag("PAYPALISHIRING", 3) == "PAHNAPLSIIGYIR"
+    assert Solution().convertToZigzag("A", 1) == "A"
+    assert Solution().convertToZigzag('PAHNAPLSIIGYIR', 4)  == "PLIAPSYRHAIGNI"
