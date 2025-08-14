@@ -790,3 +790,9 @@ def test_convertToZigzag():
     assert Solution().convertToZigzag("PAYPALISHIRING", 3) == "PAHNAPLSIIGYIR"
     assert Solution().convertToZigzag("A", 1) == "A"
     assert Solution().convertToZigzag('PAHNAPLSIIGYIR', 4)  == "PLIAPSYRHAIGNI"
+
+def test_largestGoodInteger():
+    print(' --- Inside test_largestGoodInteger ---')
+    assert Solution().largestGoodInteger("6777133339") == '777'
+    assert Solution().largestGoodInteger("2300019") == '000'
+    assert Solution().largestGoodInteger("42352338") == ''

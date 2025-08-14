@@ -1606,3 +1606,12 @@ class Solution:
         for i in range(numRows):
             rows[i] = ''.join(rows[i])
         return ''.join(rows)
+
+    def largestGoodInteger(self, num: str) -> str:
+        maxi = ""
+        for i in range(len(num) - 2):
+            if num[i] == num[i + 1] == num[i + 2]:
+                triple = num[i] * 3
+                if triple > maxi:
+                    maxi = triple
+        return maxi
