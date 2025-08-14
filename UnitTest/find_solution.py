@@ -1615,3 +1615,20 @@ class Solution:
                 if triple > maxi:
                     maxi = triple
         return maxi
+
+    def isValid(self, s: str) -> bool:
+        stk = []
+        for ele in s:
+            if ele == '(' or ele == '{' or ele == '[':
+                stk.append(ele)
+            else:
+                if len(stk) == 0: return False
+                ch = stk[-1]
+                stk.pop()
+                if ((ele == ')' and ch == '(') or
+                        (ele == '}' and ch == '{') or
+                        (ele == ']' and ch == '[')):
+                    continue
+                else:
+                    return False
+        return len(stk) == 0
