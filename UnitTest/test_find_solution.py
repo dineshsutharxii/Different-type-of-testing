@@ -805,3 +805,8 @@ def test_isPowerOfFour():
     assert Solution().isPowerOfFour(16) == True
     assert Solution().isPowerOfFour(1) == True
     assert Solution().isPowerOfFour(-16) == False
+
+def test_isValid():
+    print(' --- Inside test_isValid ---')
+    assert Solution().isValid('(){}[]') == True
+    assert Solution().isValid('{{{{]]]]]') == False
