@@ -785,11 +785,13 @@ def test_numberOfWays():
     assert Solution().numberOfWays(10, 2) == 1
     assert Solution().numberOfWays(4, 1) == 2
 
+
 def test_convertToZigzag():
     print(' --- Inside test_convertToZigzag ---')
     assert Solution().convertToZigzag("PAYPALISHIRING", 3) == "PAHNAPLSIIGYIR"
     assert Solution().convertToZigzag("A", 1) == "A"
-    assert Solution().convertToZigzag('PAHNAPLSIIGYIR', 4)  == "PLIAPSYRHAIGNI"
+    assert Solution().convertToZigzag('PAHNAPLSIIGYIR', 4) == "PLIAPSYRHAIGNI"
+
 
 def test_largestGoodInteger():
     print(' --- Inside test_largestGoodInteger ---')
@@ -797,6 +799,9 @@ def test_largestGoodInteger():
     assert Solution().largestGoodInteger("2300019") == '000'
     assert Solution().largestGoodInteger("42352338") == ''
 
+
 def test_isPowerOfFour():
     print(' --- Inside test_isPowerOfFour ---')
     assert Solution().isPowerOfFour(16) == True
+    assert Solution().isPowerOfFour(1) == True
+    assert Solution().isPowerOfFour(-16) == False
