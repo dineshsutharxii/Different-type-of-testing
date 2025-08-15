@@ -796,3 +796,7 @@ def test_largestGoodInteger():
     assert Solution().largestGoodInteger("6777133339") == '777'
     assert Solution().largestGoodInteger("2300019") == '000'
     assert Solution().largestGoodInteger("42352338") == ''
+
+def test_isPowerOfFour():
+    print(' --- Inside test_isPowerOfFour ---')
+    assert Solution().isPowerOfFour(16) == True
