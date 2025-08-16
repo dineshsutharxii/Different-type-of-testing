@@ -1639,3 +1639,11 @@ class Solution:
         while n % 4 == 0:
             n = n // 4
         return n == 1
+
+    def maximum69Number(self, num: int) -> int:
+        str1 = str(num)
+        for ele in str1:
+            if ele == '6':
+                str1 = str1.replace(ele, '9', 1)
+                break
+        return int(str1)
