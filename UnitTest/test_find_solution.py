@@ -812,7 +812,14 @@ def test_isValid():
     assert Solution().isValid('{{{{]]]]]') == False
 
 def test_maximum69Number():
-    print(' --- Inside test_isValid ---')
+    print(' --- Inside test_maximum69Number ---')
     assert Solution().maximum69Number(9669) == 9969
     assert Solution().maximum69Number(9996) == 9999
     assert Solution().maximum69Number(9999) == 9999
+
+def test_isPowerOfThree():
+    print(' --- Inside test_isPowerOfThree ---')
+    assert Solution().isPowerOfThree(9) == True
+    assert Solution().isPowerOfThree(10) == False
+    assert Solution().isPowerOfThree(27) == True
+    assert Solution().isPowerOfThree(999) == False
