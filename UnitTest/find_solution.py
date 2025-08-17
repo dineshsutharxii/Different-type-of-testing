@@ -1654,3 +1654,14 @@ class Solution:
         while n > 1:
             n = n / 3
         return n == 1
+
+    def countDays(self, days: int, meetings) -> int:
+        meetings.sort()
+        prevend = 0
+
+        for start, end in meetings:
+            start = max(start, prevend+1)
+            length = end - start + 1
+            days -= max(length, 0)
+            prevend = max(prevend, end)
+        return days
