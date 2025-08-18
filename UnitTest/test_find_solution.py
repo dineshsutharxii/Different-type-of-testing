@@ -828,7 +828,12 @@ def test_isPowerOfThree():
     assert Solution().isPowerOfThree(999) == False
 
 def test_countDays():
-    print(' --- Inside test_isPowerOfThree ---')
+    print(' --- Inside test_countDays ---')
     assert Solution().countDays(10, [[5,7],[1,3],[9,10]]) == 2
     assert Solution().countDays(5, [[2,4],[1,3]]) == 1
     assert Solution().countDays(6, [[1,6]]) == 0
+
+def test_judgePoint24():
+    print(' --- Inside test_countDays ---')
+    assert Solution().judgePoint24([4,1,8,7]) == True
+    assert Solution().judgePoint24([1,2,1,2]) == False
