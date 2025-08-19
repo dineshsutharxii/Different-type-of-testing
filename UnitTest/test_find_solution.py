@@ -846,6 +846,8 @@ def test_nextPermutation():
     assert Solution().nextPermutation([1, 2, 3]) == [1, 3, 2]
     assert Solution().nextPermutation([1, 1, 5]) == [1, 5, 1]
 
+
 def test_zeroFilledSubarray():
     print(' --- Inside test_zeroFilledSubarray ---')
-    assert Solution().zeroFilledSubarray([1,3,0,0,2,0,0,4]) == 6
+    assert Solution().zeroFilledSubarray([1, 3, 0, 0, 2, 0, 0, 4]) == 6
+    assert Solution().zeroFilledSubarray([0, 0, 0, 2, 0, 0]) == 9
