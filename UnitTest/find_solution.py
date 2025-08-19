@@ -1701,3 +1701,17 @@ class Solution:
               "5888", "5889", "6666", "6668", "6669", "6679", "6688", "6689", "6789", "6799", "6888", "6889", "6899",
               "7889"}
         return normalize in dp
+
+    def nextPermutation(self, nums) -> None:
+        i = len(nums) - 1
+        while i > 0 and nums[i - 1] >= nums[i]:
+            i -= 1
+        if i == 0:
+            nums.reverse()
+            return
+        j = len(nums) - 1
+        while j >= i and nums[j] <= nums[i - 1]:
+            j -= 1
+        nums[i - 1], nums[j] = nums[j], nums[i - 1]
+        nums[i:] = reversed(nums[i:])
+        return nums
