@@ -1715,3 +1715,13 @@ class Solution:
         nums[i - 1], nums[j] = nums[j], nums[i - 1]
         nums[i:] = reversed(nums[i:])
         return nums
+
+    def zeroFilledSubarray(self, nums) -> int:
+        cnt, streak = 0, 0
+        for num in nums:
+            if num == 0:
+                streak += 1
+                cnt += streak
+            else:
+                streak = 0
+        return cnt
