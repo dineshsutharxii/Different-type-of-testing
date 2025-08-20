@@ -851,3 +851,8 @@ def test_zeroFilledSubarray():
     print(' --- Inside test_zeroFilledSubarray ---')
     assert Solution().zeroFilledSubarray([1, 3, 0, 0, 2, 0, 0, 4]) == 6
     assert Solution().zeroFilledSubarray([0, 0, 0, 2, 0, 0]) == 9
+
+def test_countSquares():
+    print(' --- Inside test_countSquares ---')
+    assert Solution().countSquares([[0,1,1,1],[1,1,1,1],[0,1,1,1]]) == 15
+    assert Solution().countSquares([[1,0,1],[1,1,0],[1,1,0]]) == 7
