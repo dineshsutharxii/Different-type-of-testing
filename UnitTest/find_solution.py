@@ -1,4 +1,5 @@
 import collections
+import heapq
 from collections import deque
 from heapq import heappop, heappush
 from itertools import chain
@@ -1741,3 +1742,12 @@ class Solution:
                     ) + 1
                 res += matrix[i][j]
         return res
+
+    def findKthLargest(self, nums, k: int) -> int:
+        heap = nums[:k]
+        heapq.heapify(heap)
+        for num in nums[k:]:
+            if num > heap[0]:
+                heapq.heappop(heap)
+                heapq.heappush(heap, num)
+        return heap[0]
