@@ -864,7 +864,14 @@ def test_findKthLargest():
     assert Solution().findKthLargest([3, 2, 1, 5, 6, 4], 2) == 5
     assert Solution().findKthLargest([3, 2, 3, 1, 2, 4, 5, 5, 6], 4) == 4
 
+
 def test_minimumArea():
     print(' --- Inside test_minimumArea ---')
-    assert Solution().minimumArea([[0,1,0],[1,0,1]]) == 6
-    assert Solution().minimumArea([[1,0],[0,0]]) == 1
+    assert Solution().minimumArea([[0, 1, 0], [1, 0, 1]]) == 6
+    assert Solution().minimumArea([[1, 0], [0, 0]]) == 1
+
+
+def test_findDiagonalOrder():
+    print(' --- Inside test_findDiagonalOrder ---')
+    assert Solution().findDiagonalOrder([[1, 2, 3], [4, 5, 6], [7, 8, 9]]) == [1, 2, 4, 7, 5, 3, 6, 8, 9]
+    assert Solution().findDiagonalOrder([[1, 2], [3, 4]]) == [1, 2, 3, 4]
