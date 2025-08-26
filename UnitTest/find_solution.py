@@ -3,7 +3,7 @@ import heapq
 from collections import deque
 from heapq import heappop, heappush
 from itertools import chain
-from math import floor, log10
+from math import floor, log10, sqrt
 
 
 def twoSum(nums, target):
@@ -1778,3 +1778,11 @@ class Solution:
             else:
                 ans.extend(entry[1])
         return ans
+
+    def areaOfMaxDiagonal(self, dimensions):
+        maxi, area = 0, 0
+        for ele in dimensions:
+            if maxi <= sqrt(ele[0] * ele[0] + ele[1] * ele[1]):
+                maxi = sqrt(ele[0] * ele[0] + ele[1] * ele[1])
+                area = ele[0] * ele[1]
+        return area
