@@ -876,7 +876,8 @@ def test_findDiagonalOrder():
     assert Solution().findDiagonalOrder([[1, 2, 3], [4, 5, 6], [7, 8, 9]]) == [1, 2, 4, 7, 5, 3, 6, 8, 9]
     assert Solution().findDiagonalOrder([[1, 2], [3, 4]]) == [1, 2, 3, 4]
 
+
 def test_areaOfMaxDiagonal():
     print(' --- Inside test_areaOfMaxDiagonal ---')
-    assert Solution().areaOfMaxDiagonal([[3,4],[4,3]]) == 12
-    assert Solution().areaOfMaxDiagonal([[9,3],[8,6]]) == 48
+    assert Solution().areaOfMaxDiagonal([[3, 4], [4, 3]]) == 12
+    assert Solution().areaOfMaxDiagonal([[9, 3], [8, 6]]) == 48
