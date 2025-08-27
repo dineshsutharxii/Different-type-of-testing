@@ -1661,7 +1661,7 @@ class Solution:
         prevend = 0
 
         for start, end in meetings:
-            start = max(start, prevend+1)
+            start = max(start, prevend + 1)
             length = end - start + 1
             days -= max(length, 0)
             prevend = max(prevend, end)
@@ -1786,3 +1786,15 @@ class Solution:
                 maxi = sqrt(ele[0] * ele[0] + ele[1] * ele[1])
                 area = ele[0] * ele[1]
         return area
+
+    def getDecimalValue(self, head) -> int:
+        res = 0
+        while head:
+            res = 2 * res + head.val
+            head = head.next
+        return res
+
+class ListNode:
+    def __init__(self, val=0, next=None):
+        self.val = val
+        self.next = next

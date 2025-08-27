@@ -7,7 +7,7 @@ from find_solution import (twoSum, minSubArrayLen,
                            check_if_power_of_two, divide_two_integers, find_single_num, count_primes, reverse_integer,
                            find_missing_and_repeated_number, assign_cookies, lemonado_change, valid_parenthesis_string,
                            jump_game, jump_game_2, insert_interval, merge_intervals, non_overlapping_intervals)
-from find_solution import Solution, TreeNode
+from find_solution import Solution, TreeNode, ListNode
 import pytest
 
 
@@ -171,6 +171,15 @@ def sample_tree_2():
     root.right = TreeNode(20)
     root.right.left = TreeNode(15)
     root.right.right = TreeNode(7)
+
+
+@pytest.fixture
+def sample_linked_list():
+    node3 = ListNode(1)
+    node2 = ListNode(0, node3)
+    node1 = ListNode(1, node2)
+    head = node1
+    return head
 
 
 def test_postorderTraversal(sample_tree):  #left->right->Node
@@ -881,3 +890,8 @@ def test_areaOfMaxDiagonal():
     print(' --- Inside test_areaOfMaxDiagonal ---')
     assert Solution().areaOfMaxDiagonal([[3, 4], [4, 3]]) == 12
     assert Solution().areaOfMaxDiagonal([[9, 3], [8, 6]]) == 48
+
+
+def test_getDecimalValue(sample_linked_list):
+    print(' --- Inside test_areaOfMaxDiagonal ---')
+    assert Solution().getDecimalValue(sample_linked_list) == 5
