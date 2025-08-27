@@ -1800,7 +1800,7 @@ class Solution:
             head = head.next
         return res
 
-    def isValid(self, word):
+    def isValidWord(self, word):
         if len(word) < 3:
             return False
         vowels = set('aeiouAEIOU')

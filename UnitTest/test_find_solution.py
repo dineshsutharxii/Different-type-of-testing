@@ -893,5 +893,11 @@ def test_areaOfMaxDiagonal():
 
 
 def test_getDecimalValue(sample_linked_list):
-    print(' --- Inside test_areaOfMaxDiagonal ---')
+    print(' --- Inside test_getDecimalValue ---')
     assert Solution().getDecimalValue(sample_linked_list) == 5
+
+
+def test_isValidWord():
+    print(' --- Inside test_isValidWord ---')
+    assert Solution().isValidWord("234Adas") == True
+    assert Solution().isValidWord("b3") == False
