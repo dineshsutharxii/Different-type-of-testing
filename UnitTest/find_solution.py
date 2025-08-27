@@ -338,6 +338,12 @@ class TreeNode:
         self.right = right
 
 
+class ListNode:
+    def __init__(self, val=0, next=None):
+        self.val = val
+        self.next = next
+
+
 class Solution:
     def postorderTraversal(self, root):
         res = []
@@ -1794,7 +1800,16 @@ class Solution:
             head = head.next
         return res
 
-class ListNode:
-    def __init__(self, val=0, next=None):
-        self.val = val
-        self.next = next
+    def isValid(self, word):
+        if len(word) < 3:
+            return False
+        vowels = set('aeiouAEIOU')
+        vowel = consonant = False
+        for char in word:
+            if not (('0' <= char <= '9') or ('A' <= char <= 'Z') or ('a' <= char <= 'z')):
+                return False
+            if char in vowels:
+                vowel = True
+            if not ('0' <= char <= '9') and char not in vowels:
+                consonant = True
+        return consonant and vowel
