@@ -901,3 +901,4 @@ def test_isValidWord():
     print(' --- Inside test_isValidWord ---')
     assert Solution().isValidWord("234Adas") == True
     assert Solution().isValidWord("b3") == False
+    assert Solution().isValidWord("bB3") == False
