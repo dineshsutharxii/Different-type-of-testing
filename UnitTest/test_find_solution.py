@@ -902,3 +902,7 @@ def test_isValidWord():
     assert Solution().isValidWord("234Adas") == True
     assert Solution().isValidWord("b3") == False
     assert Solution().isValidWord("bB3") == False
+
+def test_flowerGame():
+    print(' --- Inside test_flowerGame ---')
+    assert Solution().flowerGame(3,2) == 3
