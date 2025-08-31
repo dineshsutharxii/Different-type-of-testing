@@ -1820,3 +1820,9 @@ class Solution:
         even_y = m // 2
         odd_y = m - even_y
         return even_x * odd_y + odd_x * even_y
+
+    def subsetXORSumNew(self, nums):
+        total = 0
+        for num in nums:
+            total |= num
+        return total * (2 ** (len(nums) - 1))
