@@ -909,7 +909,12 @@ def test_flowerGame():
     assert Solution().flowerGame(4,6) == 12
 
 def test_subsetXORSumNew():
-    print(' --- Inside test_max_sum_path ---')
+    print(' --- Inside test_subsetXORSumNew ---')
     assert Solution().subsetXORSumNew([1, 3]) == 6
     assert Solution().subsetXORSumNew([5, 1, 6]) == 28
     assert Solution().subsetXORSumNew([3, 4, 5, 6, 7, 8]) == 480
+
+def test_maxAverageRatio():
+    print(' --- Inside test_maxAverageRatio ---')
+    assert Solution().maxAverageRatio([[1,2],[3,5],[2,2]], 2) == 0.78333
+    assert Solution().maxAverageRatio([[2,4],[3,9],[4,5],[2,10]], 4) == 0.53485

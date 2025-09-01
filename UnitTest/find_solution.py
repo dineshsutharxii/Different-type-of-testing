@@ -1826,3 +1826,16 @@ class Solution:
         for num in nums:
             total |= num
         return total * (2 ** (len(nums) - 1))
+
+    def maxAverageRatio(self, classes, extraStudents):
+        h = []
+        for p, t in classes:
+            delta = (p + 1) / (t + 1) - p / t
+            heapq.heappush(h, (-delta, p, t))
+        for _ in range(extraStudents):
+            d, p, t = heapq.heappop(h)
+            p += 1
+            t += 1
+            delta = (p + 1) / (t + 1) - p / t
+            heapq.heappush(h, (-delta, p, t))
+        return round(sum(p / t for _, p, t in h) / len(classes), 5)
