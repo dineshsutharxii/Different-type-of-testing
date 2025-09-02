@@ -1849,7 +1849,7 @@ class Solution:
             lower_y_limit = float('-inf')
             for j in range(i + 1, n):
                 current_y = points[j][1]
-                if current_y <= upper_y and current_y > lower_y_limit:
+                if upper_y >= current_y > lower_y_limit:
                     pair_cnt += 1
                     lower_y_limit = current_y
                     if current_y == upper_y:

@@ -918,3 +918,9 @@ def test_maxAverageRatio():
     print(' --- Inside test_maxAverageRatio ---')
     assert Solution().maxAverageRatio([[1,2],[3,5],[2,2]], 2) == 0.78333
     assert Solution().maxAverageRatio([[2,4],[3,9],[4,5],[2,10]], 4) == 0.53485
+
+def test_numberOfPairs():
+    print(' --- Inside test_numberOfPairs ---')
+    assert Solution().numberOfPairs([[1,1],[2,2],[3,3]]) == 0
+    assert Solution().numberOfPairs([[6,2],[4,4],[2,6]]) == 2
+    assert Solution().numberOfPairs([[3,1],[1,3],[1,1]]) == 2
