@@ -1855,3 +1855,20 @@ class Solution:
                     if current_y == upper_y:
                         break
         return pair_cnt
+
+
+    def countSymmetricIntegers(self, low: int, high: int) -> int:
+        cnt = 0
+        for ele in range(low, high + 1):
+            s = str(ele)
+            n = len(s)
+            if n % 2 != 0:
+                continue
+            half = n // 2
+
+            left = sum(int(s[i]) for i in range(half))
+            right = sum(int(s[i]) for i in range(half, n))
+
+            if left == right:
+                cnt += 1
+        return cnt

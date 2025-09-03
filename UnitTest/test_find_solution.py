@@ -924,3 +924,8 @@ def test_numberOfPairs():
     assert Solution().numberOfPairs([[1,1],[2,2],[3,3]]) == 0
     assert Solution().numberOfPairs([[6,2],[4,4],[2,6]]) == 2
     assert Solution().numberOfPairs([[3,1],[1,3],[1,1]]) == 2
+
+def test_countSymmetricIntegers():
+    print(' --- Inside test_countSymmetricIntegers ---')
+    assert Solution().countSymmetricIntegers(1, 100) == 9
+    assert Solution().countSymmetricIntegers(1200, 1230) == 4
