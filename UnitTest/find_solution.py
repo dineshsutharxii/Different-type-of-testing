@@ -1872,3 +1872,12 @@ class Solution:
             if left == right:
                 cnt += 1
         return cnt
+
+    def findClosest(self, x: int, y: int, z: int) -> int:
+        x_z = z - x
+        y_z = z - y
+        if abs(x_z) == abs(y_z): return 0
+        if abs(x_z) > abs(y_z):
+            return 2
+        else:
+            return 1

@@ -929,3 +929,8 @@ def test_countSymmetricIntegers():
     print(' --- Inside test_countSymmetricIntegers ---')
     assert Solution().countSymmetricIntegers(1, 100) == 9
     assert Solution().countSymmetricIntegers(1200, 1230) == 4
+
+def test_findClosest():
+    print(' --- Inside test_findClosest ---')
+    assert Solution().findClosest(1,5,3) == 0
+    assert Solution().findClosest(2,7,4) == 1
