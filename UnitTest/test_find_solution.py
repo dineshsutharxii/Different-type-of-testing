@@ -903,10 +903,12 @@ def test_isValidWord():
     assert Solution().isValidWord("b3") == False
     assert Solution().isValidWord("bB3") == False
 
+
 def test_flowerGame():
     print(' --- Inside test_flowerGame ---')
-    assert Solution().flowerGame(3,2) == 3
-    assert Solution().flowerGame(4,6) == 12
+    assert Solution().flowerGame(3, 2) == 3
+    assert Solution().flowerGame(4, 6) == 12
+
 
 def test_subsetXORSumNew():
     print(' --- Inside test_subsetXORSumNew ---')
@@ -914,23 +916,27 @@ def test_subsetXORSumNew():
     assert Solution().subsetXORSumNew([5, 1, 6]) == 28
     assert Solution().subsetXORSumNew([3, 4, 5, 6, 7, 8]) == 480
 
+
 def test_maxAverageRatio():
     print(' --- Inside test_maxAverageRatio ---')
-    assert Solution().maxAverageRatio([[1,2],[3,5],[2,2]], 2) == 0.78333
-    assert Solution().maxAverageRatio([[2,4],[3,9],[4,5],[2,10]], 4) == 0.53485
+    assert Solution().maxAverageRatio([[1, 2], [3, 5], [2, 2]], 2) == 0.78333
+    assert Solution().maxAverageRatio([[2, 4], [3, 9], [4, 5], [2, 10]], 4) == 0.53485
+
 
 def test_numberOfPairs():
     print(' --- Inside test_numberOfPairs ---')
-    assert Solution().numberOfPairs([[1,1],[2,2],[3,3]]) == 0
-    assert Solution().numberOfPairs([[6,2],[4,4],[2,6]]) == 2
-    assert Solution().numberOfPairs([[3,1],[1,3],[1,1]]) == 2
+    assert Solution().numberOfPairs([[1, 1], [2, 2], [3, 3]]) == 0
+    assert Solution().numberOfPairs([[6, 2], [4, 4], [2, 6]]) == 2
+    assert Solution().numberOfPairs([[3, 1], [1, 3], [1, 1]]) == 2
+
 
 def test_countSymmetricIntegers():
     print(' --- Inside test_countSymmetricIntegers ---')
     assert Solution().countSymmetricIntegers(1, 100) == 9
     assert Solution().countSymmetricIntegers(1200, 1230) == 4
 
+
 def test_findClosest():
     print(' --- Inside test_findClosest ---')
-    assert Solution().findClosest(1,5,3) == 0
-    assert Solution().findClosest(2,7,4) == 1
+    assert Solution().findClosest(1, 5, 3) == 0
+    assert Solution().findClosest(2, 7, 4) == 1
