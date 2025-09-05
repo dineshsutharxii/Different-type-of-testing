@@ -941,6 +941,8 @@ def test_findClosest():
     assert Solution().findClosest(1, 5, 3) == 0
     assert Solution().findClosest(2, 7, 4) == 1
 
+
 def test_makeTheIntegerZero():
     print(' --- Inside test_makeTheIntegerZero ---')
     assert Solution().makeTheIntegerZero(3, -2) == 3
+    assert Solution().makeTheIntegerZero(5, 7) == -1
