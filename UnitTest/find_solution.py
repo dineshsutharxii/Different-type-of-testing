@@ -1890,3 +1890,19 @@ class Solution:
             if i >= x.bit_count():
                 return i
         return -1
+
+    def minOperations(self, queries) -> int:
+        ans = 0
+        for query in queries:
+            start, end = query
+            ops = 0
+            prev = 1
+            for d in range(1, 17):
+                cur = prev * 4
+                l = max(start, prev)
+                r = min(end, cur - 1)
+                if r >= l:
+                    ops += (r - l + 1) * d
+                prev = cur
+            ans += (ops + 1) // 2
+        return ans

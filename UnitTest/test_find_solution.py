@@ -946,3 +946,8 @@ def test_makeTheIntegerZero():
     print(' --- Inside test_makeTheIntegerZero ---')
     assert Solution().makeTheIntegerZero(3, -2) == 3
     assert Solution().makeTheIntegerZero(5, 7) == -1
+
+def test_minOperations():
+    print(' --- Inside test_minOperations ---')
+    assert Solution().minOperations([[1,2],[2,4]]) == 3
+    assert Solution().minOperations([[2,6]]) == 4
