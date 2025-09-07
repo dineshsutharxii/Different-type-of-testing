@@ -947,7 +947,15 @@ def test_makeTheIntegerZero():
     assert Solution().makeTheIntegerZero(3, -2) == 3
     assert Solution().makeTheIntegerZero(5, 7) == -1
 
+
 def test_minOperations():
     print(' --- Inside test_minOperations ---')
-    assert Solution().minOperations([[1,2],[2,4]]) == 3
-    assert Solution().minOperations([[2,6]]) == 4
+    assert Solution().minOperations([[1, 2], [2, 4]]) == 3
+    assert Solution().minOperations([[2, 6]]) == 4
+
+
+def test_sumZero():
+    print(' --- Inside test_sumZero ---')
+    assert Solution().sumZero(5) == [1, -1, 2, -2, 0]
+    assert Solution().sumZero(3) == [1, -1, 0]
+    assert Solution().sumZero(1) == [0]
