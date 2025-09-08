@@ -1856,7 +1856,6 @@ class Solution:
                         break
         return pair_cnt
 
-
     def countSymmetricIntegers(self, low: int, high: int) -> int:
         cnt = 0
         for ele in range(low, high + 1):
@@ -1917,3 +1916,10 @@ class Solution:
         if n % 2 != 0:
             res.append(0)
         return res
+
+    def getNoZeroIntegers(self, n: int):
+        def has_zero(num):
+            return '0' in str(num)
+        for i in range(1, n + 1):
+            if not has_zero(i) and not has_zero(n - i):
+                return [i, n - i]

@@ -959,3 +959,10 @@ def test_sumZero():
     assert Solution().sumZero(5) == [1, -1, 2, -2, 0]
     assert Solution().sumZero(3) == [1, -1, 0]
     assert Solution().sumZero(1) == [0]
+
+
+def test_getNoZeroIntegers():
+    print(' --- Inside test_getNoZeroIntegers ---')
+    assert Solution().getNoZeroIntegers(2) == [1, 1]
+    assert Solution().getNoZeroIntegers(11) == [2, 9]
+    assert Solution().getNoZeroIntegers(100000) == [1, 99999]
