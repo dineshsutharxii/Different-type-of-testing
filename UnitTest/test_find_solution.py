@@ -966,3 +966,8 @@ def test_getNoZeroIntegers():
     assert Solution().getNoZeroIntegers(2) == [1, 1]
     assert Solution().getNoZeroIntegers(11) == [2, 9]
     assert Solution().getNoZeroIntegers(100000) == [1, 99999]
+
+
+def test_peopleAwareOfSecret():
+    print(' --- Inside test_peopleAwareOfSecret ---')
+    assert Solution().peopleAwareOfSecret(6,2,4) == 5
