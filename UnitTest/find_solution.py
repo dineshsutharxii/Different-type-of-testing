@@ -1920,6 +1920,7 @@ class Solution:
     def getNoZeroIntegers(self, n: int):
         def has_zero(num):
             return '0' in str(num)
+
         for i in range(1, n + 1):
             if not has_zero(i) and not has_zero(n - i):
                 return [i, n - i]
@@ -1946,5 +1947,27 @@ class Solution:
         total = 0
         for p in people:
             total = mod_add(total, p)
-
         return total
+
+    def minimumTeachings(self, n: int, languages, friendships) -> int:
+        cncon = set()
+        for u, v in friendships:
+            can_comm = False
+            mp = set(languages[u - 1])
+            for lang in languages[v - 1]:
+                if lang in mp:
+                    can_comm = True
+                    break
+            if not can_comm:
+                cncon.add(u - 1)
+                cncon.add(v - 1)
+        if not cncon:
+            return 0
+        cnt = [0] * n
+        for person in cncon:
+            for lang in languages[person]:
+                cnt[lang - 1] += 1
+        max_cnt = 0
+        for c in cnt:
+            max_cnt = max(max_cnt, c)
+        return len(cncon) - max_cnt

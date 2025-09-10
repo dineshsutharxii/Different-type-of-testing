@@ -970,4 +970,10 @@ def test_getNoZeroIntegers():
 
 def test_peopleAwareOfSecret():
     print(' --- Inside test_peopleAwareOfSecret ---')
-    assert Solution().peopleAwareOfSecret(6,2,4) == 5
+    assert Solution().peopleAwareOfSecret(6, 2, 4) == 5
+
+
+def test_minimumTeachings():
+    print(' --- Inside test_minimumTeachings ---')
+    assert Solution().minimumTeachings(2, [[1], [2], [1, 2]], [[1, 2], [1, 3], [2, 3]]) == 1
+    assert Solution().minimumTeachings(3, [[2], [1, 3], [1, 2], [3]], [[1, 4], [1, 2], [3, 4], [2, 3]]) == 2
