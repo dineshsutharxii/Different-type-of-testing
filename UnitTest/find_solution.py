@@ -1971,3 +1971,22 @@ class Solution:
         for c in cnt:
             max_cnt = max(max_cnt, c)
         return len(cncon) - max_cnt
+
+    def sortVowels(self, s: str) -> str:
+        vowels = 'AEIOUaeiou'
+        p_vowels = []
+        for char in s:
+            if char in vowels:
+                p_vowels.append(char)
+        if len(p_vowels) == 0:
+            return s
+        p_vowels.sort()
+        i = 0
+        res = []
+        for char in s:
+            if char in vowels:
+                res.append(p_vowels[i])
+                i += 1
+            else:
+                res.append(char)
+        return "".join(res)
