@@ -1990,3 +1990,20 @@ class Solution:
             else:
                 res.append(char)
         return "".join(res)
+
+    def doesAliceWin(self, s: str) -> bool:
+        cnt = 0
+        vowels = 'AEIOUaeiou'
+        for char in s:
+            if char in vowels:
+                cnt += 1
+        if cnt == 0:
+            return False
+        elif cnt % 2 != 0:
+            return True
+        cnt = 0
+        for i in range(len(s) - 1, -1, -1):
+            if s[i] in vowels:
+                cnt += 1
+                if cnt == 2:
+                    return True

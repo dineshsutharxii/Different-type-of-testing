@@ -978,7 +978,14 @@ def test_minimumTeachings():
     assert Solution().minimumTeachings(2, [[1], [2], [1, 2]], [[1, 2], [1, 3], [2, 3]]) == 1
     assert Solution().minimumTeachings(3, [[2], [1, 3], [1, 2], [3]], [[1, 4], [1, 2], [3, 4], [2, 3]]) == 2
 
+
 def test_sortVowels():
     print(' --- Inside test_sortVowels ---')
     assert Solution().sortVowels("lEetcOde") == "lEOtcede"
     assert Solution().sortVowels("lYmpH") == "lYmpH"
+
+
+def test_doesAliceWin():
+    print(' --- Inside test_doesAliceWin ---')
+    assert Solution().doesAliceWin("leetcoder") == True
+    assert Solution().doesAliceWin("bbcd") == False
