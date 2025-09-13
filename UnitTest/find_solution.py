@@ -2007,3 +2007,20 @@ class Solution:
                 cnt += 1
                 if cnt == 2:
                     return True
+
+    def maxFreqSum(self, s: str) -> int:
+        dict1 = {}
+        for char in s:
+            if char not in dict1:
+                dict1[char] = 1
+            else:
+                dict1[char] += 1
+        str1 = 'aeiou'
+        max_vowel = 0
+        max_consonant = 0
+        for key in dict1.keys():
+            if key in str1 and dict1[key] > max_vowel:
+                max_vowel = dict1[key]
+            elif not (key in str1) and dict1[key] > max_consonant:
+                max_consonant = dict1[key]
+        return max_vowel + max_consonant

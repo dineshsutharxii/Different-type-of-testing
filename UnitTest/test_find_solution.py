@@ -989,3 +989,9 @@ def test_doesAliceWin():
     print(' --- Inside test_doesAliceWin ---')
     assert Solution().doesAliceWin("leetcoder") == True
     assert Solution().doesAliceWin("bbcd") == False
+
+
+def test_maxFreqSum():
+    print(' --- Inside test_maxFreqSum ---')
+    assert Solution().maxFreqSum("aeiaeia") == 3
+    assert Solution().maxFreqSum("successes") == 6
