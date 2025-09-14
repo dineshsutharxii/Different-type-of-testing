@@ -995,3 +995,9 @@ def test_maxFreqSum():
     print(' --- Inside test_maxFreqSum ---')
     assert Solution().maxFreqSum("aeiaeia") == 3
     assert Solution().maxFreqSum("successes") == 6
+
+def test_minOperations_to_make_zero():
+    print(' --- Inside test_minOperations_to_make_zero ---')
+    assert Solution().minOperations_to_make_zero([0,2]) == 1
+    assert Solution().minOperations_to_make_zero([3,1,2,1]) == 3
+    assert Solution().minOperations_to_make_zero([1,2,1,2,1,2]) == 4

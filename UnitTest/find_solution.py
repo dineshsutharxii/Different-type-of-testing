@@ -2024,3 +2024,20 @@ class Solution:
             elif not (key in str1) and dict1[key] > max_consonant:
                 max_consonant = dict1[key]
         return max_vowel + max_consonant
+
+    def minOperations_to_make_zero(self, nums):
+        increasing_stk = []
+        ans = 0
+        for val in nums:
+            while len(increasing_stk) > 0 and val < increasing_stk[-1]:
+                p_val = increasing_stk.pop()
+                if p_val != 0:
+                    ans += 1
+            if len(increasing_stk) == 0 or val > increasing_stk[-1]:
+                increasing_stk.append(val)
+
+        while len(increasing_stk) > 0:
+            p_val = increasing_stk.pop()
+            if p_val != 0:
+                ans += 1
+        return ans
