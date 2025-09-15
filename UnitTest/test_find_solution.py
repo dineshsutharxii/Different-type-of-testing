@@ -1006,6 +1006,12 @@ def test_minOperations_to_make_zero():
 
 def test_spellchecker():
     print(' --- Inside test_spellchecker ---')
-    assert (Solution().spellchecker(["KiTe","kite","hare","Hare"],
-                                   ["kite","Kite","KiTe","Hare","HARE","Hear","hear","keti","keet","keto"]) ==
-            ["kite","KiTe","KiTe","Hare","hare","","","KiTe","","KiTe"])
+    assert (Solution().spellchecker(["KiTe", "kite", "hare", "Hare"],
+                                    ["kite", "Kite", "KiTe", "Hare", "HARE", "Hear", "hear", "keti", "keet", "keto"]) ==
+            ["kite", "KiTe", "KiTe", "Hare", "hare", "", "", "KiTe", "", "KiTe"])
+
+def test_canBeTypedWords():
+    print(' --- Inside test_canBeTypedWords ---')
+    assert Solution().canBeTypedWords("hello world", "ad") == 1
+    assert Solution().canBeTypedWords("leet code", "lt") == 1
+    assert Solution().canBeTypedWords("leet code", "e") == 0

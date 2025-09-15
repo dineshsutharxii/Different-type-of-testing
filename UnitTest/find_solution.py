@@ -2070,3 +2070,16 @@ class Solution:
                 else:
                     result.append("")
         return result
+
+    def canBeTypedWords(self, text: str, brokenLetters: str) -> int:
+        sep_ = text.split(' ')
+        cnt = 0
+        for char in sep_:
+            flag = False
+            for bl in brokenLetters:
+                if bl in char:
+                    flag = True
+                    break
+            if flag:
+                cnt += 1
+        return len(sep_) - cnt
