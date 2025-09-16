@@ -3,7 +3,7 @@ import heapq
 from collections import deque
 from heapq import heappop, heappush
 from itertools import chain
-from math import floor, log10, sqrt
+from math import floor, log10, sqrt, gcd
 
 
 def twoSum(nums, target):
@@ -2046,8 +2046,10 @@ class Solution:
         exact = set(wordlist)
         caseMap = {}
         vowelMap = {}
+
         def deVowel(s):
             return ''.join('*' if c in 'aeiou' else c for c in s)
+
         for w in wordlist:
             lower = w.lower()
             devowel = deVowel(lower)
@@ -2083,3 +2085,14 @@ class Solution:
             if flag:
                 cnt += 1
         return len(sep_) - cnt
+
+    def replaceNonCoprimes(self, nums):
+        stk = []
+        for num in nums:
+            while stk:
+                g = gcd(stk[-1], num)
+                if g == 1:
+                    break
+                num = (stk.pop() * num) // g
+            stk.append(num)
+        return stk

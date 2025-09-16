@@ -1010,8 +1010,15 @@ def test_spellchecker():
                                     ["kite", "Kite", "KiTe", "Hare", "HARE", "Hear", "hear", "keti", "keet", "keto"]) ==
             ["kite", "KiTe", "KiTe", "Hare", "hare", "", "", "KiTe", "", "KiTe"])
 
+
 def test_canBeTypedWords():
     print(' --- Inside test_canBeTypedWords ---')
     assert Solution().canBeTypedWords("hello world", "ad") == 1
     assert Solution().canBeTypedWords("leet code", "lt") == 1
     assert Solution().canBeTypedWords("leet code", "e") == 0
+
+
+def test_replaceNonCoprimes():
+    print(' --- Inside test_replaceNonCoprimes ---')
+    assert Solution().replaceNonCoprimes([6, 4, 3, 2, 7, 6, 2]) == [12, 7, 6]
+    assert Solution().replaceNonCoprimes([2, 2, 1, 1, 3, 3, 3]) == [2, 1, 1, 3]
