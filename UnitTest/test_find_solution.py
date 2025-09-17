@@ -1022,3 +1022,9 @@ def test_replaceNonCoprimes():
     print(' --- Inside test_replaceNonCoprimes ---')
     assert Solution().replaceNonCoprimes([6, 4, 3, 2, 7, 6, 2]) == [12, 7, 6]
     assert Solution().replaceNonCoprimes([2, 2, 1, 1, 3, 3, 3]) == [2, 1, 1, 3]
+
+
+def test_countLargestGroupNew():
+    print(' --- Inside test_countLargestGroupNew ---')
+    assert Solution().countLargestGroupNew(13) == 4
+    assert Solution().countLargestGroupNew(2) == 2

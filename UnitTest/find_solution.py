@@ -2096,3 +2096,23 @@ class Solution:
                 num = (stk.pop() * num) // g
             stk.append(num)
         return stk
+
+    def countLargestGroupNew(self, n: int) -> int:
+        res = []
+        for i in range(1, n + 1):
+            res.append(sum(int(x) for x in str(i)))
+        dict1 = {}
+        for ele in res:
+            if ele not in dict1:
+                dict1[ele] = 1
+            else:
+                dict1[ele] += 1
+        maxi = float('-inf')
+        for key in dict1.keys():
+            if dict1[key] > maxi:
+                maxi = dict1[key]
+        res = 0
+        for key in dict1.keys():
+            if dict1[key] == maxi:
+                res += 1
+        return res
