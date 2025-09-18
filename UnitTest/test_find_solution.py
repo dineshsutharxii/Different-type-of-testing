@@ -1028,3 +1028,4 @@ def test_countLargestGroupNew():
     print(' --- Inside test_countLargestGroupNew ---')
     assert Solution().countLargestGroupNew(13) == 4
     assert Solution().countLargestGroupNew(2) == 2
+    assert Solution().countLargestGroupNew(200) == 2
