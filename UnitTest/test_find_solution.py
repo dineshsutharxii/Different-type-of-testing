@@ -1030,3 +1030,9 @@ def test_countLargestGroupNew():
     assert Solution().countLargestGroupNew(13) == 4
     assert Solution().countLargestGroupNew(2) == 2
     assert Solution().countLargestGroupNew(200) == 2
+
+
+def test_maxFrequencyElements():
+    print(' --- Inside test_maxFrequencyElements ---')
+    assert Solution().maxFrequencyElements([1, 2, 2, 3, 1, 4]) == 4
+    assert Solution().maxFrequencyElements([1, 2, 3, 4, 5]) == 5

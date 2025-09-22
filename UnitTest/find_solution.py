@@ -2116,3 +2116,20 @@ class Solution:
             if dict1[key] == maxi:
                 res += 1
         return res
+
+    def maxFrequencyElements(self, nums) -> int:
+        freq = {}
+        for ele in nums:
+            if ele not in freq:
+                freq[ele] = 1
+            else:
+                freq[ele] += 1
+        max_freq = float('-inf')
+        for val in freq.values():
+            if max_freq < val:
+                max_freq = val
+        cnt = 0
+        for key in freq.keys():
+            if freq[key] == max_freq:
+                cnt += freq[key]
+        return cnt
