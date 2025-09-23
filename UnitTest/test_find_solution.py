@@ -1036,3 +1036,10 @@ def test_maxFrequencyElements():
     print(' --- Inside test_maxFrequencyElements ---')
     assert Solution().maxFrequencyElements([1, 2, 2, 3, 1, 4]) == 4
     assert Solution().maxFrequencyElements([1, 2, 3, 4, 5]) == 5
+
+
+def test_compareVersion():
+    print(' --- Inside test_compareVersion ---')
+    assert Solution().compareVersion("1.2", "1.10") == -1
+    assert Solution().compareVersion("1.01", "1.001") == 0
+    assert Solution().compareVersion("2.0", "1.0.0.0") == 1
