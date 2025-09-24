@@ -1043,3 +1043,10 @@ def test_compareVersion():
     assert Solution().compareVersion("1.2", "1.10") == -1
     assert Solution().compareVersion("1.01", "1.001") == 0
     assert Solution().compareVersion("2.0", "1.0.0.0") == 1
+
+
+def test_fractionToDecimal():
+    print(' --- Inside test_fractionToDecimal ---')
+    assert Solution().fractionToDecimal(1,2) == "0.5"
+    assert Solution().fractionToDecimal(2,1) == "2"
+    assert Solution().fractionToDecimal(4, 333) == "0.(012)"
