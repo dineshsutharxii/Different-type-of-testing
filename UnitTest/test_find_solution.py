@@ -1047,6 +1047,12 @@ def test_compareVersion():
 
 def test_fractionToDecimal():
     print(' --- Inside test_fractionToDecimal ---')
-    assert Solution().fractionToDecimal(1,2) == "0.5"
-    assert Solution().fractionToDecimal(2,1) == "2"
+    assert Solution().fractionToDecimal(1, 2) == "0.5"
+    assert Solution().fractionToDecimal(2, 1) == "2"
     assert Solution().fractionToDecimal(4, 333) == "0.(012)"
+
+
+def test_minimumTotal():
+    print(' --- Inside test_minimumTotal ---')
+    assert Solution().minimumTotal([[2], [3, 4], [6, 5, 7], [4, 1, 8, 3]]) == 11
+    assert Solution().minimumTotal([[-10]]) == -10
