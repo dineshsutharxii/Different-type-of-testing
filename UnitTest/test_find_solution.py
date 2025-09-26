@@ -1056,3 +1056,9 @@ def test_minimumTotal():
     print(' --- Inside test_minimumTotal ---')
     assert Solution().minimumTotal([[2], [3, 4], [6, 5, 7], [4, 1, 8, 3]]) == 11
     assert Solution().minimumTotal([[-10]]) == -10
+
+
+def test_triangleNumber():
+    print(' --- Inside test_triangleNumber ---')
+    assert Solution().triangleNumber([2,2,3,4]) == 3
+    assert Solution().triangleNumber([4,2,3,4]) == 4

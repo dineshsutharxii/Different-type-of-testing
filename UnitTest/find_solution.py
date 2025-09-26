@@ -2184,3 +2184,17 @@ class Solution:
             for c in range(r + 1):
                 memo[c] = min(memo[c], memo[c + 1]) + triangle[r][c]
         return memo[0]
+
+    def triangleNumber(self, nums) -> int:
+        nums.sort()
+        count = 0
+        for k in range(len(nums) - 1, -1, -1):
+            i = 0
+            j = k - 1
+            while i < j:
+                if nums[i] + nums[j] > nums[k]:
+                    count += j - i
+                    j -= 1
+                else:
+                    i += 1
+        return count
