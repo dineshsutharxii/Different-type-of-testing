@@ -1060,5 +1060,12 @@ def test_minimumTotal():
 
 def test_triangleNumber():
     print(' --- Inside test_triangleNumber ---')
-    assert Solution().triangleNumber([2,2,3,4]) == 3
-    assert Solution().triangleNumber([4,2,3,4]) == 4
+    assert Solution().triangleNumber([2, 2, 3, 4]) == 3
+    assert Solution().triangleNumber([4, 2, 3, 4]) == 4
+
+
+def test_largestTriangleArea():
+    print(' --- Inside test_largestTriangleArea ---')
+    assert Solution().largestTriangleArea([[0, 0], [0, 1], [1, 0], [0, 2], [2, 0]]) == 2.00000
+    assert Solution().largestTriangleArea([[1, 0], [0, 0], [0, 1]]) == 0.50000
+
