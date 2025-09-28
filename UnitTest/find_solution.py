@@ -2212,3 +2212,10 @@ class Solution:
                     area = (b0 - a0) * (c1 - a1) - (b1 - a1) * (c0 - a0)
                     maxA = max(maxA, abs(area))
         return 0.5 * maxA
+
+    def largestPerimeter(self, nums) -> int:
+        nums.sort(reverse=True)
+        for i in range(len(nums) - 2):
+            if nums[i] < nums[i + 1] + nums[i + 2]:
+                return nums[i] + nums[i + 1] + nums[i + 2]
+        return 0

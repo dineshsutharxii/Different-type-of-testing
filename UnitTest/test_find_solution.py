@@ -1069,3 +1069,8 @@ def test_largestTriangleArea():
     assert Solution().largestTriangleArea([[0, 0], [0, 1], [1, 0], [0, 2], [2, 0]]) == 2.00000
     assert Solution().largestTriangleArea([[1, 0], [0, 0], [0, 1]]) == 0.50000
 
+
+def test_largestPerimeter():
+    print(' --- Inside test_largestPerimeter ---')
+    assert Solution().largestPerimeter([2, 1, 2]) == 5
+    assert Solution().largestPerimeter([1, 2, 1, 10]) == 0
