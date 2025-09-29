@@ -1074,3 +1074,8 @@ def test_largestPerimeter():
     print(' --- Inside test_largestPerimeter ---')
     assert Solution().largestPerimeter([2, 1, 2]) == 5
     assert Solution().largestPerimeter([1, 2, 1, 10]) == 0
+
+def test_minScoreTriangulation():
+    print(' --- Inside test_minScoreTriangulation ---')
+    assert Solution().minScoreTriangulation([1,2,3]) == 6
+    assert Solution().minScoreTriangulation([3,7,4,5]) == 144
