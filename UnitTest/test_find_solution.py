@@ -1083,6 +1083,11 @@ def test_minScoreTriangulation():
 
 
 def test_triangularSum():
-    print(' --- Inside test_largestPerimeter ---')
+    print(' --- Inside test_triangularSum ---')
     assert Solution().triangularSum([1, 2, 3, 4, 5]) == 8
     assert Solution().triangularSum([5]) == 5
+
+def test_numWaterBottles():
+    print(' --- Inside test_numWaterBottles ---')
+    assert Solution().numWaterBottles(9, 3) == 13
+    assert Solution().numWaterBottles(15,4) == 19
