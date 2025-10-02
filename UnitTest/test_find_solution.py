@@ -1087,7 +1087,14 @@ def test_triangularSum():
     assert Solution().triangularSum([1, 2, 3, 4, 5]) == 8
     assert Solution().triangularSum([5]) == 5
 
+
 def test_numWaterBottles():
     print(' --- Inside test_numWaterBottles ---')
     assert Solution().numWaterBottles(9, 3) == 13
-    assert Solution().numWaterBottles(15,4) == 19
+    assert Solution().numWaterBottles(15, 4) == 19
+
+
+def test_maxBottlesDrunk():
+    print(' --- Inside test_maxBottlesDrunk ---')
+    assert Solution().maxBottlesDrunk(13, 6) == 15
+    assert Solution().maxBottlesDrunk(10, 3) == 13

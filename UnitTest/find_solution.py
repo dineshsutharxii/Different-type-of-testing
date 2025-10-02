@@ -2256,3 +2256,16 @@ class Solution:
             numBottles = numBottles // numExchange + numBottles % numExchange
 
         return totalBottles
+
+    def maxBottlesDrunk(self, numBottles: int, numExchange: int) -> int:
+        empty = 0
+        count = 0
+        while numBottles > 0:
+            empty += numBottles
+            count += numBottles
+            numBottles = 0
+            if empty >= numExchange:
+                numBottles += 1
+                empty -= numExchange
+                numExchange += 1
+        return count
