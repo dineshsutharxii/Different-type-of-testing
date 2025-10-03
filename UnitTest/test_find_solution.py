@@ -1098,3 +1098,8 @@ def test_maxBottlesDrunk():
     print(' --- Inside test_maxBottlesDrunk ---')
     assert Solution().maxBottlesDrunk(13, 6) == 15
     assert Solution().maxBottlesDrunk(10, 3) == 13
+
+def test_trapRainWater():
+    print(' --- Inside test_trapRainWater ---')
+    assert Solution().trapRainWater([[1,4,3,1,3,2],[3,2,1,3,2,4],[2,3,3,2,3,1]]) == 4
+    assert Solution().trapRainWater([[3,3,3,3,3],[3,2,2,2,3],[3,2,1,2,3],[3,2,2,2,3],[3,3,3,3,3]]) == 10
