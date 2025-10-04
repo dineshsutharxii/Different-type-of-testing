@@ -1099,7 +1099,15 @@ def test_maxBottlesDrunk():
     assert Solution().maxBottlesDrunk(13, 6) == 15
     assert Solution().maxBottlesDrunk(10, 3) == 13
 
+
 def test_trapRainWater():
     print(' --- Inside test_trapRainWater ---')
-    assert Solution().trapRainWater([[1,4,3,1,3,2],[3,2,1,3,2,4],[2,3,3,2,3,1]]) == 4
-    assert Solution().trapRainWater([[3,3,3,3,3],[3,2,2,2,3],[3,2,1,2,3],[3,2,2,2,3],[3,3,3,3,3]]) == 10
+    assert Solution().trapRainWater([[1, 4, 3, 1, 3, 2], [3, 2, 1, 3, 2, 4], [2, 3, 3, 2, 3, 1]]) == 4
+    assert Solution().trapRainWater(
+        [[3, 3, 3, 3, 3], [3, 2, 2, 2, 3], [3, 2, 1, 2, 3], [3, 2, 2, 2, 3], [3, 3, 3, 3, 3]]) == 10
+
+
+def test_maxArea():
+    print(' --- Inside test_maxArea ---')
+    assert Solution().maxArea([1, 8, 6, 2, 5, 4, 8, 3, 7]) == 49
+    assert Solution().maxArea([1, 1]) == 1
