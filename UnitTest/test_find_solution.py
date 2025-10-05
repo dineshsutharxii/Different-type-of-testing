@@ -1111,3 +1111,10 @@ def test_maxArea():
     print(' --- Inside test_maxArea ---')
     assert Solution().maxArea([1, 8, 6, 2, 5, 4, 8, 3, 7]) == 49
     assert Solution().maxArea([1, 1]) == 1
+
+
+def test_pacificAtlantic():
+    print(' --- Inside test_pacificAtlantic ---')
+    assert Solution().pacificAtlantic(
+        [[1, 2, 2, 3, 5], [3, 2, 3, 4, 4], [2, 4, 5, 3, 1], [6, 7, 1, 4, 5], [5, 1, 1, 2, 4]]) == [(4, 0), (0, 4), (3, 1), (1, 4), (3, 0), (2, 2), (1, 3)]
+    assert Solution().pacificAtlantic([[1]]) == [(0, 0)]
