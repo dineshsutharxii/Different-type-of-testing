@@ -5,6 +5,8 @@ from heapq import heappop, heappush
 from itertools import chain
 from math import floor, log10, sqrt, gcd
 
+from sortedcontainers import SortedList
+
 
 def twoSum(nums, target):
     h = {}
@@ -2328,3 +2330,20 @@ class Solution:
             spread(0, j, p_land)
             spread(R - 1, j, a_land)
         return list(p_land & a_land)
+
+    def avoidFlood(self, rains):
+        res, full, dry = [-1] * len(rains), {}, SortedList()
+        for i, lake in enumerate(rains):
+            if lake == 0:
+                dry.add(i)
+                res[i] = 1
+            elif lake in full:
+                j = dry.bisect_right(full[lake])
+                if j == len(dry):
+                    return []
+                res[dry[j]] = lake
+                dry.pop(j)
+                full[lake] = i
+            else:
+                full[lake] = i
+        return res
