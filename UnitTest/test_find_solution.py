@@ -1116,11 +1116,20 @@ def test_maxArea():
 def test_pacificAtlantic():
     print(' --- Inside test_pacificAtlantic ---')
     assert Solution().pacificAtlantic(
-        [[1, 2, 2, 3, 5], [3, 2, 3, 4, 4], [2, 4, 5, 3, 1], [6, 7, 1, 4, 5], [5, 1, 1, 2, 4]]) == [(4, 0), (0, 4), (3, 1), (1, 4), (3, 0), (2, 2), (1, 3)]
+        [[1, 2, 2, 3, 5], [3, 2, 3, 4, 4], [2, 4, 5, 3, 1], [6, 7, 1, 4, 5], [5, 1, 1, 2, 4]]) == [(4, 0), (0, 4),
+                                                                                                   (3, 1), (1, 4),
+                                                                                                   (3, 0), (2, 2),
+                                                                                                   (1, 3)]
     assert Solution().pacificAtlantic([[1]]) == [(0, 0)]
 
 
 def test_avoidFlood():
     print(' --- Inside test_avoidFlood ---')
-    assert Solution().avoidFlood([1,2,0,0,2,1]) == [-1,-1,2,1,-1,-1]
-    assert Solution().avoidFlood([1,2,3,4]) == [-1,-1,-1,-1]
+    assert Solution().avoidFlood([1, 2, 0, 0, 2, 1]) == [-1, -1, 2, 1, -1, -1]
+    assert Solution().avoidFlood([1, 2, 3, 4]) == [-1, -1, -1, -1]
+
+
+def test_successfulPairs():
+    print(' --- Inside test_successfulPairs ---')
+    assert Solution().successfulPairs([5, 1, 3], [1, 2, 3, 4, 5], 7) == [4, 0, 3]
+    assert Solution().successfulPairs([3, 1, 2],[8, 5, 8], 16) == [2,0,2]

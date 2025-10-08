@@ -2347,3 +2347,12 @@ class Solution:
             else:
                 full[lake] = i
         return res
+
+    def successfulPairs(self, spells, potions, success):
+        for i in range(len(spells)):
+            count = 0
+            for p in potions:
+                if spells[i] * p >= success:
+                    count += 1
+            spells[i] = count
+        return spells
