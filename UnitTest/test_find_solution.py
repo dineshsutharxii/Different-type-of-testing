@@ -1132,10 +1132,17 @@ def test_avoidFlood():
 def test_successfulPairs():
     print(' --- Inside test_successfulPairs ---')
     assert Solution().successfulPairs([5, 1, 3], [1, 2, 3, 4, 5], 7) == [4, 0, 3]
-    assert Solution().successfulPairs([3, 1, 2],[8, 5, 8], 16) == [2,0,2]
+    assert Solution().successfulPairs([3, 1, 2], [8, 5, 8], 16) == [2, 0, 2]
+
 
 def test_minTime():
     print(' --- Inside test_minTime ---')
-    assert Solution().minTime([1,5,2,4], [5,1,4,2]) == 110
-    assert Solution().minTime([1,1,1], [1,1,1]) == 5
-    assert Solution().minTime([1,2,3,4], [1,2]) == 21
+    assert Solution().minTime([1, 5, 2, 4], [5, 1, 4, 2]) == 110
+    assert Solution().minTime([1, 1, 1], [1, 1, 1]) == 5
+    assert Solution().minTime([1, 2, 3, 4], [1, 2]) == 21
+
+
+def test_maximumEnergy():
+    print(' --- Inside test_maximumEnergy ---')
+    assert Solution().maximumEnergy([5, 2, -10, -5, 1], 3) == 3
+    assert Solution().maximumEnergy([-2, -3, -1], 2) == -1

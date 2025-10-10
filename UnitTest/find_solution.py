@@ -2366,3 +2366,12 @@ class Solution:
             for i in range(n - 1, 0, -1):
                 done[i] = done[i + 1] - mana[j] * skill[i]
         return done[n]
+
+    def maximumEnergy(self, energy, k) -> int:
+        n = len(energy)
+        ans = float('-inf')
+        for j in range(n - k - 1, -1, -1):
+            energy[j] += energy[j + k]
+        for i in range(n):
+            ans = max(ans, energy[i])
+        return ans
