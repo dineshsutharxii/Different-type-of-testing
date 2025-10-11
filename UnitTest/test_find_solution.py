@@ -1146,3 +1146,9 @@ def test_maximumEnergy():
     print(' --- Inside test_maximumEnergy ---')
     assert Solution().maximumEnergy([5, 2, -10, -5, 1], 3) == 3
     assert Solution().maximumEnergy([-2, -3, -1], 2) == -1
+
+
+def test_maximumTotalDamage():
+    print(' --- Inside test_maximumTotalDamage ---')
+    assert Solution().maximumTotalDamage([1, 1, 3, 4]) == 6
+    assert Solution().maximumTotalDamage([7,1,6,6]) == 13
