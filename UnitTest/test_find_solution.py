@@ -1151,9 +1151,10 @@ def test_maximumEnergy():
 def test_maximumTotalDamage():
     print(' --- Inside test_maximumTotalDamage ---')
     assert Solution().maximumTotalDamage([1, 1, 3, 4]) == 6
-    assert Solution().maximumTotalDamage([7,1,6,6]) == 13
+    assert Solution().maximumTotalDamage([7, 1, 6, 6]) == 13
+
 
 def test_magicalSum():
     print(' --- Inside test_magicalSum ---')
-    assert Solution().magicalSum(5,5,[1,10,100,10000,1000000]) == 991600007
-    assert Solution().magicalSum(2,2,[5,4,3,2,1]) == 170
+    assert Solution().magicalSum(5, 5, [1, 10, 100, 10000, 1000000]) == 991600007
+    assert Solution().magicalSum(2, 2, [5, 4, 3, 2, 1]) == 170
