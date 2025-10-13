@@ -1158,3 +1158,8 @@ def test_magicalSum():
     print(' --- Inside test_magicalSum ---')
     assert Solution().magicalSum(5, 5, [1, 10, 100, 10000, 1000000]) == 991600007
     assert Solution().magicalSum(2, 2, [5, 4, 3, 2, 1]) == 170
+
+def test_removeAnagrams():
+    print(' --- Inside test_magicalSum ---')
+    assert Solution().removeAnagrams(["abba","baba","bbaa","cd","cd"]) == ["abba","cd"]
+    assert Solution().maximumTotalDamage(["a","b","c","d","e"]) == ["a","b","c","d","e"]
