@@ -2423,3 +2423,16 @@ class Solution:
             if ana[i] != ana[i - 1]:
                 ans.append(words[i])
         return ans
+
+    def hasIncreasingSubarrays(self, nums, k) -> bool:
+        def is_increasing(arr):
+            for i in range(len(arr) - 1):
+                if arr[i] >= arr[i + 1]:
+                    return False
+            return True
+
+        n = len(nums)
+        for i in range(n - 2 * k + 1):
+            if is_increasing(nums[i:i + k]) and is_increasing(nums[i + k:i + 2 * k]):
+                return True
+        return False

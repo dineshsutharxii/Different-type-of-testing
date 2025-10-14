@@ -1159,7 +1159,14 @@ def test_magicalSum():
     assert Solution().magicalSum(5, 5, [1, 10, 100, 10000, 1000000]) == 991600007
     assert Solution().magicalSum(2, 2, [5, 4, 3, 2, 1]) == 170
 
+
 def test_removeAnagrams():
-    print(' --- Inside test_magicalSum ---')
-    assert Solution().removeAnagrams(["abba","baba","bbaa","cd","cd"]) == ["abba","cd"]
-    assert Solution().maximumTotalDamage(["a","b","c","d","e"]) == ["a","b","c","d","e"]
+    print(' --- Inside test_removeAnagrams ---')
+    assert Solution().removeAnagrams(["abba", "baba", "bbaa", "cd", "cd"]) == ["abba", "cd"]
+    assert Solution().maximumTotalDamage(["a", "b", "c", "d", "e"]) == ["a", "b", "c", "d", "e"]
+
+
+def test_hasIncreasingSubarrays():
+    print(' --- Inside test_hasIncreasingSubarrays ---')
+    assert Solution().hasIncreasingSubarrays([2, 5, 7, 8, 9, 2, 3, 4, 3, 1], 3) == True
+    assert Solution().hasIncreasingSubarrays([1, 2, 3, 4, 4, 4, 4, 5, 6, 7], 5) == False
