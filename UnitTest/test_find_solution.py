@@ -1170,3 +1170,9 @@ def test_hasIncreasingSubarrays():
     print(' --- Inside test_hasIncreasingSubarrays ---')
     assert Solution().hasIncreasingSubarrays([2, 5, 7, 8, 9, 2, 3, 4, 3, 1], 3) == True
     assert Solution().hasIncreasingSubarrays([1, 2, 3, 4, 4, 4, 4, 5, 6, 7], 5) == False
+
+
+def test_maxIncreasingSubarrays():
+    print(' --- Inside test_maxIncreasingSubarrays ---')
+    assert Solution().maxIncreasingSubarrays([2, 5, 7, 8, 9, 2, 3, 4, 3, 1]) == 3
+    assert Solution().maxIncreasingSubarrays([1, 2, 3, 4, 4, 4, 4, 5, 6, 7]) == 2
