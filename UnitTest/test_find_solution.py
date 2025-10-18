@@ -1176,3 +1176,9 @@ def test_maxIncreasingSubarrays():
     print(' --- Inside test_maxIncreasingSubarrays ---')
     assert Solution().maxIncreasingSubarrays([2, 5, 7, 8, 9, 2, 3, 4, 3, 1]) == 3
     assert Solution().maxIncreasingSubarrays([1, 2, 3, 4, 4, 4, 4, 5, 6, 7]) == 2
+
+
+def test_maxDistinctElements():
+    print(' --- Inside test_maxDistinctElements ---')
+    assert Solution().maxDistinctElements([1, 2, 2, 3, 3, 4], 2) == 6
+    assert Solution().maxDistinctElements([4, 4, 4, 4], 1) == 3

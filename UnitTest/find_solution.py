@@ -2447,3 +2447,21 @@ class Solution:
                 prev = Len
                 Len = 1
         return max(k, Len // 2, min(Len, prev))
+
+
+    def maxDistinctElements(self, nums, k: int) -> int:
+        nums.sort()
+        last_picked = -10 ** 18
+        dstnct_cnt = 0
+        for num in nums:
+            l_bound = num - k
+            u_bound = num + k
+            if last_picked < l_bound:
+                last_picked = l_bound
+            else:
+                last_picked += 1
+            if last_picked <= u_bound:
+                dstnct_cnt += 1
+            else:
+                last_picked -= 1
+        return dstnct_cnt
