@@ -2465,3 +2465,20 @@ class Solution:
             else:
                 last_picked -= 1
         return dstnct_cnt
+
+    def findLexSmallestString(self, s: str, a: int, b: int) -> str:
+        def dfs(s: str) -> None:
+            if s not in seen:
+                seen.add(s)
+                self.smallest = min(s, self.smallest)
+                addA = list(s)
+                for i, c in enumerate(addA):
+                    if i % 2 == 1:
+                        addA[i] = str((int(c) + a) % 10)
+                dfs(''.join(addA))
+                dfs(s[b:] + s[: b])
+
+        self.smallest = s
+        seen = set()
+        dfs(s)
+        return self.smallest

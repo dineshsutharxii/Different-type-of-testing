@@ -1182,3 +1182,9 @@ def test_maxDistinctElements():
     print(' --- Inside test_maxDistinctElements ---')
     assert Solution().maxDistinctElements([1, 2, 2, 3, 3, 4], 2) == 6
     assert Solution().maxDistinctElements([4, 4, 4, 4], 1) == 3
+
+
+def test_findLexSmallestString():
+    print(' --- Inside test_findLexSmallestString ---')
+    assert Solution().findLexSmallestString("5525", 9, 2) == "2050"
+    assert Solution().findLexSmallestString("74", 5, 1) == "24"
