@@ -1188,3 +1188,9 @@ def test_findLexSmallestString():
     print(' --- Inside test_findLexSmallestString ---')
     assert Solution().findLexSmallestString("5525", 9, 2) == "2050"
     assert Solution().findLexSmallestString("74", 5, 1) == "24"
+
+
+def test_maxFrequency():
+    print(' --- Inside test_maxFrequency ---')
+    assert Solution().maxFrequency([1,4,5], 1, 2) == 2
+    assert Solution().maxFrequency([5,11,20,20],5,1) == 2
