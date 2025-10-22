@@ -1194,3 +1194,8 @@ def test_maxFrequency():
     print(' --- Inside test_maxFrequency ---')
     assert Solution().maxFrequency([1, 4, 5], 1, 2) == 2
     assert Solution().maxFrequency([5, 11, 20, 20], 5, 1) == 2
+
+def test_maxFrequencyAfterOperation():
+    print(' --- Inside test_maxFrequencyAfterOperation ---')
+    assert Solution().maxFrequencyAfterOperation([1, 4, 5], 1, 2) == 2
+    assert Solution().maxFrequencyAfterOperation([5, 11, 20, 20], 5, 1) == 2
