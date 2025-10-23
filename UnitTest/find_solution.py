@@ -2514,3 +2514,11 @@ class Solution:
             res = max(res, cnt_points[point] +
                       min(points_cover_this_point - cnt_points[point], numOperations))
         return res
+
+    def hasSameDigits(self, s: str) -> bool:
+        while len(s) > 2:
+            res = ''
+            for i in range(len(s) - 1):
+                res += str((int(s[i]) + int(s[i + 1])) % 10)
+            s = res
+        return s[0] == s[1]
