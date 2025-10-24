@@ -2522,3 +2522,20 @@ class Solution:
                 res += str((int(s[i]) + int(s[i + 1])) % 10)
             s = res
         return s[0] == s[1]
+
+    def nextBeautifulNumber(self, n: int) -> int:
+        i = n + 1
+        def solve(x):
+            s = str(x)
+            vec = [0] * 10
+            for ch in s:
+                vec[ord(ch) - 48] += 1
+            for ch in s:
+                c = ord(ch) - 48
+                if c == 0 or vec[c] != c:
+                    return False
+            return True
+        while True:
+            if solve(i):
+                return i
+            i += 1
