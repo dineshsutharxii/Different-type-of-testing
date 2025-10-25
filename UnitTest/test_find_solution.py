@@ -1207,8 +1207,15 @@ def test_hasSameDigits():
     assert Solution().hasSameDigits("3902") == True
     assert Solution().hasSameDigits("34789") == False
 
+
 def test_nextBeautifulNumber():
     print(' --- Inside test_nextBeautifulNumber ---')
     assert Solution().nextBeautifulNumber(3000) == 3133
     assert Solution().nextBeautifulNumber(1000) == 1333
 
+
+def test_totalMoney():
+    print(' --- Inside test_nextBeautifulNumber ---')
+    assert Solution().totalMoney(4) == 10
+    assert Solution().totalMoney(10) == 37
+    assert Solution().totalMoney(20) == 96

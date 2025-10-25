@@ -2448,7 +2448,6 @@ class Solution:
                 Len = 1
         return max(k, Len // 2, min(Len, prev))
 
-
     def maxDistinctElements(self, nums, k: int) -> int:
         nums.sort()
         last_picked = -10 ** 18
@@ -2525,6 +2524,7 @@ class Solution:
 
     def nextBeautifulNumber(self, n: int) -> int:
         i = n + 1
+
         def solve(x):
             s = str(x)
             vec = [0] * 10
@@ -2535,7 +2535,22 @@ class Solution:
                 if c == 0 or vec[c] != c:
                     return False
             return True
+
         while True:
             if solve(i):
                 return i
             i += 1
+
+    def totalMoney(self, n: int) -> int:
+        if n < 8:
+            return n * (n + 1) // 2
+        weeks = n // 7
+        total = weeks * 28
+        total += (weeks * (weeks - 1) * 7) // 2
+        if n % 7 != 0:
+            days = n % 7
+            day = weeks + 1
+            for j in range(days):
+                total += day
+                day += 1
+        return total
