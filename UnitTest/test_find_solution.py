@@ -1212,6 +1212,7 @@ def test_nextBeautifulNumber():
     print(' --- Inside test_nextBeautifulNumber ---')
     assert Solution().nextBeautifulNumber(3000) == 3133
     assert Solution().nextBeautifulNumber(1000) == 1333
+    assert Solution().nextBeautifulNumber(100) == 122
 
 
 def test_totalMoney():
