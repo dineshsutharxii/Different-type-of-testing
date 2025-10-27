@@ -1216,7 +1216,13 @@ def test_nextBeautifulNumber():
 
 
 def test_totalMoney():
-    print(' --- Inside test_nextBeautifulNumber ---')
+    print(' --- Inside test_totalMoney ---')
     assert Solution().totalMoney(4) == 10
     assert Solution().totalMoney(10) == 37
     assert Solution().totalMoney(20) == 96
+
+
+def test_numberOfBeams():
+    print(' --- Inside test_numberOfBeams ---')
+    assert Solution().numberOfBeams(["011001","000000","010100","001000"]) == 8
+    assert Solution().numberOfBeams(["000","111","000"]) == 0
