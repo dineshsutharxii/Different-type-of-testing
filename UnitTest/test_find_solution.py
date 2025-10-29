@@ -1226,3 +1226,11 @@ def test_numberOfBeams():
     print(' --- Inside test_numberOfBeams ---')
     assert Solution().numberOfBeams(["011001","000000","010100","001000"]) == 8
     assert Solution().numberOfBeams(["000","111","000"]) == 0
+
+
+def test_smallestNumber():
+    print(' --- Inside test_smallestNumber ---')
+    assert Solution().smallestNumber(5) == 7
+    assert Solution().smallestNumber(10) == 15
+    assert Solution().smallestNumber(3) == 3
+
