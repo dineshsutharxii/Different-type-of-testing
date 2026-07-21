@@ -34,3 +34,15 @@ _arr = [1, 5, 6, 9, 11, 12, 18]
 ele, ele1 = 18, 15
 print(f'is {ele} present : ', bin_search(_arr, ele))
 print(f'is {ele1} present : ', bin_search(_arr, ele1))
+
+
+def bubble_sort(arr):
+    for i in range(len(arr) - 1):
+        for j in range(len(arr) - 1 - i):
+            if arr[j] > arr[j + 1]:
+                arr[j], arr[j + 1] = arr[j + 1], arr[j]
+    return arr
+
+
+arr = [6, 7, 2, 7, 2, 6, 1, 4, 60]
+print(bubble_sort(arr))
