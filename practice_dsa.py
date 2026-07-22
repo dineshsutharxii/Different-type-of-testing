@@ -46,3 +46,55 @@ def bubble_sort(arr):
 
 arr = [6, 7, 2, 7, 2, 6, 1, 4, 60]
 print(bubble_sort(arr))
+
+#You have a list of words that you consider to be good and could be used for variable names.
+# All the strings in words consist of lowercase English letters.
+#A complex variable name is a combination (possibly with repetition) of some strings from words, written in CamelCase.
+# In other words, all the strings are written without spaces, and each string (with the possible exception of the first one)
+# starts with a capital letter.
+words = ["is", "valid", "right"]
+variableName = "isValid"
+variableName1 = "isvalid"
+
+
+def validate_variable(words, variableName):
+    parts = []
+    curr = ''
+    for ch in variableName:
+        if ch.isupper():
+            parts.append(curr)
+            curr = ch.lower()
+        else:
+            curr += ch
+    if curr:
+        parts.append(curr)
+
+    for part in parts:
+        if part not in words:
+            return False
+    return True
+
+
+print(f'{variableName} is valid variable: {validate_variable(words, variableName)}')
+print(f'{variableName1} is valid variable: {validate_variable(words, variableName1)}')
+
+#Split String into Minimum Increasing Substrings
+s = "ABCDEFFDEfghCBA"
+
+
+#solution(s) = ["ABCDEF", "F", "DE", "fgh", "C", "B", "A"]
+def split_string(s):
+    res = []
+    temp = s[0]
+    for i in range(1, len(s)):
+        if ord(s[i]) == ord(s[i - 1]) + 1:
+            temp += s[i]
+        else:
+            res.append(temp)
+            temp = s[i]
+    if temp:
+        res.append(temp)
+    return res
+
+
+print(f'{s} has split strings : {split_string(s)}')
