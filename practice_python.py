@@ -51,18 +51,48 @@ else:
 #functions
 def addition(a, b):
     return a + b
+
+
 print(addition(5, 6))
-square = lambda x: x*x
+square = lambda x: x * x
 print(square(5))
 
 #List Comprehension & Built-ins
-square = [x*x for x in range(1,5)]
+square = [x * x for x in range(1, 5)]
 print(square)
-even = [x for x in range(5) if x%2 == 0]
+even = [x for x in range(5) if x % 2 == 0]
 print(even)
 
 print(sum(even))
 print(max(even))
 print(min(even))
 print(len(even))
+
+
+##oops
+#class and object
+class Car:
+    company = "Honda" #class variable
+    def __init__(self, name):
+        self.name = name # instance variable
+
+    def display(self): #instance method
+        print(self.name)
+
+    @classmethod
+    def change_name(cls, name): #class methods
+        cls.company = name
+
+    @staticmethod
+    def add_two_number(a, b):
+        return a+b
+
+
+car = Car('Civic')
+car.display()
+print(Car.company)
+car.change_name('BMW')
+print(car.company)
+print(Car.add_two_number(1,4))
+print(car.add_two_number(4,2))
 
