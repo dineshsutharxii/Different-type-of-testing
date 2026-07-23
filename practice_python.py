@@ -139,13 +139,112 @@ class Dog(Animal):
 
 
 class Area(Dog):
-    def streetdog(self):
+    def bangalore(self):
         super().streetdog()
         print("Bangalore")
 
 
-dog = Dog()
+class Test:
+    def test_(self):
+        print("Test_")
+
+
+class Multiple(Area, Test):  #multiple left -> right priority
+    pass
+
+
+dog = Dog()  #Single
 dog.sound()
 
-area = Area()
+area = Area()  #multilevel
 area.streetdog()
+area.sound()
+area.bangalore()
+
+
+#Polymorphism
+#Same method, different behavior.
+class Animal:
+    def sound(self):
+        print("Animal")
+
+
+class Dog(Animal):
+    def sound(self):
+        print("Bark")
+
+
+dog = Dog()  #method overriding
+dog.sound()
+
+
+#Method Overloading - Python doesn't support true method overloading. Instead:
+
+def add(a, b=0, c=0):
+    return a + b + c
+
+
+print(add(5))
+print(add(4, 5))
+print(add(4, 5, 6))
+
+#Abstraction - Hide implementation and expose functionality.
+from abc import ABC, abstractmethod
+from abc import ABC, abstractmethod
+
+
+class Vehicle(ABC):
+
+    @abstractmethod
+    def start(self):
+        pass
+
+
+class Car(Vehicle):
+
+    def start(self):
+        print("Car Started")
+
+
+class Bike(Vehicle):
+
+    def start(self):
+        print("Bike Started")
+
+
+class Truck(Vehicle):
+
+    def start(self):
+        print("Truck Started")
+
+
+Car().start()
+Bike().start()
+Truck().start()
+
+##Garbage Collection (GC)
+#Python automatically manages memory.Garbage Collection (GC)
+#Python automatically manages memory.
+#1 . Reference Counting
+#Every object keeps a reference count.
+a = []
+b = a
+#Reference count becomes 2.
+del b
+
+
+#Reference count becomes 1.
+#When it reaches 0, memory is freed immediately.
+#2. Cyclic References
+class A:
+    pass
+
+
+a = A()
+b = A()
+
+a.ref = b
+b.ref = a
+
+#Both objects reference each other, so reference counts never reach zero.
+#Python's cyclic garbage collector detects these cycles and frees the memory when the objects are no longer reachable.
