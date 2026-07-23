@@ -126,12 +126,26 @@ emp = Employee()
 print(emp.__dict__)
 print(emp._Employee__salary)  #mangling effect
 
+
 #Inheritance
 class Animal:
     def sound(self):
         print("Animal")
+
+
 class Dog(Animal):
-    pass
+    def streetdog(self):
+        print("Street Dog")
+
+
+class Area(Dog):
+    def streetdog(self):
+        super().streetdog()
+        print("Bangalore")
+
 
 dog = Dog()
 dog.sound()
+
+area = Area()
+area.streetdog()
