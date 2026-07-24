@@ -341,3 +341,4 @@ def make_sound(obj):
         #Reference Counting (primary mechanism)
         #Generational Garbage Collection (to clean cyclic references)
 
+repr()

@@ -1,4 +1,7 @@
 #Find all the elements of list which contains word 'w'
+from collections import Counter
+
+
 def find_elements_in_list_which_contains_word(listy, w):
     for ele in listy:
         l_ptr, w_ptr = 0, 0
@@ -98,3 +101,43 @@ def split_string(s):
 
 
 print(f'{s} has split strings : {split_string(s)}')
+
+#First Word from Scrambled Note
+words = ["dog", "cat", "rat"]
+note = "atgod"
+
+
+#Output: dog
+
+def first_word_with_counter(words, note):
+    notes_count = Counter(note.lower())
+    for word in words:
+        if Counter(word.lower()) <= notes_count:
+            return word
+    return '-'
+
+
+print(first_word_with_counter(words, note))
+
+
+def first_word_without_counter(words, note):
+    notes_count = {}
+    for ch in note:
+        if ch in notes_count:
+            notes_count[ch] += 1
+        else:
+            notes_count[ch] = 1
+    for word in words:
+        temp = notes_count.copy()
+        pssbl = True
+        for ch in word:
+            if temp.get(ch, 0) == 0:
+                pssbl = False
+                break
+            temp[ch] -= 1
+        if pssbl:
+            return word
+    return "-"
+
+
+print(first_word_without_counter(words, note))
