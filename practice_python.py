@@ -248,3 +248,96 @@ b.ref = a
 
 #Both objects reference each other, so reference counts never reach zero.
 #Python's cyclic garbage collector detects these cycles and frees the memory when the objects are no longer reachable.
+
+import gc
+
+gc.collect()  #Force garbage collection.
+gc.isenabled()  #Check if GC is enabled:
+gc.enable()  #enable gc
+gc.disable()  # disable GC
+
+
+class A:
+    def add(self, a, b):
+        return a + b
+
+
+class B(A):
+    def add(self, a, b, c):
+        print(super().add(a, b))
+        return a + b + c
+
+
+b = B()
+print(b.add(1, 3, 2))
+
+
+##Magic Methods
+#__init__
+#__str__
+#__repr__
+#__len__
+#__add__
+
+class Person:
+
+    def __init__(self):  #constructor
+        self.members = ["A", "B", "C"]
+
+    def __str__(self):  # Provide a human-readable string representation of an object.
+        return 'Dinesh'
+
+    def __repr__(self):  #Returns the official or developer-friendly representation of an object.
+        return 'Person("Dinesh")'
+
+    def __len__(self):
+        return len(self.members)
+
+
+person = Person()
+print(person)
+print(repr(person))
+print(len(person))
+
+
+#MRO
+class A:
+    pass
+
+
+class B(A):
+    pass
+
+
+class C(A):
+    pass
+
+
+class D(B, C):
+    pass
+
+
+print(D.mro())
+
+
+#Duck Typing
+class Dog:
+    def speak(self):
+        print("Woof")
+
+
+class Cat:
+    def speak(self):
+        print("Meow")
+
+
+def make_sound(obj):
+    obj.speak()
+
+##Memory Management in Python
+    #Objects are stored on the heap.
+    #Function calls and local references are stored on the stack.
+    #Python uses:
+        #Reference Counting (primary mechanism)
+        #Generational Garbage Collection (to clean cyclic references)
+
