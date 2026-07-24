@@ -141,3 +141,38 @@ def first_word_without_counter(words, note):
 
 
 print(first_word_without_counter(words, note))
+
+#The classic FizzBuzz interview question is:
+#Write a program that prints numbers from 1 to N.
+#However:
+    #If a number is divisible by 3, print "Fizz".
+    #If a number is divisible by 5, print "Buzz".
+    #If a number is divisible by both 3 and 5, print "FizzBuzz".
+    #Otherwise, print the number itself.
+
+def finbuzz(n):
+    for i in range(1, n+1):
+        if i%15 == 0:
+            print("FizzBuzz")
+        elif i%5 == 0:
+            print("Buzz")
+        elif i%3 == 0:
+            print("Fizz")
+        else:
+            print(i)
+finbuzz(30)
+
+group = {
+    5: "Buzz",
+    3: "Fizz",
+    7: "Jazz",
+    11: "Rock"
+}
+def finbuzz_dynamic(N):
+    for i in range(N+1):
+        res = ''
+        for divisor, word in group.items():
+            if i%divisor == 0:
+                res += word
+        print(res if res else i)
+finbuzz_dynamic(30)
