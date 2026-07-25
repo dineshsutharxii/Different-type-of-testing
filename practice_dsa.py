@@ -220,3 +220,29 @@ def balanced_pairs(str):
 
 print(balanced_pairs('[]{}()()'))
 print(balanced_pairs('([{}()()])'))
+
+#3.Given a string found the sum of integers found
+def sum_of_integer(str):
+    sum_ = 0
+    for ele in str:
+        if ord('0') <= ord(ele) <= ord('9'):
+            sum_ += int(ele)
+    return sum_
+
+print(sum_of_integer('hjksh676sjnbkjsdffu'))
+
+# 4.Given a string found the largest occurrence of consecutive 1’s
+def find_largest_con_1(str):
+    maxi_len = 0
+    curr_len = 0
+    for i in range(len(str)):
+        if str[i] == '1' :
+            curr_len += 1
+        else:
+            maxi_len = curr_len if curr_len > maxi_len else maxi_len
+            curr_len = 0
+    return curr_len if curr_len > maxi_len else maxi_len
+print(find_largest_con_1('1111011111100011111111111'))
+
+#Find the length of the longest substring without repeating characters
+# string: abbbccccdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789
