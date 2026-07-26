@@ -221,6 +221,7 @@ def balanced_pairs(str):
 print(balanced_pairs('[]{}()()'))
 print(balanced_pairs('([{}()()])'))
 
+
 #3.Given a string found the sum of integers found
 def sum_of_integer(str):
     sum_ = 0
@@ -229,20 +230,58 @@ def sum_of_integer(str):
             sum_ += int(ele)
     return sum_
 
+
 print(sum_of_integer('hjksh676sjnbkjsdffu'))
+
 
 # 4.Given a string found the largest occurrence of consecutive 1’s
 def find_largest_con_1(str):
     maxi_len = 0
     curr_len = 0
     for i in range(len(str)):
-        if str[i] == '1' :
+        if str[i] == '1':
             curr_len += 1
         else:
             maxi_len = curr_len if curr_len > maxi_len else maxi_len
             curr_len = 0
     return curr_len if curr_len > maxi_len else maxi_len
+
+
 print(find_largest_con_1('1111011111100011111111111'))
 
 #Find the length of the longest substring without repeating characters
-# string: abbbccccdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789
+strin = "abbbccccdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+
+
+def find_largest_substring_without_repeating(str):
+    maxi_len = 0
+    curr_str = ''
+    for ele in str:
+        if ele not in curr_str:
+            curr_str += ele
+        else:
+            maxi_len = max(maxi_len, len(curr_str))
+            curr_str = curr_str[curr_str.index(ele) + 1:] + ele
+    return max(maxi_len, len(curr_str))
+
+
+print(find_largest_substring_without_repeating(strin))
+
+def find_largest_substring_without_repeating_optimized(s):
+    left = 0
+    max_len = 0
+    seen = {}
+    longest = ''
+
+    for right, ch in enumerate(s):
+        if ch in seen and seen[ch] >= left:
+            left = seen[ch] + 1
+        seen[ch] = right
+        curr_str = s[left:right + 1]
+
+        if len(curr_str) > max_len:
+            max_len = len(curr_str)
+            longest = curr_str
+    return longest, max_len
+
+print(find_largest_substring_without_repeating_optimized(strin))
