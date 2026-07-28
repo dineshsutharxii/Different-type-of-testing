@@ -285,3 +285,23 @@ def find_largest_substring_without_repeating_optimized(s):
     return longest, max_len
 
 print(find_largest_substring_without_repeating_optimized(strin))
+
+#Given an array of non-negative integers, the task is to find the minimum number of elements such that their sum
+#should be greater than the sum of the rest of the elements of the array.
+#Input: arr[] = [3 , 1 , 7, 1 ]
+#Output: 1
+#Input:  arr[] = [2 , 1 , 2 ]
+#Output: 2
+
+arr1 = [5, 7, 1, 9, 3, 10, 16, 10, 8]
+arr1 = sorted(arr1)[::-1]
+sum_ = sum(arr1)
+curr_sum = 0
+count = 0
+for ele in arr1:
+    if sum_ >= curr_sum:
+        curr_sum += ele
+        sum_ -= ele
+        count += 1
+        print(f'curr_sum :{curr_sum}, sum_ : {sum_}, count_ : {count}')
+print(count)
