@@ -305,3 +305,27 @@ for ele in arr1:
         count += 1
         print(f'curr_sum :{curr_sum}, sum_ : {sum_}, count_ : {count}')
 print(count)
+
+
+#Move all zeros to the end without using extra space.
+def move_zeros(arr_):
+    temp_arr = []
+    for ele in arr_:
+        if ele != 0:
+            temp_arr.append(ele)
+    while len(temp_arr) < len(arr_):
+        temp_arr.append(0)
+    return temp_arr
+print(move_zeros([1,0,11,0,5]))
+
+def move_zeros_optimized(arr_):
+    write = 0
+    for read in range(len(arr_)):
+        if arr_[read] != 0:
+            arr_[write] = arr_[read]
+            write += 1
+    while write < len(arr_):
+        arr_[write] = 0
+        write += 1
+    return arr_
+print(move_zeros_optimized([1,0,11,0,5]))
