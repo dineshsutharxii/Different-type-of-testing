@@ -344,3 +344,12 @@ def two_sum_optimized(nums,target):
         p[num] = i
     return None
 print(two_sum_optimized([2,7,11,15], 18))
+
+
+def palindrome(str):
+    # return str == str[::-1]
+    for i in range(len(str)):
+        if str[i] != str[len(str) - 1 - i]:
+            return False
+    return True
+print(palindrome('abcba'))
