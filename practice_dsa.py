@@ -322,10 +322,25 @@ def move_zeros_optimized(arr_):
     write = 0
     for read in range(len(arr_)):
         if arr_[read] != 0:
-            arr_[write] = arr_[read]
+            arr_[read], arr_[write] = arr_[write], arr_[read]
             write += 1
-    while write < len(arr_):
-        arr_[write] = 0
-        write += 1
     return arr_
 print(move_zeros_optimized([1,0,11,0,5]))
+
+def two_sum(nums,target):
+    for i in range(len(nums)):
+        for j in range(len(nums)):
+            if nums[i] + nums[j] == target:
+                return [i, j]
+    return None
+print(two_sum([2,7,11,15], 26))
+
+def two_sum_optimized(nums,target):
+    p = {}
+    for i, num in enumerate(nums):
+        diff = target - num
+        if diff in p:
+            return [p[diff], i]
+        p[num] = i
+    return None
+print(two_sum_optimized([2,7,11,15], 18))
