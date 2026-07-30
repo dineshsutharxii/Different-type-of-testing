@@ -353,3 +353,12 @@ def palindrome(str):
             return False
     return True
 print(palindrome('abcba'))
+
+def max_profit(s):
+    buy = s[0]
+    profit = 0
+    for price in s:
+        buy = min(buy, price)
+        profit = max(profit, price - buy)
+    return profit
+print(max_profit([7,1,5,3,6,4]))
