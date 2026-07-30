@@ -362,3 +362,14 @@ def max_profit(s):
         profit = max(profit, price - buy)
     return profit
 print(max_profit([7,1,5,3,6,4]))
+
+def merge_interval(intervals):
+    intervals.sort()
+    merged = []
+    for interval in intervals:
+        if not merged or merged[-1][1] < interval[0]:
+            merged.append(interval)
+        else:
+            merged[-1][1] = max(merged[-1][1], interval[1])
+    return merged
+print(merge_interval([[1,3],[2,6],[8,10],[15,18]]))
