@@ -294,7 +294,7 @@ print(find_largest_substring_without_repeating_optimized(strin))
 #Output: 2
 
 arr1 = [5, 7, 1, 9, 3, 10, 16, 10, 8]
-arr1 = sorted(arr1)[::-1]
+arr1 = sorted(arr1, reverse=True)
 sum_ = sum(arr1)
 curr_sum = 0
 count = 0
@@ -373,3 +373,17 @@ def merge_interval(intervals):
             merged[-1][1] = max(merged[-1][1], interval[1])
     return merged
 print(merge_interval([[1,3],[2,6],[8,10],[15,18]]))
+
+def second_non_repeating(s):
+    non_repeating = 0
+    for i in range(len(s)):
+        count = 0
+        for j in range(len(s)):
+            if s[i] == s[j]:
+                count += 1
+        if count == 1:
+            non_repeating += 1
+            if non_repeating == 2:
+                return s[i]
+    return -1
+print(second_non_repeating('abccdd'))
