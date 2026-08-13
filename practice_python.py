@@ -17,7 +17,13 @@ listy.reverse()
 listy.remove(1)
 print(listy)
 
+str1 = "Hello"
+print(str1.isupper())
+
+
 _tuple = (1, 2, 5, [3, 6, 8, 'abc'], 'abc')
+_tuple[3].append(2)
+print(_tuple)
 print(_tuple[3][1])
 
 dict1 = {'one': 1, 'two': 2, 'name': 'dipak', 'age': 20}
@@ -99,9 +105,9 @@ print(car.add_two_number(4, 2))
 
 
 #encapsulation
-# __var - private variable : A public variable can be accessed from anywhere.
+# var - private variable : A public variable can be accessed from anywhere.
 # _var - protected variable : Protected variables are meant to be used inside the class and its subclasses.
-# var - public variable : It appears inaccessible from outside the class. Double underscore triggers name mangling.
+# __var - private variable : It appears inaccessible from outside the class. Double underscore triggers name mangling.
 #Python internally changes the variable name.
 #__svar becomes _classnaem__var  This is called name mangling.
 class Bank:
@@ -334,11 +340,24 @@ class Cat:
 def make_sound(obj):
     obj.speak()
 
-##Memory Management in Python
-    #Objects are stored on the heap.
-    #Function calls and local references are stored on the stack.
-    #Python uses:
-        #Reference Counting (primary mechanism)
-        #Generational Garbage Collection (to clean cyclic references)
+#Memory Management in Python
+    # Objects are stored on the heap.
+    # Function calls and local references are stored on the stack.
+    # Python uses:
+    #     Reference Counting (primary mechanism)
+    #     Generational Garbage Collection (to clean cyclic references)
 
 repr()
+
+# listy = [1,3,5,7, "hello"]
+# listy.index("hello")
+# print(listy)
+# tupley = (1, 2, 3)
+# print(tupley)
+# print(tupley*2)
+#
+# dict1 = {1:'one', 2:'two', 3:'three'}
+# print(dict1)
+# set = {1,2,3}
+# set.remove(1)
+# print(set)
