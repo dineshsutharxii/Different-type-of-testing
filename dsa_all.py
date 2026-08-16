@@ -26,3 +26,13 @@ def move_zeroes(arr):
             l += 1
     return arr
 print(move_zeroes([6,0,0,4,5]))
+
+def max_profit(arr):
+    min_price = float('inf')
+    max_pro = 0
+    for ele in arr:
+        min_price = min(min_price, ele)
+        max_pro = max(max_pro, ele - min_price)
+    return max_pro
+
+print(max_profit([7, 1, 5, 3, 6, 4]))
