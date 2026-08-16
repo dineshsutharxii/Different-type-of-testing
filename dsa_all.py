@@ -17,3 +17,12 @@ def contains_duplicate(arr):
     return []
 
 print(contains_duplicate([1,2,5,4,5]))
+
+def move_zeroes(arr):
+    l = 0
+    for r in range(len(arr)):
+        if arr[r] != 0:
+            arr[r], arr[l] = arr[l], arr[r]
+            l += 1
+    return arr
+print(move_zeroes([6,0,0,4,5]))
