@@ -71,3 +71,17 @@ def missing_number(arr):
 
 print(missing_number([3, 0, 1, 2, 5, 6, 7]))
 
+def majority_element(arr):
+    n = len(arr)
+    ele_dict = {}
+    for ele in arr:
+        if ele in ele_dict:
+            ele_dict[ele] += 1
+        else:
+            ele_dict[ele] = 1
+    for val in ele_dict.values():
+        if val > n//2:
+            return val
+    return 0
+
+print(majority_element([3, 0, 1, 2, 3, 6, 3]))
