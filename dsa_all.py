@@ -62,3 +62,12 @@ def max_subarray_optimized(arr):
     return [max_sum, arr[ans_start:ans_end]]
 
 print(max_subarray_optimized([-2, -3, 4, -1, -2, 1, 5, -3]))
+
+def missing_number(arr):
+    n = len(arr)
+    sum_ = n*(n+1)//2
+    arr_sum = sum(arr)
+    return sum_ - arr_sum
+
+print(missing_number([3, 0, 1, 2, 5, 6, 7]))
+
