@@ -56,8 +56,9 @@ def max_subarray_optimized(arr):
         current_sum += arr[i]
         if current_sum > max_sum:
             max_sum = current_sum
+            ans_start, ans_end = start, i
         if current_sum < 0:
             current_sum = 0
-    return max_sum
+    return [max_sum, arr[ans_start:ans_end]]
 
-print(max_subarray([-2, -3, 4, -1, -2, 1, 5, -3]))
+print(max_subarray_optimized([-2, -3, 4, -1, -2, 1, 5, -3]))
