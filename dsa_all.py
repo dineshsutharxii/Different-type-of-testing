@@ -83,5 +83,32 @@ def majority_element(arr):
         if val > n//2:
             return val
     return 0
-
 print(majority_element([3, 0, 1, 2, 3, 6, 3]))
+
+
+def product_except_self(arr):
+    n = len(arr)
+    res = []
+    for i in range(n):
+        prod = 1
+        for j in range(n):
+            if j != i:
+                prod *= arr[j]
+        res.append(prod)
+    return res
+
+print(product_except_self([3, 5, 1, 2, 3, 6, 3]))
+
+def product_except_self_optimal(arr):
+    res = [1]*len(arr)
+    prefix = 1
+    for i in range(len(arr)):
+        res[i] = prefix
+        prefix *= arr[i]
+    sufix = 1
+    for i in range(len(arr)-1, -1, -1):
+        res[i] *= sufix
+        sufix *= arr[i]
+    return res
+
+print(product_except_self_optimal([3, 5, 1, 2, 3, 6, 3]))
