@@ -34,5 +34,19 @@ def max_profit(arr):
         min_price = min(min_price, ele)
         max_pro = max(max_pro, ele - min_price)
     return max_pro
-
 print(max_profit([7, 1, 5, 3, 6, 4]))
+
+def max_subarray(arr):
+    max_sum = float('-inf')
+    for i in range(len(arr)):
+        current_sum  = 0
+        for j in range(i, len(arr)):
+            current_sum += arr[j]
+            if current_sum > max_sum:
+                max_sum = current_sum
+    return max_sum
+print(max_subarray([-2, -1, 0, 1, 2]))
+
+def max_subarray_optimized(arr):
+    max_sum = float('-inf')
+
