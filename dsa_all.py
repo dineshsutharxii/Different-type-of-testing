@@ -136,3 +136,19 @@ def merge_sorted_array(arr1, arr2):
 
 print(merge_sorted_array([0,3], [1,2]))
 
+def merge_sorted_array_optimized(arr1, arr2):
+    l1 = len(arr1)
+    l2 = len(arr2)
+    arr1.extend([0]*len(arr2))
+    i, j, k = l1-1, l2-1, l1+l2-1
+    while j >= 0:
+        if i >= 0 and arr1[i] > arr2[j]:
+            arr1[k] = arr1[i]
+            i -= 1
+        else:
+            arr1[k] = arr2[j]
+            j -= 1
+        k -= 1
+    return arr1
+
+print(merge_sorted_array_optimized([ 1, 2, 3, 6,], [4,5,9]))
