@@ -25,7 +25,7 @@ def move_zeroes(arr):
             arr[r], arr[l] = arr[l], arr[r]
             l += 1
     return arr
-print(move_zeroes([6,0,0,4,5]))
+print(f'Move zeros - {move_zeroes([6,0,0,4,5])}')
 
 def max_profit(arr):
     min_price = float('inf')
@@ -112,3 +112,27 @@ def product_except_self_optimal(arr):
     return res
 
 print(product_except_self_optimal([3, 5, 1, 2, 3, 6, 3]))
+
+def merge_sorted_array(arr1, arr2):
+    l1 = len(arr1)
+    l2 = len(arr2)
+    l3 = l1+l2
+    res = []
+    i, j = 0, 0
+    while i < l1 and j < l2:
+        if arr1[i] < arr2[j]:
+            res.append(arr1[i])
+            i += 1
+        else:
+            res.append(arr2[j])
+            j += 1
+    while i < l1:
+        res.append(arr1[i])
+        i += 1
+    while j < l2:
+        res.append(arr2[j])
+        j += 1
+    return res
+
+print(merge_sorted_array([0,3], [1,2]))
+
