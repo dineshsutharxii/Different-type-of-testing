@@ -152,3 +152,11 @@ def merge_sorted_array_optimized(arr1, arr2):
     return arr1
 
 print(merge_sorted_array_optimized([ 1, 2, 3, 6,], [4,5,9]))
+
+def rotate_arr(arr, k):
+    n = len(arr)
+    new_arr = []
+    for i in range(n):
+        new_arr.append(arr[(n-k+i)%n])
+    return new_arr
+print(rotate_arr([1,2,3,4,5,6,7,8,9], 3))
