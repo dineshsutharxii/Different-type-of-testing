@@ -159,4 +159,20 @@ def rotate_arr(arr, k):
     for i in range(n):
         new_arr.append(arr[(n-k+i)%n])
     return new_arr
-print(rotate_arr([1,2,3,4,5,6,7,8,9], 3))
+print(rotate_arr([1,2,3,4,5,6,7,8,9], 5))
+
+def rotate_arr_1(arr, k):
+    k %= len(arr)
+    arr[:] = arr[-k:] + arr[:-k]
+    return arr
+
+print(rotate_arr_1([2,3,4,5,6,7,8,9], 3))
+
+def rotate_arr_2(arr, k):
+    k %= len(arr)
+    arr.reverse()
+    arr[:k] = reversed(arr[:k])
+    arr[k:] = reversed(arr[k:])
+    return arr
+
+print(rotate_arr_2([2,3,4,5,6,8,9], 4))
