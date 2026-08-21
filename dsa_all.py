@@ -176,3 +176,31 @@ def rotate_arr_2(arr, k):
     return arr
 
 print(rotate_arr_2([2,3,4,5,6,8,9], 4))
+
+def threesome(arr):
+    res = []
+    arr.sort()
+    for i in range(len(arr)-2):
+        if i > 0 and arr[i] == arr[i - 1]:
+            continue
+        left = i +1
+        right = len(arr) -1
+        while left < right:
+            if arr[i] + arr[left] + arr[right] == 0:
+                res.append([arr[i], arr[left], arr[right]])
+                left += 1
+                right -= 1
+                while left < right and arr[left] == arr[left-1]:
+                    left += 1
+                while left < right and arr[right] == arr[right+1]:
+                    right -= 1
+
+            elif arr[left] + arr[right] < arr[i]:
+                left = left +1
+            else:
+                right = right -1
+    return res
+
+print(threesome([-4, -1, -1, 0, 1, 2]))
+print(threesome([-1, 0, 0, 0, 1, 2]))
+print(threesome([-2, 0, 0, 0, 2, 2]))
