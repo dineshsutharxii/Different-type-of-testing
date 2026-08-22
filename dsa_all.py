@@ -204,3 +204,16 @@ def threesome(arr):
 print(threesome([-4, -1, -1, 0, 1, 2]))
 print(threesome([-1, 0, 0, 0, 1, 2]))
 print(threesome([-2, 0, 0, 0, 2, 2]))
+
+def subarray_sum(arr, k):
+    count = 0
+    prefix_sum = 0
+    seen = {0:1}
+    for ele in arr:
+        prefix_sum += ele
+        if prefix_sum - k in seen:
+            count += seen[prefix_sum - k]
+        seen[prefix_sum] = seen.get(prefix_sum, 0) + 1
+    return count
+
+print(subarray_sum([-2, -1, 0, 1, 2], 2))
